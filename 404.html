@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Niet Gevonden (404) | Garden of Jess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F9F6F0;
+      --sage: #6B7A55;
+      --lavender: #8B7AA8;
+      --deep-forest: #2D3823;
+      --border-sand: #EDE7DD;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--cream);
+      font-family: 'Montserrat', sans-serif;
+      color: var(--deep-forest);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .card-404 {
+      background: #FFFFFF;
+      border: 1px solid var(--border-sand);
+      border-radius: 20px;
+      max-width: 640px;
+      width: 100%;
+      padding: 56px 40px;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(45, 56, 35, 0.07);
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--lavender);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    p {
+      color: #556149;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .btn-return {
+      display: inline-block;
+      background: var(--sage);
+      color: #FFF;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-return:hover { background: var(--deep-forest); }
+    .rec-box {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-sand);
+      text-align: left;
+    }
+    .rec-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--lavender);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .rec-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .rec-link {
+      background: var(--cream);
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border-sand);
+      text-decoration: none;
+      color: var(--deep-forest);
+      font-size: 13px;
+      display: block;
+    }
+    .rec-link strong { color: var(--sage); display: block; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+  <div class="card-404">
+    <div style="margin-bottom: 20px;">
+      <svg width="60" height="60" viewBox="0 0 64 64" fill="none" style="margin:0 auto;">
+        <path d="M32 4C32 4 28 16 20 22C12 28 4 32 4 32C4 32 16 36 22 44C28 52 32 60 32 60C32 60 36 48 44 42C52 36 60 32 60 32C60 32 48 28 42 20C36 12 32 4 32 4Z" stroke="#6B7A55" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M32 20V44M20 32H44" stroke="#8B7AA8" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <p class="eyebrow">Foutcode 404 • Pad Niet Gevonden</p>
+    <h1>Even Verdwaald in de Kruidentuin?</h1>
+    <p>
+      Het botanische blad dat u zoekt is meegenomen door de wind. Zelfs in de meest zorgvuldig onderhouden kruidentuin dwaalt men weleens af. Laat ons u terugleiden naar onze rustgevende theemelanges.
+    </p>
+
+    <a href="index.html" class="btn-return">Terug naar het Kruidenatelier →</a>
+
+    <div class="rec-box">
+      <div class="rec-title">Populaire Herstellende Melanges (€7,95 / 50g):</div>
+      <div class="rec-links">
+        <a href="index.html#signature-six" class="rec-link">
+          <strong>✦ Morning Rise</strong>
+          Munt, lavendel en ginkgo
+        </a>
+        <a href="index.html#signature-six" class="rec-link">
+          <strong>✦ Smooth Digest</strong>
+          Artisjok, steranijs en venkel
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

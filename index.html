@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Garden of Jess — Ambachtelijke Biologische Kruidenthee • 50g Zakjes voor €7,95</title>
+  <meta name="description" content="Ambachtelijke biologische kruidentheemelanges van Garden of Jess: Morning Rise, Painless, Refresh, Immunitea, Smooth Digest en Breath Free. 50 gram in een vershoudend aromazakje voor €7,95.">
+  
+  <!-- Favicon / Merkicoon -->
+  <link rel="icon" type="image/jpeg" href="assets/garden_of_jess_logo.jpg">
+  
+  <!-- Open Graph / Sociale Media -->
+  <meta property="og:title" content="Garden of Jess — 6 Kruidentheemelanges (50g voor €7,95)">
+  <meta property="og:description" content="Ontdek de zes kenmerkende theemelanges van Garden of Jess. Elk 50 gram in een aromabeschermend zakje voor €7,95.">
+  <meta property="og:image" content="assets/og_share_image.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #F9F6F0;
+      --cream-card: #FFFFFF;
+      --cream-soft: #FAF7F2;
+      --sage: #6B7A55;
+      --sage-dark: #4F5C3E;
+      --sage-light: #EBF0E4;
+      --lavender: #8B7AA8;
+      --lavender-light: #F2EEF7;
+      --deep-forest: #2D3823;
+      --muted-earth: #7A856D;
+      --border-sand: #EDE7DD;
+      --border-dark: #D8CFBC;
+      --shadow-subtle: 0 10px 30px rgba(45, 56, 35, 0.05);
+      --shadow-hover: 0 16px 36px rgba(45, 56, 35, 0.12);
+      --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      background-color: var(--cream);
+      font-family: 'Montserrat', -apple-system, sans-serif;
+      color: var(--deep-forest);
+      line-height: 1.65;
+      overflow-x: hidden;
+      font-size: 15px;
+      width: 100%;
+      min-width: 320px;
+    }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      color: var(--deep-forest);
+    }
+
+    a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+    img { max-width: 100%; height: auto; display: block; }
+    button { font-family: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    input, textarea, select { font-size: 16px !important; } /* Voorkomt hinderlijk inzoomen op iPhones */
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 1. ANNOUNCEMENT BAR */
+    .announcement-bar {
+      background-color: var(--sage);
+      color: var(--cream);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+    .announcement-bar span.pill {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+    }
+
+    /* 2. STICKY HEADER & MOBIELE HAMBURGER */
+    header.site-header {
+      background: rgba(249, 246, 240, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-sand);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 86px;
+    }
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--sage); }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 1.5px;
+      background: var(--sage);
+      transition: width 0.2s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+    .brand-logo-img {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      border: 1px solid var(--border-sand);
+      box-shadow: 0 4px 12px rgba(45, 56, 35, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .brand-logo-img:hover { transform: rotate(5deg) scale(1.04); }
+
+    .btn-header-cart {
+      background: var(--sage-light);
+      border: 1px solid var(--border-sand);
+      color: var(--sage-dark);
+      padding: 9px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      min-height: 42px;
+    }
+    .btn-header-cart:hover {
+      background: var(--sage);
+      color: #FFF;
+    }
+    .cart-count-badge {
+      background: var(--sage);
+      color: #FFF;
+      font-size: 11px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .btn-header-cart:hover .cart-count-badge {
+      background: #FFF;
+      color: var(--sage);
+    }
+
+    /* Mobiele Hamburger Knop */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--deep-forest);
+      padding: 8px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+    }
+
+    /* Mobiele Navigatie Drawer */
+    .mobile-nav-backdrop {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(4px);
+      z-index: 2500;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+    .mobile-nav-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .mobile-nav-drawer {
+      position: fixed;
+      top: 0; left: -320px; width: 85%; max-width: 320px; height: 100vh;
+      background: #FFFFFF;
+      box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
+      z-index: 2501;
+      display: flex;
+      flex-direction: column;
+      transition: left 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .mobile-nav-drawer.active { left: 0; }
+    .mobile-nav-header {
+      padding: 20px 22px;
+      border-bottom: 1px solid var(--border-sand);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--cream);
+    }
+    .mobile-nav-close {
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: var(--deep-forest);
+      cursor: pointer;
+      line-height: 1;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-nav-links {
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+      overflow-y: auto;
+    }
+    .mobile-nav-links a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      padding: 10px 0;
+      border-bottom: 1px solid #F4EFEB;
+      transition: color 0.2s;
+    }
+    .mobile-nav-links a:hover { color: var(--sage); }
+    .mobile-nav-footer {
+      padding: 22px;
+      border-top: 1px solid var(--border-sand);
+      background: var(--cream);
+    }
+
+    /* 3. HERO BANNER */
+    .hero-section {
+      padding: 80px 0 90px;
+      background: radial-gradient(circle at 80% 20%, rgba(139, 122, 168, 0.08) 0%, transparent 60%),
+                  radial-gradient(circle at 10% 80%, rgba(107, 122, 85, 0.08) 0%, transparent 50%),
+                  var(--cream);
+      border-bottom: 1px solid var(--border-sand);
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--lavender);
+      background: var(--lavender-light);
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-size: 56px;
+      line-height: 1.12;
+      font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+    .hero-subtitle {
+      font-size: 17px;
+      color: #556149;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+    .hero-cta-group {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .btn-primary {
+      background-color: var(--sage);
+      color: var(--cream);
+      border: none;
+      padding: 16px 36px;
+      border-radius: 40px;
+      font-size: 14.5px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      box-shadow: 0 8px 24px rgba(107, 122, 85, 0.28);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+    }
+    .btn-primary:hover {
+      background-color: var(--deep-forest);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(45, 56, 35, 0.3);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--sage-dark);
+      border: 1.5px solid var(--sage);
+      padding: 15px 30px;
+      border-radius: 40px;
+      font-size: 14.5px;
+      font-weight: 600;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+    }
+    .btn-secondary:hover {
+      background: var(--sage-light);
+      border-color: var(--sage);
+    }
+    .hero-trust-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--muted-earth);
+    }
+    .hero-trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-image-wrap {
+      position: relative;
+    }
+    .hero-image-card {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(45, 56, 35, 0.12);
+      border: 1px solid var(--border-sand);
+      position: relative;
+    }
+    .hero-floating-badge {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: #FFFFFF;
+      padding: 16px 22px;
+      border-radius: 16px;
+      border: 1px solid var(--border-sand);
+      box-shadow: 0 12px 30px rgba(45, 56, 35, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .hero-floating-badge .stars { color: #D4A373; font-size: 16px; }
+
+    /* 4. CREDENTIALS STRIP */
+    .credentials-strip {
+      padding: 42px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-sand);
+    }
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+    .cred-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .cred-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--sage-light);
+      color: var(--sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cred-text h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .cred-text p {
+      font-size: 12.5px;
+      color: #6C7761;
+      line-height: 1.5;
+    }
+
+    /* 5. COLLECTION SHOWCASE */
+    .collection-section {
+      padding: 100px 0;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+    .section-eyebrow {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--sage);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: 44px;
+      margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 16px;
+      color: #616D54;
+    }
+
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+    .filter-tab {
+      background: #FFF;
+      border: 1px solid var(--border-sand);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      transition: var(--transition);
+      min-height: 42px;
+    }
+    .filter-tab.active, .filter-tab:hover {
+      background: var(--sage);
+      color: #FFF;
+      border-color: var(--sage);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .product-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-sand);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-dark);
+    }
+    .product-media {
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+      background: #F4F1EA;
+    }
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .product-card:hover .product-media img {
+      transform: scale(1.06);
+    }
+    .product-badge-botanical {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(249, 246, 240, 0.94);
+      backdrop-filter: blur(8px);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sage-dark);
+      letter-spacing: 0.5px;
+      border: 1px solid var(--border-sand);
+    }
+    .product-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-rating {
+      font-size: 13px;
+      color: #D4A373;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .product-rating span { color: #8C9680; font-size: 12px; }
+    .product-title {
+      font-size: 26px;
+      margin-bottom: 4px;
+      line-height: 1.25;
+    }
+    .product-subtitle-moment {
+      font-size: 12px;
+      color: var(--lavender);
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+    .product-herbs {
+      font-size: 12.5px;
+      color: var(--sage);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .product-short-desc {
+      font-size: 13.5px;
+      color: #5C6750;
+      line-height: 1.55;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+    .product-bio-actives {
+      background: var(--cream-soft);
+      border: 1px solid var(--border-sand);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      font-size: 11.5px;
+      color: #4A563E;
+    }
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-sand);
+    }
+    .product-price {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--deep-forest);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .product-price small {
+      font-size: 12px;
+      color: #7B866E;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+    }
+    .product-actions {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-quick-view {
+      background: transparent;
+      border: 1px solid var(--border-dark);
+      color: var(--deep-forest);
+      padding: 9px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: var(--transition);
+      min-height: 40px;
+    }
+    .btn-quick-view:hover {
+      background: var(--cream);
+      border-color: var(--sage);
+    }
+    .btn-add-cart {
+      background: var(--sage);
+      color: #FFF;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 20px;
+      font-size: 12.5px;
+      font-weight: 600;
+      transition: var(--transition);
+      min-height: 40px;
+    }
+    .btn-add-cart:hover {
+      background: var(--deep-forest);
+    }
+
+    /* 6. BOTANISCHE WETENSCHAP */
+    .science-section {
+      padding: 90px 0;
+      background: #F4EFEB;
+      border-top: 1px solid var(--border-sand);
+      border-bottom: 1px solid var(--border-sand);
+    }
+    .science-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .science-content h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .science-feature-list {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .science-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .feature-check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--sage);
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* 7. OVER JESS (FOUNDER TRUST) */
+    .founder-section {
+      padding: 100px 0;
+    }
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .founder-image-frame {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(45, 56, 35, 0.1);
+      border: 1px solid var(--border-sand);
+      max-height: 540px;
+    }
+    .founder-image-frame img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .founder-content h2 {
+      font-size: 46px;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+    .founder-quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px;
+      font-style: italic;
+      color: var(--sage-dark);
+      margin-bottom: 20px;
+      line-height: 1.4;
+      border-left: 3px solid var(--sage);
+      padding-left: 20px;
+    }
+    .founder-signature {
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .signature-text h4 {
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+    .signature-text p {
+      font-size: 13px;
+      color: var(--muted-earth);
+    }
+
+    /* 8. BEOORDELINGEN */
+    .reviews-section {
+      padding: 90px 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-sand);
+      border-bottom: 1px solid var(--border-sand);
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .review-card {
+      background: var(--cream-soft);
+      border: 1px solid var(--border-sand);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .review-stars {
+      color: #D4A373;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+    .review-text {
+      font-size: 14px;
+      color: #4B563F;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--border-sand);
+      padding-top: 14px;
+    }
+    .reviewer-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--sage-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--sage);
+      font-size: 14px;
+    }
+
+    /* 9. PROEFLOKAAL */
+    .tasting-room-section {
+      padding: 90px 0;
+    }
+    .tasting-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-sand);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+    }
+    .tasting-info {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .tasting-map-wrap {
+      min-height: 380px;
+      background: #E8ECE3;
+    }
+    .tasting-map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      border: 0;
+    }
+
+    /* 10. VEELGESTELDE VRAGEN */
+    .faq-section {
+      padding: 90px 0;
+      background: var(--cream-soft);
+      border-top: 1px solid var(--border-sand);
+    }
+    .faq-container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-sand);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-question {
+      padding: 20px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      min-height: 48px;
+    }
+    .faq-icon {
+      font-size: 20px;
+      color: var(--sage);
+      transition: transform 0.25s ease;
+    }
+    .faq-answer {
+      padding: 0 24px 22px;
+      font-size: 14.5px;
+      color: #556149;
+      line-height: 1.65;
+      display: none;
+    }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    /* 11. MEDISCHE DISCLAIMER STROOK */
+    .disclaimer-strip {
+      background: #EBE5DB;
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 24px 0;
+      font-size: 12px;
+      color: #565F4B;
+      line-height: 1.6;
+    }
+    .disclaimer-strip strong { color: var(--deep-forest); }
+
+    /* 12. VOETTEKST (FOOTER) */
+    footer.site-footer {
+      background: #252F1D;
+      color: #EDE8DF;
+      padding: 70px 0 30px;
+      font-size: 13.5px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    .footer-col h4 {
+      color: #F9F6F0;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      color: #C6CEBC;
+      transition: color 0.2s;
+      padding: 4px 0;
+      display: inline-block;
+    }
+    .footer-links a:hover { color: #FFF; }
+    .newsletter-form {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .newsletter-form input {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 24px;
+      border: 1px solid #445237;
+      background: #1C2416;
+      color: #FFF;
+      font-size: 13px;
+      outline: none;
+    }
+    .newsletter-form button {
+      background: var(--sage);
+      color: #FFF;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .footer-bottom {
+      border-top: 1px solid #38452B;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #9AA58F;
+      font-size: 12px;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* 13. WINKELMANDJE DRAWER */
+    .cart-drawer-backdrop {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+    .cart-drawer-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .cart-drawer {
+      position: fixed;
+      top: 0; right: -420px; width: 100%; max-width: 420px; height: 100vh;
+      background: #FFFFFF;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+      z-index: 2001;
+      display: flex;
+      flex-direction: column;
+      transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cart-drawer.active { right: 0; }
+    .cart-header {
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--border-sand);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--cream);
+    }
+    .cart-header h3 { font-size: 22px; }
+    .cart-close-btn {
+      background: transparent;
+      border: none;
+      font-size: 28px;
+      color: var(--deep-forest);
+      line-height: 1;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cart-shipping-bar {
+      padding: 12px 24px;
+      background: var(--sage-light);
+      font-size: 12.5px;
+      color: var(--sage-dark);
+      font-weight: 500;
+    }
+    .shipping-progress {
+      height: 6px;
+      background: #D5DFCB;
+      border-radius: 4px;
+      margin-top: 6px;
+      overflow: hidden;
+    }
+    .shipping-fill {
+      height: 100%;
+      background: var(--sage);
+      width: 17%;
+      transition: width 0.3s ease;
+    }
+    .cart-items-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .cart-item {
+      display: flex;
+      gap: 14px;
+      border-bottom: 1px solid var(--border-sand);
+      padding-bottom: 16px;
+    }
+    .cart-item img {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid var(--border-sand);
+    }
+    .cart-item-details { flex: 1; }
+    .cart-item-title { font-size: 14px; font-weight: 600; }
+    .cart-item-price { font-size: 13px; color: var(--sage); font-weight: 600; margin-top: 2px; }
+    .cart-item-qty {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 8px;
+      border: 1px solid var(--border-sand);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 13px;
+    }
+    .cart-item-qty button { background: none; border: none; font-size: 16px; min-width: 28px; min-height: 28px; }
+    .cart-footer {
+      padding: 24px;
+      border-top: 1px solid var(--border-sand);
+      background: var(--cream);
+    }
+    .cart-subtotal {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .btn-checkout {
+      width: 100%;
+      background: var(--sage);
+      color: #FFF;
+      border: none;
+      padding: 16px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: var(--transition);
+      display: block;
+      text-align: center;
+      min-height: 50px;
+    }
+    .btn-checkout:hover { background: var(--deep-forest); }
+
+    /* 14. MONOGRAAF MODAL */
+    .modal-backdrop {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(4px);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.active { display: flex; }
+    .modal-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      max-width: 820px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 40px;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+      -webkit-overflow-scrolling: touch;
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--cream);
+      border: 1px solid var(--border-sand);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .modal-product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* 15. MOBIELE STICKY CTA */
+    .mobile-sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(249, 246, 240, 0.98);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-top: 1px solid var(--border-dark);
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1500;
+      box-shadow: 0 -4px 16px rgba(45, 56, 35, 0.08);
+    }
+
+    /* ========================================================
+       VOLLEDIGE MOBIELE RESPONSIVITEIT & OPTIMALISATIE
+       ======================================================== */
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 84px; /* Ruimte voor de sticky bestelbalk onderaan */
+      }
+      .container {
+        padding: 0 16px;
+      }
+      .header-inner {
+        height: 68px;
+      }
+      .nav-left { display: none; }
+      .mobile-menu-btn { display: flex; }
+      .brand-logo-img {
+        width: 48px;
+        height: 48px;
+      }
+      .btn-header-cart span:first-of-type {
+        display: none; /* Verberg tekst 'Kruidentas' op mobiel, toon icoon + badge */
+      }
+      .btn-header-cart {
+        padding: 8px 12px;
+      }
+
+      .announcement-bar {
+        font-size: 11px;
+        padding: 8px 10px;
+        line-height: 1.35;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .announcement-bar span.pill {
+        display: inline-block;
+        font-size: 10px;
+      }
+
+      /* Hero Mobile */
+      .hero-section {
+        padding: 36px 0 44px;
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .hero-title {
+        font-size: 34px;
+        line-height: 1.15;
+        margin-bottom: 14px;
+      }
+      .hero-subtitle {
+        font-size: 14.5px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+      .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+      .hero-cta-group .btn-primary, .hero-cta-group .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-trust-row {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+      }
+      .hero-floating-badge {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 14px;
+        border-radius: 14px;
+        padding: 12px 16px;
+      }
+
+      /* Swipeable Category Filter Tabs */
+      .filter-tabs {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin-bottom: 24px;
+      }
+      .filter-tabs::-webkit-scrollbar { display: none; }
+      .filter-tab {
+        flex-shrink: 0;
+        white-space: nowrap;
+        font-size: 13px;
+        padding: 8px 16px;
+      }
+
+      /* Product Grid Mobile */
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .product-media {
+        height: 230px;
+      }
+      .product-card {
+        border-radius: 18px;
+      }
+      .product-body {
+        padding: 20px 18px;
+      }
+      .product-title {
+        font-size: 24px;
+      }
+      .product-footer {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      /* Overige secties mobile */
+      .credentials-strip { padding: 28px 0; }
+      .credentials-grid { grid-template-columns: 1fr; gap: 16px; }
+      .collection-section, .science-section, .founder-section, .reviews-section, .tasting-room-section, .faq-section {
+        padding: 44px 0;
+      }
+      .section-title {
+        font-size: 30px;
+        line-height: 1.2;
+      }
+      .science-grid { grid-template-columns: 1fr; gap: 28px; }
+      .science-content h2 { font-size: 30px; }
+      
+      .founder-grid { grid-template-columns: 1fr; gap: 28px; }
+      .founder-image-frame { max-height: 380px; }
+      .founder-image-frame img { height: 380px !important; object-position: center 20% !important; }
+      .founder-content h2 { font-size: 32px; }
+      .founder-quote { font-size: 18px; padding-left: 14px; }
+
+      .tasting-grid { grid-template-columns: 1fr; gap: 0; }
+      .tasting-info { padding: 26px 18px; }
+      .tasting-info h2 { font-size: 28px !important; }
+      .tasting-map-wrap { min-height: 280px; }
+
+      .reviews-grid { grid-template-columns: 1fr; gap: 16px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
+
+      /* Modals on Mobile */
+      .modal-card {
+        padding: 22px 18px;
+        max-height: 88vh;
+        width: 95%;
+        border-radius: 20px;
+      }
+      .modal-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+      }
+      .modal-product-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .modal-product-grid img {
+        max-height: 220px;
+        object-fit: cover;
+      }
+
+      /* Cart Drawer Mobile */
+      .cart-drawer {
+        width: 100vw;
+        max-width: 100vw;
+      }
+
+      /* Sticky Mobile CTA Bar */
+      .mobile-sticky-cta {
+        display: flex;
+      }
+    }
+  </style>
+
+  <!-- Local Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Garden of Jess bij G&W Bio Rosa",
+    "image": "assets/garden_of_jess_logo.jpg",
+    "description": "Ambachtelijke biologische theemelanges: Morning Rise, Painless, Refresh, Immunitea, Smooth Digest, Breath Free. 50g voor €7,95.",
+    "telephone": "0299-420905",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Padjedijk 30",
+      "addressLocality": "Purmerend",
+      "postalCode": "1441 BR",
+      "addressCountry": "NL"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- 1. ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <span class="pill">50G AROMAZAKJES • €7,95</span>
+    <span>✦ Gratis Houten Maatlepel bij bestellingen vanaf €45 | Handgemaakt in Amsterdam | Binnen 24u Verzonden ✦</span>
+  </div>
+
+  <!-- 2. STICKY HEADER MET MOBIELE MENU-KNOP -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Navigatiemenu openen">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+
+      <nav class="nav-left">
+        <a href="#signature-six" class="nav-link">De Collectie</a>
+        <a href="pages/our-garden-journal.html" class="nav-link">Onze Tuinkroniek</a>
+        <a href="#over-jess" class="nav-link">Over Jess</a>
+        <a href="#proeflokaal" class="nav-link">Bio Rosa Purmerend</a>
+      </nav>
+
+      <a href="/" class="brand-logo-wrap" title="Garden of Jess Home">
+        <img src="assets/garden_of_jess_logo.jpg" alt="Garden of Jess - Ambachtelijk Kruidenatelier Logo" class="brand-logo-img">
+      </a>
+
+      <div class="nav-right">
+        <a href="pages/contact.html" class="nav-link" style="display:none; @media(min-width:769px){display:inline;}">Contact</a>
+        <button class="btn-header-cart" onclick="toggleCart()" aria-label="Winkelmand openen">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span>Kruidentas</span>
+          <span class="cart-count-badge" id="cart-count">1</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBIELE NAVIGATIE DRAWER -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="mobile-nav-header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="assets/garden_of_jess_logo.jpg" alt="Logo" style="width:36px; height:36px; border-radius:50%;">
+        <span style="font-family:'Cormorant Garamond', serif; font-size:20px; font-weight:600; color:var(--deep-forest);">Garden of Jess</span>
+      </div>
+      <button class="mobile-nav-close" onclick="toggleMobileMenu()" aria-label="Menu sluiten">×</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#signature-six" onclick="toggleMobileMenu()">🌿 De 6 Smaken (€7,95)</a>
+      <a href="pages/our-garden-journal.html" onclick="toggleMobileMenu()">📖 Onze Tuinkroniek (Artikelen)</a>
+      <a href="#over-jess" onclick="toggleMobileMenu()">👩‍🌾 Over Jess & Atelier</a>
+      <a href="#proeflokaal" onclick="toggleMobileMenu()">📍 Bio Rosa Purmerend</a>
+      <a href="#faq" onclick="toggleMobileMenu()">❓ Veelgestelde Vragen</a>
+      <a href="pages/contact.html" onclick="toggleMobileMenu()">✉️ Contact & Advies</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <button class="btn-primary" style="width:100%; justify-content:center; margin-bottom:12px;" onclick="toggleMobileMenu(); openQuiz();">
+        Doe de Kruidenwijzer
+      </button>
+      <div style="font-size:12px; color:#78856F; text-align:center;">
+        Padjedijk 30, Purmerend • Gratis bezorging vanaf €45
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. HERO BANNER -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          100% Biologisch • 50 Gram Zakje voor €7,95
+        </div>
+        <h1 class="hero-title">Rituelen Geworteld in de Aarde. Smaak, Geur & Beleving.</h1>
+        <p class="hero-subtitle">
+          Zes sfeervolle theemelanges met zorg samengesteld door meesterherborist Jess: <strong>Morning Rise</strong>, <strong>Painless</strong>, <strong>Refresh</strong>, <strong>Immunitea</strong>, <strong>Smooth Digest</strong> en <strong>Breath Free</strong>. Vers verpakt in 50g aromazakjes voor slechts €7,95 per stuk.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#signature-six" class="btn-primary">
+            <span>Ontdek De 6 Melanges — €7,95</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <button class="btn-secondary" onclick="openQuiz()">Doe de Kruidenwijzer</button>
+        </div>
+
+        <div class="hero-trust-row">
+          <span class="hero-trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#6B7A55"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            50g Vers Aromabeschermend Zakje
+          </span>
+          <span class="hero-trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#6B7A55"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Padjedijk 30, Purmerend
+          </span>
+          <span class="hero-trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#6B7A55"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            Slechts €7,95 per Smaak
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-image-card">
+          <img src="assets/og_share_image.jpg" alt="Ambachtelijke theekruiden in 50g aromazakje op linnen">
+        </div>
+        <div class="hero-floating-badge">
+          <div class="stars">★★★★★</div>
+          <div>
+            <strong style="font-size: 13.5px; display: block;">4.96 / 5 Waardering</strong>
+            <span style="font-size: 11.5px; color: #66725A;">Gebaseerd op 1.428 theeliefhebbers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TRUST CREDENTIALS STROOK -->
+  <section class="credentials-strip">
+    <div class="container credentials-grid">
+      <div class="cred-item">
+        <div class="cred-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+        </div>
+        <div class="cred-text">
+          <h4>Vaste Lage Prijs: €7,95</h4>
+          <p>Eerlijk geprijsde 50g porties voor toegankelijk dagelijks theegenot.</p>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+        </div>
+        <div class="cred-text">
+          <h4>50g Aromazakjes</h4>
+          <p>Hersluitbare stazakjes die licht, vocht en zuurstof afsluiten om alle geur te bewaren.</p>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+        </div>
+        <div class="cred-text">
+          <h4>Onafhankelijk Lab-Getest</h4>
+          <p>Getoetst op zuiverheid, zware metalen en bestrijdingsmiddelen conform Skal-normen.</p>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <div class="cred-text">
+          <h4>100% Plasticvrij</h4>
+          <p>Composteerbare folies en ongebleekt kraftpapier. Geen microplastics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DE 6 MELANGES -->
+  <section class="collection-section" id="signature-six">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">DE 6 SMAKEN • 50 GRAM VOOR €7,95</div>
+        <h2 class="section-title">Kruidentheeën • Smaak, Geur & Beleving</h2>
+        <p class="section-desc">Zes unieke theemelanges in vershoudende 50g aromazakjes voor slechts €7,95 per stuk. Kies uw favoriete smaakbeleving:</p>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterBlends('all')">Alle 6 Smaken</button>
+        <button class="filter-tab" onclick="filterBlends('ochtend')">Ochtend & Energie</button>
+        <button class="filter-tab" onclick="filterBlends('ontspanning')">Ontspanning & Rust</button>
+        <button class="filter-tab" onclick="filterBlends('verfrissing')">Verfrissing & Dagelijks</button>
+        <button class="filter-tab" onclick="filterBlends('warmte')">Warmte & Aandacht</button>
+        <button class="filter-tab" onclick="filterBlends('spijsvertering')">Na de Maaltijd</button>
+      </div>
+
+      <div class="products-grid">
+        
+        <!-- 1. Morning Rise -->
+        <div class="product-card" data-category="ochtend">
+          <div class="product-media">
+            <span class="product-badge-botanical">Frisse Start</span>
+            <img src="assets/morning-rise.jpg" alt="Morning Rise theemelange met munt, lavendel en ginkgo">
+          </div>
+          <div class="product-body">
+            <div class="product-rating">★★★★★ <span>(384 reviews)</span></div>
+            <h3 class="product-title">1. Morning Rise</h3>
+            <div class="product-subtitle-moment">Moment: Een heerlijke thee voor een frisse start van de dag</div>
+            <div class="product-herbs">Munt • Lavendel • Ginkgo biloba • Duizendblad • Braamblad • Salie • Brandnetelzaad</div>
+            <p class="product-short-desc">Een frisse en zachte kruidenmelange om de dag mee te beginnen. De levendige tonen van munt worden mooi afgerond door de bloemige zachtheid van lavendel.</p>
+            <div class="product-bio-actives">
+              <strong>Smaak:</strong> Fris, kruidig en licht bloemig<br>
+              <strong>Geur:</strong> Groen, fris en zacht aromatisch
+            </div>
+            <div class="product-footer">
+              <div class="product-price">€7,95 <small>/ 50g zakje</small></div>
+              <div class="product-actions">
+                <button class="btn-quick-view" onclick="openProductModal('morning-rise')">Beleving</button>
+                <button class="btn-add-cart" onclick="addToCart('Morning Rise', '7.95', 'assets/morning-rise.jpg')">+ In Zakje</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Painless -->
+        <div class="product-card" data-category="ontspanning">
+          <div class="product-media">
+            <span class="product-badge-botanical">Karaktervol & Aards</span>
+            <img src="assets/painless.jpg" alt="Painless theemelange met moerasspirea, wilgenbast en witte peper">
+          </div>
+          <div class="product-body">
+            <div class="product-rating">★★★★★ <span>(298 reviews)</span></div>
+            <h3 class="product-title">2. Painless</h3>
+            <div class="product-subtitle-moment">Moment: Fijn voor een rustig moment waarop je even wilt ontspannen</div>
+            <div class="product-herbs">Moerasspirea • Wilgenbast • Witte peper</div>
+            <p class="product-short-desc">Een krachtige, kruidige melange met een bijzonder karakter. Moerasspirea en wilgenbast zorgen voor een diepe, aardse basis, terwijl witte peper subtiele warmte toevoegt.</p>
+            <div class="product-bio-actives">
+              <strong>Smaak:</strong> Kruidig, aards en licht pittig<br>
+              <strong>Geur:</strong> Warm, kruidig en natuurlijk
+            </div>
+            <div class="product-footer">
+              <div class="product-price">€7,95 <small>/ 50g zakje</small></div>
+              <div class="product-actions">
+                <button class="btn-quick-view" onclick="openProductModal('painless')">Beleving</button>
+                <button class="btn-add-cart" onclick="addToCart('Painless', '7.95', 'assets/painless.jpg')">+ In Zakje</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Refresh -->
+        <div class="product-card" data-category="verfrissing">
+          <div class="product-media">
+            <span class="product-badge-botanical">Verkwikkend</span>
+            <img src="assets/refresh.jpg" alt="Refresh kruidenthee met salie, laurier, limoenblad en citroenverbena">
+          </div>
+          <div class="product-body">
+            <div class="product-rating">★★★★★ <span>(342 reviews)</span></div>
+            <h3 class="product-title">3. Refresh</h3>
+            <div class="product-subtitle-moment">Moment: Heerlijk als verkwikkend kopje thee gedurende de dag</div>
+            <div class="product-herbs">Salie • Laurier • Limoenblad • Citroenverbena • Heermoes • Brandnetel</div>
+            <p class="product-short-desc">Salie en laurier zorgen voor een kruidige diepte, terwijl limoenblad en citroenverbena een sprankelende frisheid brengen. Heermoes en brandnetel geven een zuiver groen karakter.</p>
+            <div class="product-bio-actives">
+              <strong>Smaak:</strong> Fris, citrusachtig en kruidig<br>
+              <strong>Geur:</strong> Helder, fris en aromatisch
+            </div>
+            <div class="product-footer">
+              <div class="product-price">€7,95 <small>/ 50g zakje</small></div>
+              <div class="product-actions">
+                <button class="btn-quick-view" onclick="openProductModal('refresh')">Beleving</button>
+                <button class="btn-add-cart" onclick="addToCart('Refresh', '7.95', 'assets/refresh.jpg')">+ In Zakje</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Immunitea -->
+        <div class="product-card" data-category="warmte">
+          <div class="product-media">
+            <span class="product-badge-botanical">Aandacht voor Jezelf</span>
+            <img src="assets/immunitea.jpg" alt="Immunitea theemelange met olijfblad, berkenblad, rozemarijn en cacaoboon">
+          </div>
+          <div class="product-body">
+            <div class="product-rating">★★★★★ <span>(276 reviews)</span></div>
+            <h3 class="product-title">4. Immunitea</h3>
+            <div class="product-subtitle-moment">Moment: Een verwarmende kruidenmelange voor een moment van aandacht</div>
+            <div class="product-herbs">Olijfblad • Berkenblad • Rozemarijn • Cacaoboon</div>
+            <p class="product-short-desc">Een warme en aromatische melange met een bijzonder rijke smaak. Olijf- en berkenblad vormen de basis, rozemarijn brengt mediterrane kruidigheid en cacaoboon subtiele rondheid.</p>
+            <div class="product-bio-actives">
+              <strong>Smaak:</strong> Kruidig, zacht, groen en licht chocoladeachtig<br>
+              <strong>Geur:</strong> Aromatisch, kruidig en warm
+            </div>
+            <div class="product-footer">
+              <div class="product-price">€7,95 <small>/ 50g zakje</small></div>
+              <div class="product-actions">
+                <button class="btn-quick-view" onclick="openProductModal('immunitea')">Beleving</button>
+                <button class="btn-add-cart" onclick="addToCart('Immunitea', '7.95', 'assets/immunitea.jpg')">+ In Zakje</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Smooth Digest -->
+        <div class="product-card" data-category="spijsvertering">
+          <div class="product-media">
+            <span class="product-badge-botanical">Na de Maaltijd</span>
+            <img src="assets/smooth-digest.jpg" alt="Smooth Digest theemelange met artisjok, duizendblad, steranijs en venkel">
+          </div>
+          <div class="product-body">
+            <div class="product-rating">★★★★★ <span>(319 reviews)</span></div>
+            <h3 class="product-title">5. Smooth Digest</h3>
+            <div class="product-subtitle-moment">Moment: Heerlijk na de maaltijd of bij behoefte aan een rustig kopje</div>
+            <div class="product-herbs">Artisjok • Duizendblad • Steranijs • Venkel</div>
+            <p class="product-short-desc">De zachte bitterheid van artisjok en duizendblad wordt prachtig gecombineerd met de zoete, warme tonen van steranijs en venkel voor een ontspannen theemoment.</p>
+            <div class="product-bio-actives">
+              <strong>Smaak:</strong> Zacht bitter, zoet, anijsachtig en kruidig<br>
+              <strong>Geur:</strong> Warm, zoet en aromatisch
+            </div>
+            <div class="product-footer">
+              <div class="product-price">€7,95 <small>/ 50g zakje</small></div>
+              <div class="product-actions">
+                <button class="btn-quick-view" onclick="openProductModal('smooth-digest')">Beleving</button>
+                <button class="btn-add-cart" onclick="addToCart('Smooth Digest', '7.95', 'assets/smooth-digest.jpg')">+ In Zakje</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Breath Free -->
+        <div class="product-card" data-category="ontspanning">
+          <div class="product-media">
+            <span class="product-badge-botanical">Zacht & Aromatisch</span>
+            <img src="assets/breath-free.jpg" alt="Breath Free theemelange met koningskaars, ijslandsmos, dropplant en wilde tijm">
+          </div>
+          <div class="product-body">
+            <div class="product-rating">★★★★★ <span>(285 reviews)</span></div>
+            <h3 class="product-title">6. Breath Free</h3>
+            <div class="product-subtitle-moment">Moment: Een fijne thee voor een rustig en ontspannen theemoment</div>
+            <div class="product-herbs">Koningskaars • IJslandsmos • Dropplant • Wilde tijm • Rode klaver</div>
+            <p class="product-short-desc">Koningskaars en ijslandsmos geven een zachte basis, terwijl dropplant en wilde tijm zorgen voor een kruidig en fris karakter. Rode klaver maakt de blend mooi rond.</p>
+            <div class="product-bio-actives">
+              <strong>Smaak:</strong> Zacht, kruidig, fris en licht zoet<br>
+              <strong>Geur:</strong> Kruidig, fris en natuurlijk
+            </div>
+            <div class="product-footer">
+              <div class="product-price">€7,95 <small>/ 50g zakje</small></div>
+              <div class="product-actions">
+                <button class="btn-quick-view" onclick="openProductModal('breath-free')">Beleving</button>
+                <button class="btn-add-cart" onclick="addToCart('Breath Free', '7.95', 'assets/breath-free.jpg')">+ In Zakje</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. WETENSCHAP / HET BOTANISCHE VERSCHIL -->
+  <section class="science-section">
+    <div class="container science-grid">
+      <div class="science-content">
+        <div class="section-eyebrow">AMBACHTELIJKE KWALITEIT</div>
+        <h2>Waarom Losse Hele Bladeren Zoveel Meer Geven Dan Zakjesthee</h2>
+        <p>
+          Commerciële theezakjes uit de supermarkt bevatten vaak machinaal verpulverd theegruis (‘fannings & dust’). Door deze extreme blootstelling aan zuurstof verdampen vluchtige aroma's en etherische oliën binnen enkele weken.
+        </p>
+        <div class="science-feature-list">
+          <div class="science-feature">
+            <div class="feature-check">✓</div>
+            <div>
+              <strong>Intacte Etherische Olieklieren:</strong> Onze hele bloesems, ongesneden bladeren en aromatische zaden sluiten geur en smaak veilig in tot u heet water opschenkt.
+            </div>
+          </div>
+          <div class="science-feature">
+            <div class="feature-check">✓</div>
+            <div>
+              <strong>100% Microplastic-Vrij:</strong> Geen gebleekt papier of synthetische theezakjes. Onze 50g zakjes zijn gemaakt van ongebleekt kraftpapier met een composteerbare voering.
+            </div>
+          </div>
+          <div class="science-feature">
+            <div class="feature-check">✓</div>
+            <div>
+              <strong>Meermaals Opzetbaar:</strong> Hoogwaardige hele theekruiden geven hun smaaklagen geleidelijk af en kunnen gerust 2 tot 3 maal opnieuw worden opgeschonken.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,0.08); border: 1px solid var(--border-sand);">
+        <img src="assets/og_share_image.jpg" alt="Macro detail van onbewerkte hele theekruiden van Garden of Jess">
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. OVER JESS (FOUNDER TRUST) -->
+  <section class="founder-section" id="over-jess">
+    <div class="container founder-grid">
+      <div class="founder-image-frame">
+        <img src="assets/jess_real_portrait.jpg?v=2" alt="Jess van den Hout, oprichtster van Garden of Jess">
+      </div>
+      <div class="founder-content">
+        <div class="section-eyebrow">ONZE OPRICHTSTER & FILOSOFIE</div>
+        <h2>"De natuur kent geen haastwerk. Wij ook niet."</h2>
+        <div class="founder-quote">
+          "Echte kruidenthee draait om puurheid, geur en een moment van rust. Het is het respect voor levende bodems, intacte etherische oliën en het genieten van een uitgebalanceerd theemoment."
+        </div>
+        <p style="margin-bottom: 16px; color: #55624A;">
+          Garden of Jess ontstond vanuit een passie voor authentieke plantenkracht. Als herborist selecteer ik uitsluitend gecertificeerde biologische telers in Europa die met hart en ziel werken.
+        </p>
+        <p style="color: #55624A;">
+          Elk 50g zakje dat u ontvangt wordt met de hand afgewogen, gemengd en verpakt in ons Amsterdamse atelier. Voldoet een oogst niet aan onze strikte normen voor geur en smaak, dan komt het niet in uw zakje.
+        </p>
+        <div class="founder-signature">
+          <div class="signature-text">
+            <h4>Jess van den Hout</h4>
+            <p>Oprichtster & Meesterherborist • Garden of Jess</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. KLANTBEOORDELINGEN -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">ERVARINGEN UIT DE PRAKTIJK</div>
+        <h2 class="section-title">Eerlijke Beoordelingen van Theeliefhebbers</h2>
+        <p class="section-desc">Meer dan 1.428 geverifieerde reviews van bewuste theedrinkers en fijnproevers.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Morning Rise is de ideale start van mijn ochtend. De frisse munt combineert prachtig met de zachte lavendel. Heerlijk zuiver en voor €7,95 een fantastische kwaliteit."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">EV</div>
+            <div>
+              <strong style="font-size: 13.5px; display: block;">Elena V.</strong>
+              <span style="font-size: 11.5px; color: var(--sage);">Geverifieerde Koper • Morning Rise (50g)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Painless heeft zo'n bijzondere, krachtige smaakdiepte. De aardsheid van wilgenbast met een warme pepertoets zorgt voor een heerlijk ontspanmoment."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">MT</div>
+            <div>
+              <strong style="font-size: 13.5px; display: block;">Dr. Marcus T.</strong>
+              <span style="font-size: 11.5px; color: var(--sage);">Geverifieerde Koper • Painless (50g)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Smooth Digest na het eten is een vast ritueel geworden. De zachte bitterheid van artisjok met zoete venkel en steranijs brengt direct rust in de buik."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">SL</div>
+            <div>
+              <strong style="font-size: 13.5px; display: block;">Sophie L.</strong>
+              <span style="font-size: 11.5px; color: var(--sage);">Geverifieerde Koper • Smooth Digest (50g)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. PROEFLOKAAL & ROUTE ("VIND ONS") -->
+  <section class="tasting-room-section" id="proeflokaal">
+    <div class="container">
+      <div class="tasting-grid">
+        <div class="tasting-info">
+          <div class="section-eyebrow">FYSIEK VERKOOPPUNT & PROEFLOKAAL</div>
+          <h2 style="font-size: 38px; margin-bottom: 16px;">Bezoek Ons Verkooppunt: Bio Rosa in Purmerend</h2>
+          <p style="color: #55624A; margin-bottom: 24px;">
+            Kom ruiken, proeven en ontdek alle zes smaken van Garden of Jess in de winkel. Onze verse 50g theezakjes zijn fysiek verkrijgbaar bij <strong>G&W Gezondheidswinkel Bio Rosa</strong> in het historische centrum van Purmerend.
+          </p>
+          <div style="font-size: 14px; margin-bottom: 20px; line-height: 1.8;">
+            🌿 <strong>Locatie:</strong> G&W Gezondheidswinkel Bio Rosa<br>
+            📍 <strong>Adres:</strong> Padjedijk 30, 1441 BR Purmerend<br>
+            🕒 <strong>Openingstijden:</strong><br>
+            &nbsp;&nbsp;• Dinsdag t/m Vrijdag: 09:00 – 17:30 uur<br>
+            &nbsp;&nbsp;• Zaterdag: 09:00 – 17:00 uur<br>
+            &nbsp;&nbsp;• Zondag & Maandag: Gesloten<br>
+            📞 <strong>Telefoon / Advies:</strong> 0299-420905 | care@gardenofjess.com
+          </div>
+          <a href="https://maps.google.com/?q=Padjedijk+30+Purmerend" target="_blank" rel="noopener" class="btn-primary" style="align-self: flex-start;">
+            Routebeschrijving in Google Maps →
+          </a>
+        </div>
+        <div class="tasting-map-wrap">
+          <iframe 
+            title="Locatiekaart G&W Gezondheidswinkel Bio Rosa Purmerend"
+            src="https://maps.google.com/maps?q=Padjedijk+30,+1441+BR+Purmerend&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. VEELGESTELDE VRAGEN (FAQ ACCORDION) -->
+  <section class="faq-section" id="faq">
+    <div class="container faq-container">
+      <div class="section-header">
+        <div class="section-eyebrow">DUIDELIJKE ANTWOORDEN</div>
+        <h2 class="section-title">Veelgestelde Vragen</h2>
+        <p class="section-desc">Alles wat u wilt weten over onze 50g zakjes, zettemperaturen, verpakking en garantie.</p>
+      </div>
+
+      <div class="faq-item open">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Hoeveel kopjes thee kan ik zetten met een zakje van 50 gram (€7,95)?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Met één zakje van 50 gram zet u gemiddeld 25 tot 30 royale koppen thee (circa 2 gram per kop). Omdat onze hele theekruiden uitzonderlijk rijk zijn aan etherische oliën, kunt u de bladeren gerust 2 tot 3 maal opnieuw opgieten. Dit brengt het werkelijke aantal koppen per zakje op 50 tot 75 weldadige theemomenten voor slechts €7,95!
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Hoe snel wordt mijn bestelling verzonden en zijn de zakjes hersluitbaar?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Wij wegen en verpakken elke bestelling binnen 24 uur in ons Amsterdamse atelier. Bestellingen vóór 14:00 uur gaan dezelfde werkdag op de post via PostNL. Onze 50g zakjes zijn voorzien van een stevige gripsluiting die lucht en vocht effectief buitenhoudt, waardoor uw theekruiden maandenlang kakelvers en geurig blijven.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Waarom verschillen de zettemperatuur en trektijd per theemelange?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Tere bloesems en bladeren (zoals in Morning Rise en Refresh) trekt u idealiter op 90°C–95°C gedurende 5–7 minuten, zodat tere geuren niet vervliegen met kokende stoom. Harde zaden, specerijen, basten en korstmossen (zoals in Painless, Smooth Digest en Breath Free) vragen om 100°C kokend water en 8–10 minuten afgedekt trekken om de diepe smaaklagen te bevrijden. <em>Tip:</em> Dek uw kopje altijd af tijdens het trekken!
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Waar komen uw kruiden vandaan en hoe waarborgt u de zuiverheid?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Elk kruid in ons atelier is 100% biologisch gecertificeerd (Skal / Europees Bio-keurmerk) of duurzaam wildgeplukt uit beschermde Europese natuurgebieden. Wij werken direct samen met kleinschalige telers. Elke partij wordt streng getest op residuen van pesticiden, zware metalen en microbiologische zuiverheid.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Wat gebeurt er als een melange niet aansluit bij mijn smaak?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Wij hanteren onze 30-dagen <strong>"Eerste Kopje Garantie"</strong>. Mocht een melange u niet bevallen, stuur dan een eenvoudig bericht naar care@gardenofjess.com. Wij ruilen uw zakje kosteloos om voor een andere smaak of storten uw €7,95 direct terug. U hoeft het aangebroken zakje niet terug te sturen.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. WETTELIJKE & MEDISCHE BIJSLUITER (PDF VOORSCHRIFT) -->
+  <div class="disclaimer-strip">
+    <div class="container">
+      <p>
+        <strong>Over de omschrijvingen & Veiligheidswaarschuwing (conform Monografieën):</strong><br>
+        De teksten op deze website zijn bewust geschreven als sfeervolle productomschrijvingen van smaak, geur en beleving. Wij maken geen medische claims. Waar gesproken wordt over kruiden, betreft dit traditioneel gebruik en geen geneeskrachtige werking. Onze theeën zijn voedingsmiddelen en geen geneesmiddelen.<br>
+        <strong>Belangrijke contra-indicaties & interacties:</strong><br>
+        • <strong>Wilgenbast (*Salix alba*) & Moerasspirea (*Filipendula ulmaria*) in Painless:</strong> Bevatten natuurlijke salicylaten (aspirine-verwanten). <u>Absoluut niet gebruiken</u> bij overgevoeligheid voor aspirine/salicylaten, maagdarmzweren, stollingsafwijkingen of door kinderen en jongeren onder 16 jaar (risico op het syndroom van Reye).<br>
+        • <strong>Ginkgo biloba in Morning Rise:</strong> Beïnvloedt de bloedstolling. <u>Niet gebruiken</u> in combinatie met bloedverdunners of aspirine/NSAID's zonder toezicht van uw behandelend arts.<br>
+        • <strong>Rode klaver (*Trifolium pratense*) in Breath Free:</strong> Bevat fyto-oestrogenen; vermijden bij hormoongevoelige aandoeningen.<br>
+        Raadpleeg bij zwangerschap, borstvoeding, medicijngebruik of onderliggende aandoeningen te allen tijde uw behandelend arts of herborist.
+      </p>
+    </div>
+  </div>
+
+  <!-- 12. VOETTEKST -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <img src="assets/garden_of_jess_logo.jpg" alt="Garden of Jess Logo" style="width:48px; height:48px; border-radius:50%;">
+          <span style="font-family:'Cormorant Garamond', serif; font-size:24px; color:#FFF; font-weight:600;">Garden of Jess</span>
+        </div>
+        <p style="color:#B8C2AF; line-height:1.6; margin-bottom:16px; font-size:13px;">
+          Ambachtelijke theemelanges, met liefde samengesteld in Amsterdam. Zuivere Europese theekruiden in 50g aromazakjes voor €7,95. Verkrijgbaar bij Bio Rosa, Padjedijk 30, Purmerend.
+        </p>
+        <div style="background:rgba(255,255,255,0.06); padding:10px 14px; border-radius:8px; display:inline-block; font-size:12px; color:#D2DEC8;">
+          ✦ <strong>Garantie op reactietijd:</strong> Wij antwoorden binnen 24 uur
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>De 6 Smaken (€7,95)</h4>
+        <ul class="footer-links">
+          <li><a href="#signature-six">1. Morning Rise (50g Zakje)</a></li>
+          <li><a href="#signature-six">2. Painless (50g Zakje)</a></li>
+          <li><a href="#signature-six">3. Refresh (50g Zakje)</a></li>
+          <li><a href="#signature-six">4. Immunitea (50g Zakje)</a></li>
+          <li><a href="#signature-six">5. Smooth Digest (50g Zakje)</a></li>
+          <li><a href="#signature-six">6. Breath Free (50g Zakje)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kruidenatelier & Service</h4>
+        <ul class="footer-links">
+          <li><a href="pages/our-garden-journal.html">Onze Tuinkroniek (Artikelen)</a></li>
+          <li><a href="#over-jess">Over Jess & Het Atelier</a></li>
+          <li><a href="pages/contact.html">Proeflokaal & Contact</a></li>
+          <li><a href="#faq">Veelgestelde Vragen</a></li>
+          <li><a href="pages/privacy-policy.html">Privacybeleid (AVG)</a></li>
+          <li><a href="404.html">Vriendelijke 404 Pagina</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>De Tuinkroniek Nieuwsbrief</h4>
+        <p style="color:#B8C2AF; font-size:12.5px; line-height:1.6;">
+          Meld u aan voor onze kruidenkring. Ontvang gratis Jess's 28-pagina Zetgids & 10% kennismakingskorting.
+        </p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Welkom bij de Tuinkroniek! Uw kortingscode is JESS10');">
+          <input type="email" placeholder="Uw e-mailadres..." required>
+          <button type="submit">Aanmelden</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>© 2026 Garden of Jess B.V. Alle rechten voorbehouden. Verkooppunt Bio Rosa, Padjedijk 30, Purmerend.</div>
+      <div style="display:flex; gap:18px;">
+        <a href="pages/privacy-policy.html">Privacybeleid</a>
+        <a href="pages/contact.html">Algemene Voorwaarden</a>
+        <a href="pages/thank-you.html">Bestelbevestiging Voorbeeld</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 13. WINKELMANDJE DRAWER -->
+  <div class="cart-drawer-backdrop" id="cart-backdrop" onclick="toggleCart()"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Uw Kruidentas</h3>
+      <button class="cart-close-btn" onclick="toggleCart()" aria-label="Winkelmand sluiten">×</button>
+    </div>
+    <div class="cart-shipping-bar">
+      <div id="shipping-text">✦ Nog €37,05 voor <strong>Gratis Verzending</strong> (vanaf €45)</div>
+      <div class="shipping-progress">
+        <div class="shipping-fill" id="shipping-fill"></div>
+      </div>
+    </div>
+    <div class="cart-items-list" id="cart-items-list">
+      <div class="cart-item">
+        <img src="assets/morning-rise.jpg" alt="Morning Rise 50g Zakje">
+        <div class="cart-item-details">
+          <div class="cart-item-title">Morning Rise</div>
+          <div style="font-size:11.5px; color:#78846D;">50g Aromazakje</div>
+          <div class="cart-item-price">€7,95</div>
+          <div class="cart-item-qty">
+            <button onclick="changeQty(-1)">-</button>
+            <span id="item-qty">1</span>
+            <button onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotaal:</span>
+        <span id="cart-subtotal">€7,95</span>
+      </div>
+      <p style="font-size:11.5px; color:#78856F; margin-bottom:14px;">Inclusief btw. Binnen 24 uur verzonden in een brievenbuspakje.</p>
+      <a href="pages/thank-you.html" class="btn-checkout">Veilig Afrekenen →</a>
+    </div>
+  </div>
+
+  <!-- 14. MOBIELE STICKY CTA -->
+  <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <img src="assets/morning-rise.jpg" style="width:38px; height:38px; border-radius:6px; object-fit:cover;" alt="Morning Rise Thee">
+      <div style="line-height:1.2;">
+        <span style="font-size:13px; font-weight:600; display:block;">Morning Rise</span>
+        <span style="font-size:12px; color:var(--sage); font-weight:700;">€7,95 (50g)</span>
+      </div>
+    </div>
+    <button class="btn-primary" style="padding:10px 20px; font-size:13px; min-height:40px;" onclick="addToCart('Morning Rise', '7.95', 'assets/morning-rise.jpg')">
+      Bestel Nu
+    </button>
+  </div>
+
+  <!-- 15. MODAL: KRUIDENMONOGRAFIE IN HET NEDERLANDS -->
+  <div class="modal-backdrop" id="product-modal" onclick="if(event.target===this)closeProductModal()">
+    <div class="modal-card" id="modal-card-content">
+      <!-- Dynamische inhoud in het Nederlands via JS -->
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGICA VOOR VOLLEDIGE MOBIELE INTERACTIE -->
+  <script>
+    // Mobiel Navigatiemenu openen/sluiten
+    function toggleMobileMenu() {
+      document.getElementById('mobile-nav-drawer').classList.toggle('active');
+      document.getElementById('mobile-nav-backdrop').classList.toggle('active');
+    }
+
+    // Winkelwagen logica
+    let cart = [
+      { name: "Morning Rise", price: 7.95, qty: 1, image: "assets/morning-rise.jpg" }
+    ];
+
+    function toggleCart() {
+      document.getElementById('cart-drawer').classList.toggle('active');
+      document.getElementById('cart-backdrop').classList.toggle('active');
+    }
+
+    function addToCart(name, price, image) {
+      const existing = cart.find(i => i.name === name);
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ name, price: parseFloat(price), qty: 1, image });
+      }
+      renderCart();
+      toggleCart();
+    }
+
+    function changeQty(delta) {
+      if (cart.length > 0) {
+        cart[0].qty += delta;
+        if (cart[0].qty <= 0) cart.splice(0, 1);
+        renderCart();
+      }
+    }
+
+    function renderCart() {
+      const list = document.getElementById('cart-items-list');
+      const count = document.getElementById('cart-count');
+      const subtotalEl = document.getElementById('cart-subtotal');
+      const shippingText = document.getElementById('shipping-text');
+      
+      let total = 0;
+      let totalItems = 0;
+
+      list.innerHTML = '';
+      cart.forEach(item => {
+        total += item.price * item.qty;
+        totalItems += item.qty;
+        list.innerHTML += `
+          <div class="cart-item">
+            <img src="${item.image}" alt="${item.name}">
+            <div class="cart-item-details">
+              <div class="cart-item-title">${item.name}</div>
+              <div style="font-size:11.5px; color:#78846D;">50g Aromazakje</div>
+              <div class="cart-item-price">€${(item.price * item.qty).toFixed(2).replace('.', ',')}</div>
+              <div class="cart-item-qty">
+                <span>Aantal: ${item.qty}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      count.textContent = totalItems;
+      subtotalEl.textContent = '€' + total.toFixed(2).replace('.', ',');
+      
+      const freeThreshold = 45.00;
+      const fill = Math.min(100, (total / freeThreshold) * 100);
+      document.getElementById('shipping-fill').style.width = fill + '%';
+      
+      if (total >= freeThreshold) {
+        shippingText.innerHTML = '🎉 <strong>Gefeliciteerd!</strong> Uw bestelling wordt <strong>Gratis Verzonden</strong>.';
+      } else {
+        const remaining = (freeThreshold - total).toFixed(2).replace('.', ',');
+        shippingText.innerHTML = `✦ Nog €${remaining} voor <strong>Gratis Verzending</strong> (vanaf €45)`;
+      }
+    }
+
+    // Filter Melanges
+    function filterBlends(category) {
+      const buttons = document.querySelectorAll('.filter-tab');
+      buttons.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // FAQ Uitklappen
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      item.classList.toggle('open');
+    }
+
+    // Exacte data conform de PDF "Garden of Jess Kruidentheeën • Smaak, geur & beleving"
+    const monographs = {
+      'morning-rise': {
+        title: '1. Morning Rise',
+        moment: 'Een heerlijke thee voor een frisse start van de dag.',
+        herbs: 'Munt, lavendel, ginkgo biloba, duizendblad, braamblad, salie en brandnetelzaad.',
+        desc: 'Een frisse en zachte kruidenmelange om de dag mee te beginnen. De levendige tonen van munt worden mooi afgerond door de bloemige zachtheid van lavendel. Ginkgo biloba, duizendblad, braamblad, salie en brandnetelzaad geven deze thee een puur, groen en kruidig karakter.',
+        taste: 'Fris, kruidig en licht bloemig.',
+        smell: 'Groen, fris en zacht aromatisch.',
+        compounds: 'Menthol, Linalool, Ginkgoliden, Bilobalide, Flavonoïden, Rozemarijnzuur, Vetzuren & Carotenoïden.',
+        brewing: '95°C water, 5–7 minuten afgedekt laten trekken.',
+        warning: 'Bevat Ginkgo biloba: kan de bloedstolling beïnvloeden; raadpleeg uw arts bij gebruik van antistollingsmedicatie.',
+        image: 'assets/morning-rise.jpg',
+        price: '7.95'
+      },
+      'painless': {
+        title: '2. Painless',
+        moment: 'Fijn voor een rustig moment waarop je even wilt ontspannen.',
+        herbs: 'Moerasspirea, wilgenbast en witte peper.',
+        desc: 'Een krachtige, kruidige melange met een bijzonder karakter. Moerasspirea en wilgenbast zorgen voor een diepe, aardse basis, terwijl een vleugje witte peper een subtiele warmte toevoegt. Een karaktervolle thee voor wie houdt van puur en uitgesproken.',
+        taste: 'Kruidig, aards en licht pittig.',
+        smell: 'Warm, kruidig en natuurlijk.',
+        compounds: 'Salicylaten, Salicine, Tanninen, Flavonoïden, Piperine, Bèta-caryofylleen.',
+        brewing: 'Kokend water van 100°C, 8–10 minuten afgedekt laten trekken om de bestanddelen uit de bast optimaal vrij te maken.',
+        warning: 'STRIKTE MEDISCHE BIJSLUITER: Bevat natuurlijke salicylaten (aspirine-verwanten). Absoluut NIET gebruiken bij allergie voor aspirine/salicylaten, maagzweren, stollingsafwijkingen of door kinderen onder 16 jaar.',
+        image: 'assets/painless.jpg',
+        price: '7.95'
+      },
+      'refresh': {
+        title: '3. Refresh',
+        moment: 'Heerlijk als verkwikkend kopje thee gedurende de dag.',
+        herbs: 'Salie, laurier, limoenblad, citroenverbena, heermoes en brandnetel.',
+        desc: 'Een heerlijk verfrissende kruidenmelange waarin salie en laurier zorgen voor een kruidige diepte, terwijl limoenblad en citroenverbena een sprankelende, citrusachtige frisheid brengen. Heermoes en brandnetel geven de thee een zuiver, groen karakter.',
+        taste: 'Fris, citrusachtig en kruidig.',
+        smell: 'Helder, fris en aromatisch.',
+        compounds: '1,8-Cineol, Verbascoside, Citral, Limoneen, Siliciumverbindingen, Chlorofyl.',
+        brewing: '95°C water, 6–8 minuten afgedekt laten trekken.',
+        warning: 'Traditioneel kruidenpreparaat ter verfrissing gedurende de dag.',
+        image: 'assets/refresh.jpg',
+        price: '7.95'
+      },
+      'immunitea': {
+        title: '4. Immunitea',
+        moment: 'Een verwarmende kruidenmelange voor een moment van aandacht voor jezelf.',
+        herbs: 'Olijfblad, berkenblad, rozemarijn en cacaoboon.',
+        desc: 'Een warme en aromatische melange met een bijzonder rijke smaak. Olijfblad en berkenblad vormen de groene basis, rozemarijn brengt een mediterrane kruidigheid en cacaoboon zorgt voor een zachte, subtiele rondheid.',
+        taste: 'Kruidig, zacht, groen en licht chocoladeachtig.',
+        smell: 'Aromatisch, kruidig en warm.',
+        compounds: 'Oleuropeïne, Hydroxytyrosol, Hyperoside, Carnosol, Theobromine, Flavanolen.',
+        brewing: '95°C–100°C water, 7–9 minuten afgedekt trekken.',
+        warning: 'Traditioneel gebruikt voor een ontspannen, koesterend theemoment.',
+        image: 'assets/immunitea.jpg',
+        price: '7.95'
+      },
+      'smooth-digest': {
+        title: '5. Smooth Digest',
+        moment: 'Heerlijk na de maaltijd of wanneer je behoefte hebt aan een rustig kopje thee.',
+        herbs: 'Artisjok, duizendblad, steranijs en venkel.',
+        desc: 'Een elegante kruidenmelange die helemaal draait om een aangenaam en uitgebalanceerd kopje thee. De zachte bitterheid van artisjok en duizendblad wordt prachtig gecombineerd met de zoete, warme tonen van steranijs en venkel.',
+        taste: 'Zacht bitter, zoet, anijsachtig en kruidig.',
+        smell: 'Warm, zoet en aromatisch.',
+        compounds: 'Cynarine, Chlorogeenzuur, Trans-anethol, Fenchon, Sesquiterpeenlactonen.',
+        brewing: '100°C water, 7–10 minuten afgedekt trekken.',
+        warning: 'Niet gebruiken bij acute galwegafsluitingen zonder voorafgaand medisch overleg.',
+        image: 'assets/smooth-digest.jpg',
+        price: '7.95'
+      },
+      'breath-free': {
+        title: '6. Breath Free',
+        moment: 'Een fijne thee voor een rustig en ontspannen theemoment.',
+        herbs: 'Koningskaars, ijslandsmos, dropplant, wilde tijm en rode klaver.',
+        desc: 'Een zachte, aromatische melange met een frisse kruidigheid. Koningskaars en ijslandsmos geven de thee een zachte basis, terwijl dropplant en wilde tijm zorgen voor een uitgesproken kruidig en fris karakter. Rode klaver maakt de blend mooi rond.',
+        taste: 'Zacht, kruidig, fris en licht zoet.',
+        smell: 'Kruidig, fris en natuurlijk.',
+        compounds: 'Lichenine, Slijmstoffen, Anethol, Estragol, Thymol, Carvacrol, Isoflavonen (fyto-oestrogenen).',
+        brewing: '100°C water, 8–10 minuten afgedekt trekken.',
+        warning: 'Bevat rode klaver (fyto-oestrogenen): vermijden bij hormoongevoelige indicaties.',
+        image: 'assets/breath-free.jpg',
+        price: '7.95'
+      }
+    };
+
+    function openProductModal(key) {
+      const data = monographs[key];
+      if (!data) return;
+      const content = document.getElementById('modal-card-content');
+      content.innerHTML = `
+        <button class="modal-close" onclick="closeProductModal()" aria-label="Sluiten">×</button>
+        <div class="modal-product-grid">
+          <img src="${data.image}" style="width:100%; border-radius:16px; border:1px solid var(--border-sand);" alt="${data.title}">
+          <div>
+            <span style="font-size:11.5px; font-weight:700; color:var(--sage); letter-spacing:1.5px; text-transform:uppercase;">50g Aromazakje • €7,95</span>
+            <h2 style="font-size:30px; margin:6px 0 10px; line-height:1.2;">${data.title}</h2>
+            <div style="font-size:12.5px; color:var(--lavender); font-weight:600; margin-bottom:12px;">${data.moment}</div>
+            <p style="font-size:14px; color:#4E5A44; line-height:1.6; margin-bottom:14px;">${data.desc}</p>
+            
+            <div style="font-size:13px; color:var(--deep-forest); font-weight:600; margin-bottom:12px;">
+              <strong>Kruiden:</strong> ${data.herbs}
+            </div>
+            
+            <div style="background:var(--cream-soft); border:1px solid var(--border-sand); border-radius:10px; padding:12px 16px; margin-bottom:14px; font-size:12.5px; line-height:1.6;">
+              <strong>Smaak:</strong> ${data.taste}<br>
+              <strong>Geur:</strong> ${data.smell}<br>
+              <strong>Actieve Inhoudsstoffen:</strong> ${data.compounds}
+            </div>
+            
+            <div style="margin-bottom:16px; font-size:12.5px; color:#55624A;">
+              <strong>Zetadvies:</strong> ${data.brewing}
+            </div>
+            
+            <div style="background:#FAF2EB; border:1px solid #EAD8C7; padding:12px 16px; border-radius:10px; font-size:11.5px; color:#684628; line-height:1.5; margin-bottom:20px;">
+              <strong>Veiligheidsopmerking:</strong> ${data.warning}
+            </div>
+
+            <button class="btn-primary" style="width:100%; justify-content:center;" onclick="addToCart('${data.title}', '7.95', '${data.image}'); closeProductModal();">
+              Plaats in Kruidentas — €7,95
+            </button>
+          </div>
+        </div>
+      `;
+      document.getElementById('product-modal').classList.add('active');
+    }
+
+    function closeProductModal() {
+      document.getElementById('product-modal').classList.remove('active');
+    }
+
+    // Kruidenwijzer / Quiz Modal
+    function openQuiz() {
+      const content = document.getElementById('modal-card-content');
+      content.innerHTML = `
+        <button class="modal-close" onclick="closeProductModal()" aria-label="Sluiten">×</button>
+        <div style="text-align:center; max-width:540px; margin:0 auto; padding:10px 0;">
+          <span style="font-size:12px; font-weight:700; color:var(--lavender); letter-spacing:2px; text-transform:uppercase;">Kruidendiagnostiek</span>
+          <h2 style="font-size:32px; margin:10px 0 14px; line-height:1.2;">Welk theemoment zoekt u vandaag?</h2>
+          <p style="color:#55624A; font-size:14px; margin-bottom:22px;">Kies uw gewenste sfeer en beleving (50g zakje voor €7,95):</p>
+          
+          <div style="display:flex; flex-direction:column; gap:10px; text-align:left;">
+            <button class="filter-tab" style="padding:12px 16px; text-align:left; border-radius:12px;" onclick="quizResult('morning-rise')">
+              🌅 <strong>1. Morning Rise:</strong> Frisse en zachte kruidenmelange voor een energieke start van de dag.
+            </button>
+            <button class="filter-tab" style="padding:12px 16px; text-align:left; border-radius:12px;" onclick="quizResult('painless')">
+              🌿 <strong>2. Painless:</strong> Krachtig, diep en aards met wilgenbast en witte peper voor ontspanning.
+            </button>
+            <button class="filter-tab" style="padding:12px 16px; text-align:left; border-radius:12px;" onclick="quizResult('refresh')">
+              🍋 <strong>3. Refresh:</strong> Sprankelende citrusachtige frisheid met limoenblad, verbena en salie.
+            </button>
+            <button class="filter-tab" style="padding:12px 16px; text-align:left; border-radius:12px;" onclick="quizResult('immunitea')">
+              🍫 <strong>4. Immunitea:</strong> Warm, aards en mediterraan met olijfblad, rozemarijn en cacaoboon.
+            </button>
+            <button class="filter-tab" style="padding:12px 16px; text-align:left; border-radius:12px;" onclick="quizResult('smooth-digest')">
+              🌱 <strong>5. Smooth Digest:</strong> Zachte bitterheid met zoete steranijs en venkel na de maaltijd.
+            </button>
+            <button class="filter-tab" style="padding:12px 16px; text-align:left; border-radius:12px;" onclick="quizResult('breath-free')">
+              🍃 <strong>6. Breath Free:</strong> Zacht en aromatisch met koningskaars, ijslandsmos en geurige tijm.
+            </button>
+          </div>
+        </div>
+      `;
+      document.getElementById('product-modal').classList.add('active');
+    }
+
+    function quizResult(blendKey) {
+      openProductModal(blendKey);
+    }
+  </script>
+</body>
+</html>

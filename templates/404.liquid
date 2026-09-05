@@ -1,0 +1,81 @@
+{% comment %}
+  Garden of Jess — Custom 404 Error Template
+  Theme: Serene Botanical Garden / "Lost in the Apothecary Garden"
+  Palette: Cream #F9F6F0, Sage Green #6B7A55, Lavender #8B7AA8, Deep Botanical Forest #2D3823
+{% endcomment %}
+
+<div class="garden-404-container" style="background-color: #F9F6F0; min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 60px 20px; font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; color: #2D3823;">
+  <div class="garden-404-card" style="max-width: 680px; width: 100%; text-align: center; background: #FFFFFF; border: 1px solid #EDE8DF; border-radius: 16px; padding: 48px 32px; box-shadow: 0 10px 30px rgba(107, 122, 85, 0.08);">
+    
+    <!-- Botanical Emblem -->
+    <div class="botanical-icon" style="margin-bottom: 24px;">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto;">
+        <path d="M32 4C32 4 28 16 20 22C12 28 4 32 4 32C4 32 16 36 22 44C28 52 32 60 32 60C32 60 36 48 44 42C52 36 60 32 60 32C60 32 48 28 42 20C36 12 32 4 32 4Z" stroke="#6B7A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M32 18V46M18 32H46" stroke="#8B7AA8" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <!-- Error Subheading & Heading -->
+    <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #8B7AA8; font-weight: 600; margin-bottom: 8px;">
+      Error 404 • Path Not Found
+    </p>
+    <h1 style="font-size: 38px; line-height: 1.2; margin: 0 0 16px 0; color: #2D3823; font-weight: 500;">
+      You've Wandered off the Garden Path
+    </h1>
+    <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; line-height: 1.6; color: #5C6552; margin: 0 auto 32px auto; max-width: 480px;">
+      The leaf you are seeking has drifted away on the breeze. Even the most carefully tended apothecary gardens have hidden corners. Let us guide you back to our restorative signature tisanes.
+    </p>
+
+    <!-- Search Form -->
+    <form action="{{ routes.search_url }}" method="get" role="search" style="margin-bottom: 32px; display: flex; gap: 8px; justify-content: center;">
+      <input 
+        type="search" 
+        name="q" 
+        placeholder="Search herbs, sleep blends, digestion..." 
+        aria-label="Search herbs"
+        style="width: 100%; max-width: 320px; padding: 12px 18px; border: 1px solid #D8CFBC; border-radius: 30px; font-size: 14px; background: #FAF8F5; outline: none; transition: border-color 0.2s;"
+        onfocus="this.style.borderColor='#6B7A55';"
+        onblur="this.style.borderColor='#D8CFBC';"
+      >
+      <button 
+        type="submit" 
+        style="background-color: #6B7A55; color: #F9F6F0; border: none; padding: 12px 24px; border-radius: 30px; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s;"
+        onmouseover="this.style.backgroundColor='#2D3823';"
+        onmouseout="this.style.backgroundColor='#6B7A55';"
+      >
+        Search
+      </button>
+    </form>
+
+    <!-- Navigation Direct Links -->
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+      <a href="{{ routes.collections_url }}/signature-blends" 
+         style="display: inline-block; background-color: #6B7A55; color: #F9F6F0; text-decoration: none; padding: 14px 28px; border-radius: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; transition: all 0.2s ease;">
+        Shop The Signature Six →
+      </a>
+      <a href="{{ routes.root_url }}" 
+         style="display: inline-block; background: transparent; color: #2D3823; border: 1px solid #6B7A55; text-decoration: none; padding: 14px 28px; border-radius: 30px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 500; transition: all 0.2s ease;">
+        Return to Home
+      </a>
+    </div>
+
+    <!-- Quick Recommendations Grid -->
+    <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid #EDE8DF; text-align: left;">
+      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #8B7AA8; margin-bottom: 12px; font-weight: 600;">
+        Most Loved Restorative Infusions:
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px;">
+        <a href="/products/calm-and-sleep" style="color: #2D3823; text-decoration: none; padding: 8px 12px; background: #FAF8F5; border-radius: 8px; border: 1px solid #EDE8DF; display: block;">
+          ✦ <strong>Calm & Sleep</strong><br><span style="color: #6B7A55; font-size: 11px;">Lavender • Verbena • Mint</span>
+        </a>
+        <a href="/products/digestive-relief" style="color: #2D3823; text-decoration: none; padding: 8px 12px; background: #FAF8F5; border-radius: 8px; border: 1px solid #EDE8DF; display: block;">
+          ✦ <strong>Digestive Relief</strong><br><span style="color: #6B7A55; font-size: 11px;">Fennel • Artichoke • Mint</span>
+        </a>
+        <a href="/products/focus-and-vitality" style="color: #2D3823; text-decoration: none; padding: 8px 12px; background: #FAF8F5; border-radius: 8px; border: 1px solid #EDE8DF; display: block;">
+          ✦ <strong>Focus & Vitality</strong><br><span style="color: #6B7A55; font-size: 11px;">Rosemary • Ginkgo • Verbena</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,51 @@
+# Robots.txt for Garden of Jess (https://gardenofjess.com)
+# Optimized for Shopify E-commerce Crawl Budget & SEO Best Practices
+
+User-agent: *
+Disallow: /admin
+Disallow: /cart
+Disallow: /orders
+Disallow: /checkout
+Disallow: /67890/checkouts
+Disallow: /checkouts/
+Disallow: /carts
+Disallow: /account
+Disallow: /collections/*sort_by*
+Disallow: /*/collections/*sort_by*
+Disallow: /collections/*+*
+Disallow: /collections/*%2B*
+Disallow: /collections/*%2b*
+Disallow: /*/collections/*+*
+Disallow: /*/collections/*%2B*
+Disallow: /*/collections/*%2b*
+Disallow: /blogs/*+*
+Disallow: /blogs/*%2B*
+Disallow: /blogs/*%2b*
+Disallow: /*/blogs/*+*
+Disallow: /*/blogs/*%2B*
+Disallow: /*/blogs/*%2b*
+Disallow: /*?*oseid=*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /policies/
+Disallow: /search
+Disallow: /apple-app-site-association
+Disallow: /.well-known/shopify/monorail
+
+# Allow search engines to index core marketing, collection, product, and blog pages
+Allow: /
+Allow: /collections/
+Allow: /collections/*
+Allow: /products/
+Allow: /products/*
+Allow: /blogs/
+Allow: /blogs/*
+Allow: /pages/
+Allow: /pages/*
+
+# Sitemaps
+Sitemap: https://gardenofjess.com/sitemap.xml
+Sitemap: https://gardenofjess.com/sitemap_products_1.xml
+Sitemap: https://gardenofjess.com/sitemap_pages_1.xml
+Sitemap: https://gardenofjess.com/sitemap_collections_1.xml
+Sitemap: https://gardenofjess.com/sitemap_blogs_1.xml

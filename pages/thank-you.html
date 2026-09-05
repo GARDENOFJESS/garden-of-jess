@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestelling Bevestigd — Hartelijk Dank | Garden of Jess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F9F6F0;
+      --sage: #6B7A55;
+      --lavender: #8B7AA8;
+      --deep-forest: #2D3823;
+      --card-bg: #FFFFFF;
+      --border-color: #EDE8DF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--cream);
+      font-family: 'Montserrat', sans-serif;
+      color: var(--deep-forest);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .thank-you-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      max-width: 640px;
+      width: 100%;
+      padding: 48px 36px;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(107, 122, 85, 0.08);
+      position: relative;
+    }
+    .brand-emblem {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-color);
+    }
+    .brand-emblem img {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--lavender);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .order-status {
+      display: inline-block;
+      background: #F1F5EB;
+      color: var(--sage);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 30px;
+      margin-bottom: 24px;
+    }
+    p.lead-text {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #5C6552;
+      margin-bottom: 32px;
+    }
+    .steps-box {
+      background: #FAF8F5;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .step-item:last-child { margin-bottom: 0; }
+    .step-number {
+      background: var(--sage);
+      color: #FFF;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .social-section {
+      border-top: 1px solid var(--border-color);
+      padding-top: 24px;
+      margin-top: 20px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .social-btn {
+      color: var(--sage);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+    .social-btn:hover {
+      background: var(--sage);
+      color: #FFF;
+      border-color: var(--sage);
+    }
+    .cta-return {
+      display: inline-block;
+      background: var(--sage);
+      color: #F9F6F0;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 24px;
+      transition: background 0.2s;
+    }
+    .cta-return:hover {
+      background: var(--deep-forest);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-you-card">
+    <div class="brand-emblem">
+      <img src="../assets/garden_of_jess_logo.jpg" alt="Garden of Jess Logo">
+    </div>
+
+    <p class="eyebrow">Atelierverzending Bevestigd</p>
+    <h1>Uw Rustgevende Ritueel Begint</h1>
+    <div class="order-status">✦ Bestelling #GOJ-7849 is Succesvol Ontvangen ✦</div>
+
+    <p class="lead-text">
+      Hartelijk dank dat u <em>Garden of Jess</em> verwelkomt in uw dagelijkse welzijnsroutine. Jess en ons botanische team wegen, melangeren en verzegelen uw verse kruiden op dit moment in ons Amsterdamse atelier.
+    </p>
+
+    <div class="steps-box">
+      <div class="step-item">
+        <span class="step-number">1</span>
+        <div><strong>Ambachtelijk Verpakt (Binnen 24u):</strong> Uw hele bladeren worden luchtdicht verzegeld in onze composteerbare NatureFlex™ binnenzak en het herbruikbare luxe bewaarblik.</div>
+      </div>
+      <div class="step-item">
+        <span class="step-number">2</span>
+        <div><strong>Klimaatneutrale Verzending:</strong> U ontvangt een track & trace code zodra PostNL uw pakket heeft gescand.</div>
+      </div>
+      <div class="step-item">
+        <span class="step-number">3</span>
+        <div><strong>Persoonlijk Herborist Contact:</strong> Vragen over zettemperaturen of kruideninteracties? Beantwoord simpelweg uw orderbevestiging. Wij garanderen een reactie binnen 24 uur.</div>
+      </div>
+    </div>
+
+    <div class="social-section">
+      <p style="font-size: 13px; color: #7B856F;">Sluit u aan bij onze botanische kring & ontdek mindful theerituelen:</p>
+      <div class="social-links">
+        <a href="https://instagram.com/gardenofjess" class="social-btn" target="_blank" rel="noopener">Instagram (@gardenofjess)</a>
+        <a href="https://pinterest.com/gardenofjess" class="social-btn" target="_blank" rel="noopener">Pinterest Rituelen</a>
+        <a href="mailto:care@gardenofjess.com" class="social-btn">E-mail Jess</a>
+      </div>
+    </div>
+
+    <a href="../index.html" class="cta-return">Terug naar het Kruidenatelier →</a>
+  </div>
+
+</body>
+</html>

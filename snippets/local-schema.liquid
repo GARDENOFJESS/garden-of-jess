@@ -1,0 +1,87 @@
+{% comment %}
+  Garden of Jess — LocalBusiness & Organization JSON-LD Schema
+  Establishes physical apothecary studio authority, Google Maps geocoding, and E-E-A-T entity graph
+{% endcomment %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Store", "LocalBusiness"],
+      "@id": "{{ shop.url }}/#localbusiness",
+      "name": "Garden of Jess — Botanical Herbal Studio & Tasting Room",
+      "url": "{{ shop.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "{{ shop.url }}/#logo",
+        "url": "{{ 'garden_of_jess_logo.jpg' | asset_url }}",
+        "caption": "Garden of Jess Botanical Emblem"
+      },
+      "image": [
+        "{{ 'og_share_image.jpg' | asset_url }}",
+        "{{ 'jess_founder_portrait.jpg' | asset_url }}"
+      ],
+      "description": "Artisanal organic herbal apothecary and herbal tea tasting room founded by master herbalist Jess. Formulating the Signature Six clinical herbal infusions.",
+      "telephone": "+31 20 894 3820",
+      "email": "care@gardenofjess.com",
+      "priceRange": "€€",
+      "paymentAccepted": "Cash, Credit Card, iDEAL, Apple Pay, Bancontact",
+      "currenciesAccepted": "EUR",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plantsoenlaan 14",
+        "addressLocality": "Amsterdam",
+        "postalCode": "1012 JS",
+        "addressCountry": "NL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.370216,
+        "longitude": 4.895168
+      },
+      "hasMap": "https://maps.google.com/?q=Plantsoenlaan+14+Amsterdam",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday", "Monday"],
+          "opens": "Closed",
+          "closes": "Closed"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Jess van den Hout",
+        "jobTitle": "Master Botanical Herbalist & Formulator",
+        "image": "{{ 'jess_founder_portrait.jpg' | asset_url }}",
+        "description": "B.Sc. in Phytotherapy & Herbal Sciences with over a decade of artisanal botanical formulation experience."
+      },
+      "sameAs": [
+        "https://www.instagram.com/gardenofjess",
+        "https://www.facebook.com/gardenofjessofficial",
+        "https://nl.pinterest.com/gardenofjess"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ shop.url }}/#website",
+      "url": "{{ shop.url }}",
+      "name": "Garden of Jess",
+      "publisher": {
+        "@id": "{{ shop.url }}/#localbusiness"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ shop.url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>

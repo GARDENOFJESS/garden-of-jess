@@ -1,0 +1,78 @@
+{% comment %}
+  Garden of Jess — Google Analytics 4 (GA4) & E-Commerce DataLayer Snippet
+  Measurement ID: G-JESSGARDEN9
+  Tracks standard e-commerce events: view_item, add_to_cart, begin_checkout, purchase
+{% endcomment %}
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JESSGARDEN9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JESSGARDEN9', {
+    'send_page_view': true,
+    'currency': 'EUR'
+  });
+</script>
+
+<!-- E-commerce DataLayer Tracking -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  {% if template contains 'product' %}
+    // 1. View Item Event
+    gtag('event', 'view_item', {
+      currency: 'EUR',
+      value: {{ product.price | divided_by: 100.0 }},
+      items: [{
+        item_id: '{{ product.id }}',
+        item_name: {{ product.title | json }},
+        item_brand: 'Garden of Jess',
+        item_category: 'Signature Herbal Blends',
+        price: {{ product.price | divided_by: 100.0 }},
+        quantity: 1
+      }]
+    });
+
+    // 2. Add to Cart Event Listener
+    var addToCartForm = document.querySelector('form[action*="/cart/add"]');
+    if (addToCartForm) {
+      addToCartForm.addEventListener('submit', function() {
+        gtag('event', 'add_to_cart', {
+          currency: 'EUR',
+          value: {{ product.price | divided_by: 100.0 }},
+          items: [{
+            item_id: '{{ product.id }}',
+            item_name: {{ product.title | json }},
+            item_brand: 'Garden of Jess',
+            item_category: 'Signature Herbal Blends',
+            price: {{ product.price | divided_by: 100.0 }},
+            quantity: 1
+          }]
+        });
+      });
+    }
+  {% endif %}
+
+  {% if template contains 'cart' %}
+    // 3. View Cart Event
+    gtag('event', 'view_cart', {
+      currency: 'EUR',
+      value: {{ cart.total_price | divided_by: 100.0 }},
+      items: [
+        {% for item in cart.items %}
+        {
+          item_id: '{{ item.product_id }}',
+          item_name: {{ item.product.title | json }},
+          item_brand: 'Garden of Jess',
+          item_category: 'Signature Herbal Blends',
+          price: {{ item.price | divided_by: 100.0 }},
+          quantity: {{ item.quantity }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    });
+  {% endif %}
+});
+</script>

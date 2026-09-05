@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onze Tuinkroniek — Smaak, Geur & Botanische Beleving | Garden of Jess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F9F6F0;
+      --sage: #6B7A55;
+      --lavender: #8B7AA8;
+      --deep-forest: #2D3823;
+      --border-sand: #EDE7DD;
+      --card-bg: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--cream);
+      font-family: 'Montserrat', sans-serif;
+      color: var(--deep-forest);
+      line-height: 1.7;
+      padding: 60px 20px;
+    }
+    .journal-container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--sage);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 32px;
+    }
+    .back-home:hover { color: var(--deep-forest); }
+    .journal-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--lavender);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .lead-text {
+      font-size: 16px;
+      color: #5C6750;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .articles-list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .article-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-sand);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 12px 30px rgba(45, 56, 35, 0.05);
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .article-card { grid-template-columns: 1fr; padding: 24px; }
+    }
+    .article-media img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--border-sand);
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--sage);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .article-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      line-height: 1.25;
+      margin-bottom: 14px;
+      color: var(--deep-forest);
+    }
+    .article-excerpt {
+      font-size: 14px;
+      color: #55624A;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .btn-product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sage);
+      color: #FFF;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-product-link:hover { background: var(--deep-forest); }
+  </style>
+</head>
+<body>
+
+  <div class="journal-container">
+    <a href="../index.html" class="back-home">← Terug naar de Webwinkel</a>
+
+    <div class="journal-header">
+      <p class="eyebrow">Botanische Kennisbank & Sfeerbeschrijvingen</p>
+      <h1>De Tuinkroniek</h1>
+      <p class="lead-text">
+        Verhandelingen over geur, smaak en het harmonieuze samenspel van botanische ingrediënten, geschreven door herborist Jess.
+      </p>
+    </div>
+
+    <div class="articles-list">
+
+      <!-- Artikel 1: Morning Rise -->
+      <article class="article-card">
+        <div class="article-media">
+          <img src="../assets/morning-rise.jpg" alt="Morning Rise Kruidenthee">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Ochtendritueel • 5 min leestijd</div>
+          <h2 class="article-title">De Frisheid van de Ochtend: Hoe Munt, Lavendel & Ginkgo de Dag Openen</h2>
+          <p class="article-excerpt">
+            De levendige tonen van munt worden prachtig afgerond door de bloemige zachtheid van Franse lavendel. Ginkgo biloba, duizendblad, braamblad, salie en brandnetelzaad geven deze thee een puur, groen en kruidig karakter om energiek en fris aan de dag te beginnen.
+          </p>
+          <a href="/#signature-six" class="btn-product-link">
+            Ontdek Morning Rise (€7,95 / 50g) →
+          </a>
+        </div>
+      </article>
+
+      <!-- Artikel 2: Painless -->
+      <article class="article-card">
+        <div class="article-media">
+          <img src="../assets/painless.jpg" alt="Painless Kruidenthee">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Aardse Rust • 6 min leestijd</div>
+          <h2 class="article-title">Karaktervol & Aards: De Traditie van Moerasspirea, Wilgenbast & Witte Peper</h2>
+          <p class="article-excerpt">
+            Moerasspirea en wilgenbast vormen een eeuwenoude botanische traditie voor een diepe, robuuste basis. Een subtiele toets van gemalen witte peper brengt een zachte, verwarmende gloed achterin de keel. Een thee voor wie houdt van puur en uitgesproken.
+          </p>
+          <a href="/#signature-six" class="btn-product-link">
+            Ontdek Painless (€7,95 / 50g) →
+          </a>
+        </div>
+      </article>
+
+      <!-- Artikel 3: Refresh -->
+      <article class="article-card">
+        <div class="article-media">
+          <img src="../assets/refresh.jpg" alt="Refresh Kruidenthee">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Verkwikkend • 4 min leestijd</div>
+          <h2 class="article-title">Sprankelende Citrus & Salie: Een Heldere Oase Gedurende de Dag</h2>
+          <p class="article-excerpt">
+            Salie en laurier brengen een elegante kruidige diepte, terwijl gedroogd limoenblad en citroenverbena een verfrissende citrusnoot toevoegen. Heermoes en jonge brandnetel zorgen voor een zuiver mineraalrijk fundament.
+          </p>
+          <a href="/#signature-six" class="btn-product-link">
+            Ontdek Refresh (€7,95 / 50g) →
+          </a>
+        </div>
+      </article>
+
+      <!-- Artikel 4: Smooth Digest -->
+      <article class="article-card">
+        <div class="article-media">
+          <img src="../assets/smooth-digest.jpg" alt="Smooth Digest Kruidenthee">
+        </div>
+        <div class="article-body">
+          <div class="article-meta">Na de Maaltijd • 5 min leestijd</div>
+          <h2 class="article-title">Het Evenwicht na het Diner: Zacht Bittere Artisjok & Zoete Steranijs</h2>
+          <p class="article-excerpt">
+            Een verfijnde kruidenmelange die helemaal draait om een aangenaam en evenwichtig theemoment na de maaltijd. De zachte bitterheid van artisjokkruid en duizendblad wordt harmonieus verzacht door zoete, warme venkel en steranijs.
+          </p>
+          <a href="/#signature-six" class="btn-product-link">
+            Ontdek Smooth Digest (€7,95 / 50g) →
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+</body>
+</html>

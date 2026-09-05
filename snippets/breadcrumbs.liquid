@@ -1,0 +1,99 @@
+{% comment %}
+  Garden of Jess — Breadcrumbs Component with Structured JSON-LD Schema
+  Supports Collections, Products, Blog Articles, and Regular Pages
+{% endcomment %}
+
+{% unless template == 'index' or template == 'cart' or template == '404' %}
+<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs" style="padding: 16px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; color: #6B7A55;">
+  <div class="breadcrumb-inner" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+    <a href="{{ routes.root_url }}" title="Home" style="color: #6B7A55; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+      <span>Home</span>
+    </a>
+    <span class="breadcrumb-separator" aria-hidden="true" style="color: #D8CFBC;">/</span>
+
+    {% if template contains 'page' %}
+      <span class="breadcrumb-current" aria-current="page" style="color: #2D3823; font-weight: 500;">{{ page.title }}</span>
+
+    {% elsif template contains 'product' %}
+      {% if collection.url %}
+        <a href="{{ collection.url }}" style="color: #6B7A55; text-decoration: none;">{{ collection.title }}</a>
+        <span class="breadcrumb-separator" aria-hidden="true" style="color: #D8CFBC;">/</span>
+      {% else %}
+        <a href="/collections/signature-blends" style="color: #6B7A55; text-decoration: none;">Signature Blends</a>
+        <span class="breadcrumb-separator" aria-hidden="true" style="color: #D8CFBC;">/</span>
+      {% endif %}
+      <span class="breadcrumb-current" aria-current="page" style="color: #2D3823; font-weight: 600;">{{ product.title }}</span>
+
+    {% elsif template contains 'collection' and collection.handle %}
+      <span class="breadcrumb-current" aria-current="page" style="color: #2D3823; font-weight: 600;">{{ collection.title }}</span>
+
+    {% elsif template == 'blog' %}
+      {% if current_tags %}
+        {{ blog.title | link_to: blog.url }}
+        <span class="breadcrumb-separator" aria-hidden="true" style="color: #D8CFBC;">/</span>
+        <span class="breadcrumb-current" aria-current="page" style="color: #2D3823; font-weight: 500;">{{ current_tags | join: " + " }}</span>
+      {% else %}
+        <span class="breadcrumb-current" aria-current="page" style="color: #2D3823; font-weight: 500;">{{ blog.title }}</span>
+      {% endif %}
+
+    {% elsif template == 'article' %}
+      <a href="{{ blog.url }}" style="color: #6B7A55; text-decoration: none;">{{ blog.title }}</a>
+      <span class="breadcrumb-separator" aria-hidden="true" style="color: #D8CFBC;">/</span>
+      <span class="breadcrumb-current" aria-current="page" style="color: #2D3823; font-weight: 500;">{{ article.title }}</span>
+
+    {% else %}
+      <span class="breadcrumb-current" aria-current="page" style="color: #2D3823; font-weight: 500;">{{ page_title }}</span>
+    {% endif %}
+  </div>
+</nav>
+
+<!-- BreadcrumbList Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ shop.url }}"
+    }
+    {% if template contains 'product' %}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Signature Blends",
+      "item": "{{ shop.url }}/collections/signature-blends"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ product.title | json }},
+      "item": "{{ shop.url }}{{ product.url }}"
+    }
+    {% elsif template contains 'collection' %}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ collection.title | json }},
+      "item": "{{ shop.url }}{{ collection.url }}"
+    }
+    {% elsif template contains 'article' %}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ blog.title | json }},
+      "item": "{{ shop.url }}{{ blog.url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ article.title | json }},
+      "item": "{{ shop.url }}{{ article.url }}"
+    }
+    {% endif %}
+  ]
+}
+</script>
+{% endunless %}

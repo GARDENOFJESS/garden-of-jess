@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Proeflokaal | Garden of Jess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F9F6F0;
+      --sage: #6B7A55;
+      --lavender: #8B7AA8;
+      --deep-forest: #2D3823;
+      --border: #EDE8DF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--cream);
+      font-family: 'Montserrat', sans-serif;
+      color: var(--deep-forest);
+      line-height: 1.6;
+      padding: 60px 20px;
+    }
+    .contact-container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .header-center {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--lavender);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 500;
+      color: var(--deep-forest);
+      margin-bottom: 16px;
+    }
+    .promise-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #EFF3EA;
+      border: 1px solid #DCE6D2;
+      color: var(--sage);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 36px;
+    }
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 30px;
+      box-shadow: 0 10px 30px rgba(107, 122, 85, 0.05);
+    }
+    .card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      color: var(--deep-forest);
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #D8CFBC;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 14px;
+      background: #FAF8F5;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--sage);
+      background: #FFFFFF;
+    }
+    .btn-submit {
+      background: var(--sage);
+      color: #F9F6F0;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover {
+      background: var(--deep-forest);
+    }
+    .map-frame {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-top: 20px;
+      background: #E8ECE3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .back-home {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--sage);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <a href="../index.html" class="back-home">← Terug naar de Webwinkel</a>
+
+    <div class="header-center">
+      <p class="eyebrow">Atelier & Persoonlijk Contact</p>
+      <h1>Wij Staan Voor U Klaar</h1>
+      <div class="promise-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <span>Garantie op reactietijd: Wij antwoorden binnen 24 uur</span>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <!-- Contact Formulier -->
+      <div class="card">
+        <h2>Stuur Jess & Ons Kruidenteam een Bericht</h2>
+        <form onsubmit="event.preventDefault(); alert('Dank voor uw bericht! Jess of een van onze herboristen reageert binnen 24 uur.');">
+          <div class="form-group">
+            <label for="ContactFormName">Uw Volledige Naam</label>
+            <input type="text" id="ContactFormName" name="name" placeholder="bijv. Sophie van Dijk" required>
+          </div>
+          <div class="form-group">
+            <label for="ContactFormEmail">Uw E-mailadres</label>
+            <input type="email" id="ContactFormEmail" name="email" placeholder="sophie@voorbeeld.nl" required>
+          </div>
+          <div class="form-group">
+            <label for="ContactFormTopic">Onderwerp</label>
+            <select id="ContactFormTopic" name="topic">
+              <option value="order">Vraag over Bestelling & Bezorging</option>
+              <option value="brewing">Fytotherapeutisch Zetadvies & Kruidenwerking</option>
+              <option value="consult">Persoonlijk Melange Advies</option>
+              <option value="wholesale">Zakelijk & Apothekersverkoop</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ContactFormMessage">Uw Bericht</label>
+            <textarea id="ContactFormMessage" name="body" rows="5" placeholder="Hoe kunnen wij u vandaag van dienst zijn?" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Bericht Verzenden →</button>
+        </form>
+      </div>
+
+      <!-- Fysiek Verkooppunt & Route -->
+      <div class="card">
+        <h2>Fysiek Verkooppunt & Proeflokaal</h2>
+        <div class="info-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7A55" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <div>
+            <strong>G&W Gezondheidswinkel Bio Rosa</strong><br>
+            Padjedijk 30, 1441 BR Purmerend<br>
+            Nederland
+          </div>
+        </div>
+        <div class="info-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7A55" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <div>
+            <strong>Openingstijden Winkel:</strong><br>
+            • Dinsdag t/m Vrijdag: 09:00 – 17:30 uur<br>
+            • Zaterdag: 09:00 – 17:00 uur<br>
+            • Zondag & Maandag: Gesloten
+          </div>
+        </div>
+        <div class="info-row">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7A55" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <div>
+            <strong>Telefoonnummer:</strong> 0299-420905<br>
+            <strong>Directe E-maillijn:</strong> care@gardenofjess.com
+          </div>
+        </div>
+
+        <!-- Google Maps Embed Kaart Purmerend -->
+        <div class="map-frame">
+          <iframe 
+            title="Locatiekaart G&W Gezondheidswinkel Bio Rosa Purmerend"
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            style="border:0;" 
+            src="https://maps.google.com/maps?q=Padjedijk+30,+1441+BR+Purmerend&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
