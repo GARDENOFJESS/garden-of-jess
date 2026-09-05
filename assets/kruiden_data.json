@@ -1,0 +1,301 @@
+[
+  {
+    "name": "Artisjokkruid",
+    "latin": "Cynara cardunculus",
+    "compounds": "Cynarine, chlorogeenzuur, luteoline, flavonoïden",
+    "action": "Ondersteunt traditioneel de spijsvertering en galfunctie; antioxidant.",
+    "taste": "Bitter, kruidig, licht aards",
+    "scent": "Groen, kruidig, aards",
+    "blends": [
+      "Smooth Digest"
+    ]
+  },
+  {
+    "name": "Berkenblad",
+    "latin": "Betula pendula",
+    "compounds": "Flavonoïden, hyperoside, quercetine, tanninen",
+    "action": "Traditioneel vochtafdrijvend en gebruikt ter ondersteuning van de urinewegen.",
+    "taste": "Mild bitter, groen, licht zoet",
+    "scent": "Fris, groen, licht houtachtig",
+    "blends": [
+      "Immunitea"
+    ]
+  },
+  {
+    "name": "Braamblad",
+    "latin": "Rubus fruticosus",
+    "compounds": "Tanninen, ellaginezuur, flavonoïden, fenolzuren",
+    "action": "Samentrekkend; traditioneel voor mond/keel en darmen.",
+    "taste": "Licht bitter, wrang, groen",
+    "scent": "Fris, groen, zacht kruidig",
+    "blends": [
+      "Morning Rise"
+    ]
+  },
+  {
+    "name": "Brandnetel",
+    "latin": "Urtica dioica",
+    "compounds": "Mineralen, chlorofyl, flavonoïden, fenolzuren",
+    "action": "Traditioneel voor urinewegen en gewrichten; mineralenrijke plant.",
+    "taste": "Groen, licht ziltig, kruidig",
+    "scent": "Fris, groen, grasachtig",
+    "blends": [
+      "Refresh"
+    ]
+  },
+  {
+    "name": "Brandnetelzaad",
+    "latin": "Urtica dioica semen",
+    "compounds": "Vetzuren, sterolen, eiwitten, carotenoïden",
+    "action": "Traditioneel voedend en versterkend.",
+    "taste": "Nootachtig, groen, licht aards",
+    "scent": "Grasachtig, nootachtig",
+    "blends": [
+      "Morning Rise"
+    ]
+  },
+  {
+    "name": "Cacaoboon",
+    "latin": "Theobroma cacao",
+    "compounds": "Theobromine, cafeïne, epicatechine, catechine, flavanolen",
+    "action": "Antioxidant; licht stimulerend; flavanolen zijn cardiovasculair onderzocht.",
+    "taste": "Bitter, cacaoachtig, nootachtig",
+    "scent": "Warm, chocoladeachtig, geroosterd",
+    "blends": [
+      "Immunitea"
+    ]
+  },
+  {
+    "name": "Citroenverbena",
+    "latin": "Aloysia citrodora",
+    "compounds": "Verbascoside, citral, limoneen, flavonoïden",
+    "action": "Traditioneel rustgevend en ondersteunend voor de spijsvertering.",
+    "taste": "Fris, citroenachtig, licht zoet",
+    "scent": "Sterk citroenachtig, fris",
+    "blends": [
+      "Refresh"
+    ]
+  },
+  {
+    "name": "Dropplant",
+    "latin": "Agastache foeniculum",
+    "compounds": "Anethol, estragol, limoneen, flavonoïden",
+    "action": "Traditioneel voor spijsvertering en luchtwegen.",
+    "taste": "Zoet, anijsachtig, licht muntachtig",
+    "scent": "Zoet, anijsachtig, kruidig",
+    "blends": [
+      "Breath Free"
+    ]
+  },
+  {
+    "name": "Duizendblad",
+    "latin": "Achillea millefolium",
+    "compounds": "Flavonoïden, chlorogeenzuur, sesquiterpeenlactonen, etherische olie",
+    "action": "Traditioneel voor spijsvertering en menstruatie; samentrekkend.",
+    "taste": "Bitter, kruidig, licht scherp",
+    "scent": "Kruidig, kamferachtig, groen",
+    "blends": [
+      "Morning Rise",
+      "Smooth Digest"
+    ]
+  },
+  {
+    "name": "Ginkgo biloba",
+    "latin": "Ginkgo biloba",
+    "compounds": "Ginkgoliden, bilobalide, flavonglycosiden",
+    "action": "Onderzocht voor bloedcirculatie en cognitieve functies.",
+    "taste": "Licht bitter, droog, aards",
+    "scent": "Groen, licht harsachtig",
+    "blends": [
+      "Morning Rise"
+    ]
+  },
+  {
+    "name": "Heermoes",
+    "latin": "Equisetum arvense",
+    "compounds": "Siliciumverbindingen, flavonoïden, fenolzuren, sterolen",
+    "action": "Traditioneel vochtafdrijvend; gebruikt voor huid, haar en nagels.",
+    "taste": "Aards, groen, licht bitter",
+    "scent": "Grasachtig, aards",
+    "blends": [
+      "Refresh"
+    ]
+  },
+  {
+    "name": "IJslandsmos",
+    "latin": "Cetraria islandica",
+    "compounds": "Lichenine, isolichenine, slijmstoffen, lichenine-zuren",
+    "action": "Verzachtend voor keel en slijmvliezen; traditioneel bij hoest.",
+    "taste": "Licht bitter, aards",
+    "scent": "Aards, mosachtig, droog",
+    "blends": [
+      "Breath Free"
+    ]
+  },
+  {
+    "name": "Koningskaars",
+    "latin": "Verbascum thapsus",
+    "compounds": "Slijmstoffen, saponinen, flavonoïden, iridoïden",
+    "action": "Verzachtend voor keel en luchtwegen; traditioneel bij hoest.",
+    "taste": "Mild, zacht kruidig, licht bitter",
+    "scent": "Zacht bloemig, honingachtig",
+    "blends": [
+      "Breath Free"
+    ]
+  },
+  {
+    "name": "Lavendel",
+    "latin": "Lavandula angustifolia",
+    "compounds": "Linalool, linalylacetaat, cineol, flavonoïden",
+    "action": "Ontspannend en rustgevend; traditioneel voor slaap en stress.",
+    "taste": "Bloemig, licht bitter, kruidig",
+    "scent": "Sterk bloemig, fris",
+    "blends": [
+      "Morning Rise"
+    ]
+  },
+  {
+    "name": "Laurier",
+    "latin": "Laurus nobilis",
+    "compounds": "1,8-cineol, linalool, eugenol, α-pineen",
+    "action": "Traditioneel voor spijsvertering en winderigheid.",
+    "taste": "Kruidig, licht bitter, warm",
+    "scent": "Aromatisch, kruidig, eucalyptusachtig",
+    "blends": [
+      "Refresh"
+    ]
+  },
+  {
+    "name": "Limoenblad",
+    "latin": "Citrus hystrix",
+    "compounds": "Citronellal, limoneen, linalool, citronellol",
+    "action": "Aromatisch; traditioneel gebruikt in voeding en kruidenthee.",
+    "taste": "Fris, citrusachtig, licht bitter",
+    "scent": "Intens limoenachtig, citrus, bloemig",
+    "blends": [
+      "Refresh"
+    ]
+  },
+  {
+    "name": "Moerasspirea",
+    "latin": "Filipendula ulmaria",
+    "compounds": "Salicylaten, flavonoïden, tanninen, fenolzuren",
+    "action": "Traditioneel voor gewrichten, pijn en koorts.",
+    "taste": "Zoetig, bitter, licht amandelachtig",
+    "scent": "Zoet, honingachtig, amandelachtig",
+    "blends": [
+      "Painless"
+    ]
+  },
+  {
+    "name": "Munt",
+    "latin": "Mentha piperita",
+    "compounds": "Menthol, menthon, rozemarijnzuur, flavonoïden",
+    "action": "Traditioneel voor spijsvertering, misselijkheid en darmkrampen.",
+    "taste": "Fris, koel, licht scherp",
+    "scent": "Sterk muntachtig, fris, koel",
+    "blends": [
+      "Morning Rise"
+    ]
+  },
+  {
+    "name": "Olijfblad",
+    "latin": "Olea europaea",
+    "compounds": "Oleuropeïne, hydroxytyrosol, verbascoside, flavonoïden",
+    "action": "Antioxidant; onderzocht voor bloeddruk en glucose- en vetstofwisseling.",
+    "taste": "Duidelijk bitter, groen, droog",
+    "scent": "Groen, kruidig, licht olijfachtig",
+    "blends": [
+      "Immunitea"
+    ]
+  },
+  {
+    "name": "Rode klaver",
+    "latin": "Trifolium pratense",
+    "compounds": "Formononetine, biochanine A, genisteïne, daïdzeïne",
+    "action": "Bevat fyto-oestrogenen; onderzocht bij overgangsklachten.",
+    "taste": "Licht zoet, grasachtig, zacht kruidig",
+    "scent": "Zacht bloemig, honingachtig, groen",
+    "blends": [
+      "Breath Free"
+    ]
+  },
+  {
+    "name": "Rozemarijn",
+    "latin": "Salvia rosmarinus",
+    "compounds": "Rozemarijnzuur, carnosol, carnosinezuur, kamfer",
+    "action": "Antioxidant; traditioneel voor spijsvertering; antimicrobieel onderzocht.",
+    "taste": "Krachtig kruidig, licht bitter",
+    "scent": "Harsachtig, dennenachtig, kamferachtig",
+    "blends": [
+      "Immunitea"
+    ]
+  },
+  {
+    "name": "Salie",
+    "latin": "Salvia officinalis",
+    "compounds": "Rozemarijnzuur, thujon, kamfer, cineol, borneol",
+    "action": "Traditioneel voor mond/keel, spijsvertering en transpiratie.",
+    "taste": "Sterk kruidig, bitter, licht peperig",
+    "scent": "Intens kruidig, kamferachtig",
+    "blends": [
+      "Morning Rise",
+      "Refresh"
+    ]
+  },
+  {
+    "name": "Steranijs",
+    "latin": "Illicium verum",
+    "compounds": "Trans-anethol, shikiminezuur, limoneen, linalool",
+    "action": "Traditioneel voor spijsvertering en darmkrampen.",
+    "taste": "Zoet, sterk anijsachtig",
+    "scent": "Intens zoet, anijsachtig",
+    "blends": [
+      "Smooth Digest"
+    ]
+  },
+  {
+    "name": "Venkel",
+    "latin": "Foeniculum vulgare",
+    "compounds": "Trans-anethol, fenchon, estragol, limoneen",
+    "action": "Traditioneel tegen gasvorming en darmkrampen; slijmoplossend.",
+    "taste": "Zoet, anijsachtig, licht peperig",
+    "scent": "Zoet, anijsachtig, warm",
+    "blends": [
+      "Smooth Digest"
+    ]
+  },
+  {
+    "name": "Wilde tijm",
+    "latin": "Thymus serpyllum",
+    "compounds": "Thymol, carvacrol, linalool, rozemarijnzuur",
+    "action": "Traditioneel voor luchtwegen en spijsvertering; antimicrobieel onderzocht.",
+    "taste": "Krachtig kruidig, licht bitter, pittig",
+    "scent": "Sterk kruidig, tijmachtig, warm",
+    "blends": [
+      "Breath Free"
+    ]
+  },
+  {
+    "name": "Wilgenbast",
+    "latin": "Salix alba",
+    "compounds": "Salicine, salicylaten, flavonoïden, tanninen",
+    "action": "Traditioneel voor pijn, koorts en gewrichtsklachten.",
+    "taste": "Sterk bitter, wrang, houtachtig",
+    "scent": "Houtachtig, droog, licht zoet",
+    "blends": [
+      "Painless"
+    ]
+  },
+  {
+    "name": "Witte peper",
+    "latin": "Piper nigrum",
+    "compounds": "Piperine, vluchtige olie, β-caryofylleen, limoneen",
+    "action": "Stimuleert traditioneel de spijsvertering; piperine beïnvloedt de opname van sommige stoffen.",
+    "taste": "Pittig, scherp, warm",
+    "scent": "Peperig, warm, kruidig",
+    "blends": [
+      "Painless"
+    ]
+  }
+]

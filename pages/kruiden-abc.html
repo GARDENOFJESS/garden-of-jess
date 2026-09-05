@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kruiden ABC — Werking, Inhoudsstoffen, Smaak & Geur | Garden of Jess</title>
+  <meta name="description" content="Het officiële Kruiden ABC van Garden of Jess: een alfabetisch compendium van 27 botanische kruiden en planten met inhoudsstoffen, traditionele werking, smaak- en geurprofielen.">
+  
+  <link rel="icon" type="image/jpeg" href="../assets/garden_of_jess_logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #F9F6F0;
+      --cream-card: #FFFFFF;
+      --cream-soft: #FAF7F2;
+      --sage: #6B7A55;
+      --sage-dark: #4F5C3E;
+      --sage-light: #EBF0E4;
+      --lavender: #8B7AA8;
+      --lavender-soft: #F3F0F7;
+      --deep-forest: #2D3823;
+      --border-sand: #EDE7DD;
+      --gold-accent: #C5A059;
+      --shadow: 0 10px 30px rgba(45, 56, 35, 0.05);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--cream);
+      font-family: 'Montserrat', sans-serif;
+      color: var(--deep-forest);
+      line-height: 1.6;
+      padding: 40px 20px 80px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-sand);
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--sage);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-home:hover { color: var(--deep-forest); }
+
+    .brand-title-small {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--deep-forest);
+    }
+
+    .hero-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 48px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--lavender);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 600;
+      color: var(--deep-forest);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .lead-text {
+      font-size: 16px;
+      color: #55624A;
+      line-height: 1.7;
+    }
+
+    /* Zoekbalk & Filters */
+    .controls-panel {
+      background: var(--cream-card);
+      border: 1px solid var(--border-sand);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .search-box {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 14px 20px 14px 44px;
+      border: 1px solid #D8CFBC;
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: 16px;
+      background: var(--cream-soft);
+      outline: none;
+      transition: all 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--sage);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(107, 122, 85, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--sage);
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .filter-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--deep-forest);
+      margin-right: 6px;
+    }
+
+    .btn-filter {
+      background: var(--cream-soft);
+      border: 1px solid var(--border-sand);
+      color: var(--deep-forest);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-filter:hover, .btn-filter.active {
+      background: var(--sage);
+      color: #FFFFFF;
+      border-color: var(--sage);
+    }
+
+    .alphabet-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--border-sand);
+    }
+
+    .letter-btn {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--cream-soft);
+      border: 1px solid var(--border-sand);
+      color: var(--deep-forest);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .letter-btn:hover, .letter-btn.active {
+      background: var(--lavender);
+      color: #FFFFFF;
+      border-color: var(--lavender);
+    }
+
+    .counter-info {
+      font-size: 13px;
+      color: #7B856F;
+      margin-top: 14px;
+      font-weight: 500;
+    }
+
+    /* Grid van Kruidenkaarten */
+    .herbs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .herbs-grid { grid-template-columns: 1fr; }
+      body { padding: 24px 16px 60px; }
+      .controls-panel { padding: 18px 14px; }
+    }
+
+    .herb-card {
+      background: var(--cream-card);
+      border: 1px solid var(--border-sand);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+    }
+    .herb-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(45, 56, 35, 0.09);
+      border-color: #D6CCBD;
+    }
+
+    .herb-card-top {
+      margin-bottom: 18px;
+    }
+
+    .herb-letter-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--lavender);
+      background: var(--lavender-soft);
+      padding: 3px 9px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .herb-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .herb-latin {
+      font-style: italic;
+      font-size: 13px;
+      color: var(--sage);
+      margin-bottom: 16px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: #7B856F;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .herb-content-block {
+      margin-bottom: 14px;
+    }
+
+    .herb-action {
+      font-size: 14px;
+      color: var(--deep-forest);
+      line-height: 1.55;
+    }
+
+    .herb-compounds {
+      font-size: 13px;
+      color: #4A563D;
+      background: var(--cream-soft);
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-sand);
+      line-height: 1.5;
+    }
+
+    .herb-sensory-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid #F0ECE4;
+    }
+
+    .sensory-item {
+      font-size: 12.5px;
+    }
+    .sensory-item strong {
+      display: block;
+      color: var(--deep-forest);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .sensory-item span {
+      color: #636E58;
+    }
+
+    /* Melange koppeling onderaan kaart */
+    .herb-blends-footer {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--border-sand);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .blend-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--sage-light);
+      border: 1px solid #D6E3CB;
+      color: var(--sage-dark);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .blend-tag:hover {
+      background: var(--sage);
+      color: #FFFFFF;
+      border-color: var(--sage);
+    }
+
+    /* Disclaimer box */
+    .disclaimer-card {
+      background: #F4EFEB;
+      border-left: 5px solid var(--sage);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-top: 60px;
+      box-shadow: var(--shadow);
+    }
+
+    .disclaimer-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--deep-forest);
+      margin-bottom: 10px;
+    }
+
+    .disclaimer-card p {
+      font-size: 14px;
+      color: #55604B;
+      line-height: 1.65;
+    }
+
+    /* Footer */
+    footer.abc-footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 13px;
+      color: #7B856F;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Top Navigatie -->
+    <div class="nav-top">
+      <a href="../index.html" class="back-home">← Terug naar het Kruidenatelier</a>
+      <span class="brand-title-small">Garden of Jess • Botanisch Compendium</span>
+    </div>
+
+    <!-- Header -->
+    <div class="hero-header">
+      <p class="eyebrow">Fytotherapeutische Kennisbank</p>
+      <h1>Kruiden ABC — Werking, Inhoudsstoffen, Smaak & Geur</h1>
+      <p class="lead-text">
+        Een diepgaand alfabetisch overzicht van de 27 zuivere kruiden, bloemen, zaden en basten die Jess selecteert en verwerkt in haar zes kenmerkende theemelanges.
+      </p>
+    </div>
+
+    <!-- Filter & Zoekpaneel -->
+    <div class="controls-panel">
+      <div class="search-box">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-input" class="search-input" placeholder="Zoek op kruid, werkzame stof (bijv. cynarine, salicylaten, menthol), smaak of werking..." oninput="filterHerbs()">
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Smaakbeleving:</span>
+        <button class="btn-filter active" onclick="setTasteFilter('all', this)">Alles (27)</button>
+        <button class="btn-filter" onclick="setTasteFilter('bitter', this)">Bitter</button>
+        <button class="btn-filter" onclick="setTasteFilter('fris', this)">Fris & Citrus</button>
+        <button class="btn-filter" onclick="setTasteFilter('kruidig', this)">Kruidig</button>
+        <button class="btn-filter" onclick="setTasteFilter('zoet', this)">Zoet & Anijs</button>
+        <button class="btn-filter" onclick="setTasteFilter('aards', this)">Aards & Houtachtig</button>
+        <button class="btn-filter" onclick="setTasteFilter('pittig', this)">Pittig</button>
+      </div>
+
+      <div class="alphabet-nav" id="alphabet-nav">
+        <button class="letter-btn active" onclick="setLetterFilter('all', this)">Alle</button>
+        <button class="letter-btn" onclick="setLetterFilter('A', this)">A</button>
+        <button class="letter-btn" onclick="setLetterFilter('B', this)">B</button>
+        <button class="letter-btn" onclick="setLetterFilter('C', this)">C</button>
+        <button class="letter-btn" onclick="setLetterFilter('D', this)">D</button>
+        <button class="letter-btn" onclick="setLetterFilter('G', this)">G</button>
+        <button class="letter-btn" onclick="setLetterFilter('H', this)">H</button>
+        <button class="letter-btn" onclick="setLetterFilter('I', this)">I</button>
+        <button class="letter-btn" onclick="setLetterFilter('K', this)">K</button>
+        <button class="letter-btn" onclick="setLetterFilter('L', this)">L</button>
+        <button class="letter-btn" onclick="setLetterFilter('M', this)">M</button>
+        <button class="letter-btn" onclick="setLetterFilter('O', this)">O</button>
+        <button class="letter-btn" onclick="setLetterFilter('R', this)">R</button>
+        <button class="letter-btn" onclick="setLetterFilter('S', this)">S</button>
+        <button class="letter-btn" onclick="setLetterFilter('V', this)">V</button>
+        <button class="letter-btn" onclick="setLetterFilter('W', this)">W</button>
+      </div>
+
+      <div class="counter-info" id="counter-info">Toont alle 27 geselecteerde botanische kruiden</div>
+    </div>
+
+    <!-- Grid van alle 27 Kruiden -->
+    <div class="herbs-grid" id="herbs-grid">
+      <div class="herb-card" 
+           data-name="artisjokkruid" 
+           data-latin="cynara cardunculus" 
+           data-compounds="cynarine, chlorogeenzuur, luteoline, flavonoïden" 
+           data-action="ondersteunt traditioneel de spijsvertering en galfunctie; antioxidant." 
+           data-taste="bitter, kruidig, licht aards" 
+           data-scent="groen, kruidig, aards" 
+           data-letter="A">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter A</span>
+          <h2 class="herb-name">Artisjokkruid</h2>
+          <div class="herb-latin">Cynara cardunculus</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Ondersteunt traditioneel de spijsvertering en galfunctie; antioxidant.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Cynarine, chlorogeenzuur, luteoline, flavonoïden</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Bitter, kruidig, licht aards</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Groen, kruidig, aards</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="berkenblad" 
+           data-latin="betula pendula" 
+           data-compounds="flavonoïden, hyperoside, quercetine, tanninen" 
+           data-action="traditioneel vochtafdrijvend en gebruikt ter ondersteuning van de urinewegen." 
+           data-taste="mild bitter, groen, licht zoet" 
+           data-scent="fris, groen, licht houtachtig" 
+           data-letter="B">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter B</span>
+          <h2 class="herb-name">Berkenblad</h2>
+          <div class="herb-latin">Betula pendula</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel vochtafdrijvend en gebruikt ter ondersteuning van de urinewegen.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Flavonoïden, hyperoside, quercetine, tanninen</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Mild bitter, groen, licht zoet</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Fris, groen, licht houtachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="braamblad" 
+           data-latin="rubus fruticosus" 
+           data-compounds="tanninen, ellaginezuur, flavonoïden, fenolzuren" 
+           data-action="samentrekkend; traditioneel voor mond/keel en darmen." 
+           data-taste="licht bitter, wrang, groen" 
+           data-scent="fris, groen, zacht kruidig" 
+           data-letter="B">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter B</span>
+          <h2 class="herb-name">Braamblad</h2>
+          <div class="herb-latin">Rubus fruticosus</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Samentrekkend; traditioneel voor mond/keel en darmen.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Tanninen, ellaginezuur, flavonoïden, fenolzuren</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Licht bitter, wrang, groen</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Fris, groen, zacht kruidig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="brandnetel" 
+           data-latin="urtica dioica" 
+           data-compounds="mineralen, chlorofyl, flavonoïden, fenolzuren" 
+           data-action="traditioneel voor urinewegen en gewrichten; mineralenrijke plant." 
+           data-taste="groen, licht ziltig, kruidig" 
+           data-scent="fris, groen, grasachtig" 
+           data-letter="B">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter B</span>
+          <h2 class="herb-name">Brandnetel</h2>
+          <div class="herb-latin">Urtica dioica</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor urinewegen en gewrichten; mineralenrijke plant.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Mineralen, chlorofyl, flavonoïden, fenolzuren</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Groen, licht ziltig, kruidig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Fris, groen, grasachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="brandnetelzaad" 
+           data-latin="urtica dioica semen" 
+           data-compounds="vetzuren, sterolen, eiwitten, carotenoïden" 
+           data-action="traditioneel voedend en versterkend." 
+           data-taste="nootachtig, groen, licht aards" 
+           data-scent="grasachtig, nootachtig" 
+           data-letter="B">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter B</span>
+          <h2 class="herb-name">Brandnetelzaad</h2>
+          <div class="herb-latin">Urtica dioica semen</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voedend en versterkend.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Vetzuren, sterolen, eiwitten, carotenoïden</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Nootachtig, groen, licht aards</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Grasachtig, nootachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="cacaoboon" 
+           data-latin="theobroma cacao" 
+           data-compounds="theobromine, cafeïne, epicatechine, catechine, flavanolen" 
+           data-action="antioxidant; licht stimulerend; flavanolen zijn cardiovasculair onderzocht." 
+           data-taste="bitter, cacaoachtig, nootachtig" 
+           data-scent="warm, chocoladeachtig, geroosterd" 
+           data-letter="C">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter C</span>
+          <h2 class="herb-name">Cacaoboon</h2>
+          <div class="herb-latin">Theobroma cacao</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Antioxidant; licht stimulerend; flavanolen zijn cardiovasculair onderzocht.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Theobromine, cafeïne, epicatechine, catechine, flavanolen</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Bitter, cacaoachtig, nootachtig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Warm, chocoladeachtig, geroosterd</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="citroenverbena" 
+           data-latin="aloysia citrodora" 
+           data-compounds="verbascoside, citral, limoneen, flavonoïden" 
+           data-action="traditioneel rustgevend en ondersteunend voor de spijsvertering." 
+           data-taste="fris, citroenachtig, licht zoet" 
+           data-scent="sterk citroenachtig, fris" 
+           data-letter="C">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter C</span>
+          <h2 class="herb-name">Citroenverbena</h2>
+          <div class="herb-latin">Aloysia citrodora</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel rustgevend en ondersteunend voor de spijsvertering.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Verbascoside, citral, limoneen, flavonoïden</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Fris, citroenachtig, licht zoet</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Sterk citroenachtig, fris</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="dropplant" 
+           data-latin="agastache foeniculum" 
+           data-compounds="anethol, estragol, limoneen, flavonoïden" 
+           data-action="traditioneel voor spijsvertering en luchtwegen." 
+           data-taste="zoet, anijsachtig, licht muntachtig" 
+           data-scent="zoet, anijsachtig, kruidig" 
+           data-letter="D">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter D</span>
+          <h2 class="herb-name">Dropplant</h2>
+          <div class="herb-latin">Agastache foeniculum</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor spijsvertering en luchtwegen.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Anethol, estragol, limoneen, flavonoïden</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Zoet, anijsachtig, licht muntachtig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Zoet, anijsachtig, kruidig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="duizendblad" 
+           data-latin="achillea millefolium" 
+           data-compounds="flavonoïden, chlorogeenzuur, sesquiterpeenlactonen, etherische olie" 
+           data-action="traditioneel voor spijsvertering en menstruatie; samentrekkend." 
+           data-taste="bitter, kruidig, licht scherp" 
+           data-scent="kruidig, kamferachtig, groen" 
+           data-letter="D">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter D</span>
+          <h2 class="herb-name">Duizendblad</h2>
+          <div class="herb-latin">Achillea millefolium</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor spijsvertering en menstruatie; samentrekkend.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Flavonoïden, chlorogeenzuur, sesquiterpeenlactonen, etherische olie</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Bitter, kruidig, licht scherp</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Kruidig, kamferachtig, groen</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a><a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="ginkgo biloba" 
+           data-latin="ginkgo biloba" 
+           data-compounds="ginkgoliden, bilobalide, flavonglycosiden" 
+           data-action="onderzocht voor bloedcirculatie en cognitieve functies." 
+           data-taste="licht bitter, droog, aards" 
+           data-scent="groen, licht harsachtig" 
+           data-letter="G">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter G</span>
+          <h2 class="herb-name">Ginkgo biloba</h2>
+          <div class="herb-latin">Ginkgo biloba</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Onderzocht voor bloedcirculatie en cognitieve functies.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Ginkgoliden, bilobalide, flavonglycosiden</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Licht bitter, droog, aards</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Groen, licht harsachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="heermoes" 
+           data-latin="equisetum arvense" 
+           data-compounds="siliciumverbindingen, flavonoïden, fenolzuren, sterolen" 
+           data-action="traditioneel vochtafdrijvend; gebruikt voor huid, haar en nagels." 
+           data-taste="aards, groen, licht bitter" 
+           data-scent="grasachtig, aards" 
+           data-letter="H">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter H</span>
+          <h2 class="herb-name">Heermoes</h2>
+          <div class="herb-latin">Equisetum arvense</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel vochtafdrijvend; gebruikt voor huid, haar en nagels.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Siliciumverbindingen, flavonoïden, fenolzuren, sterolen</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Aards, groen, licht bitter</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Grasachtig, aards</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="ijslandsmos" 
+           data-latin="cetraria islandica" 
+           data-compounds="lichenine, isolichenine, slijmstoffen, lichenine-zuren" 
+           data-action="verzachtend voor keel en slijmvliezen; traditioneel bij hoest." 
+           data-taste="licht bitter, aards" 
+           data-scent="aards, mosachtig, droog" 
+           data-letter="I">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter I</span>
+          <h2 class="herb-name">IJslandsmos</h2>
+          <div class="herb-latin">Cetraria islandica</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Verzachtend voor keel en slijmvliezen; traditioneel bij hoest.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Lichenine, isolichenine, slijmstoffen, lichenine-zuren</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Licht bitter, aards</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Aards, mosachtig, droog</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="koningskaars" 
+           data-latin="verbascum thapsus" 
+           data-compounds="slijmstoffen, saponinen, flavonoïden, iridoïden" 
+           data-action="verzachtend voor keel en luchtwegen; traditioneel bij hoest." 
+           data-taste="mild, zacht kruidig, licht bitter" 
+           data-scent="zacht bloemig, honingachtig" 
+           data-letter="K">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter K</span>
+          <h2 class="herb-name">Koningskaars</h2>
+          <div class="herb-latin">Verbascum thapsus</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Verzachtend voor keel en luchtwegen; traditioneel bij hoest.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Slijmstoffen, saponinen, flavonoïden, iridoïden</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Mild, zacht kruidig, licht bitter</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Zacht bloemig, honingachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="lavendel" 
+           data-latin="lavandula angustifolia" 
+           data-compounds="linalool, linalylacetaat, cineol, flavonoïden" 
+           data-action="ontspannend en rustgevend; traditioneel voor slaap en stress." 
+           data-taste="bloemig, licht bitter, kruidig" 
+           data-scent="sterk bloemig, fris" 
+           data-letter="L">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter L</span>
+          <h2 class="herb-name">Lavendel</h2>
+          <div class="herb-latin">Lavandula angustifolia</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Ontspannend en rustgevend; traditioneel voor slaap en stress.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Linalool, linalylacetaat, cineol, flavonoïden</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Bloemig, licht bitter, kruidig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Sterk bloemig, fris</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="laurier" 
+           data-latin="laurus nobilis" 
+           data-compounds="1,8-cineol, linalool, eugenol, α-pineen" 
+           data-action="traditioneel voor spijsvertering en winderigheid." 
+           data-taste="kruidig, licht bitter, warm" 
+           data-scent="aromatisch, kruidig, eucalyptusachtig" 
+           data-letter="L">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter L</span>
+          <h2 class="herb-name">Laurier</h2>
+          <div class="herb-latin">Laurus nobilis</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor spijsvertering en winderigheid.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">1,8-cineol, linalool, eugenol, α-pineen</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Kruidig, licht bitter, warm</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Aromatisch, kruidig, eucalyptusachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="limoenblad" 
+           data-latin="citrus hystrix" 
+           data-compounds="citronellal, limoneen, linalool, citronellol" 
+           data-action="aromatisch; traditioneel gebruikt in voeding en kruidenthee." 
+           data-taste="fris, citrusachtig, licht bitter" 
+           data-scent="intens limoenachtig, citrus, bloemig" 
+           data-letter="L">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter L</span>
+          <h2 class="herb-name">Limoenblad</h2>
+          <div class="herb-latin">Citrus hystrix</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Aromatisch; traditioneel gebruikt in voeding en kruidenthee.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Citronellal, limoneen, linalool, citronellol</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Fris, citrusachtig, licht bitter</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Intens limoenachtig, citrus, bloemig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="moerasspirea" 
+           data-latin="filipendula ulmaria" 
+           data-compounds="salicylaten, flavonoïden, tanninen, fenolzuren" 
+           data-action="traditioneel voor gewrichten, pijn en koorts." 
+           data-taste="zoetig, bitter, licht amandelachtig" 
+           data-scent="zoet, honingachtig, amandelachtig" 
+           data-letter="M">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter M</span>
+          <h2 class="herb-name">Moerasspirea</h2>
+          <div class="herb-latin">Filipendula ulmaria</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor gewrichten, pijn en koorts.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Salicylaten, flavonoïden, tanninen, fenolzuren</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Zoetig, bitter, licht amandelachtig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Zoet, honingachtig, amandelachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Painless</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="munt" 
+           data-latin="mentha piperita" 
+           data-compounds="menthol, menthon, rozemarijnzuur, flavonoïden" 
+           data-action="traditioneel voor spijsvertering, misselijkheid en darmkrampen." 
+           data-taste="fris, koel, licht scherp" 
+           data-scent="sterk muntachtig, fris, koel" 
+           data-letter="M">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter M</span>
+          <h2 class="herb-name">Munt</h2>
+          <div class="herb-latin">Mentha piperita</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor spijsvertering, misselijkheid en darmkrampen.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Menthol, menthon, rozemarijnzuur, flavonoïden</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Fris, koel, licht scherp</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Sterk muntachtig, fris, koel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="olijfblad" 
+           data-latin="olea europaea" 
+           data-compounds="oleuropeïne, hydroxytyrosol, verbascoside, flavonoïden" 
+           data-action="antioxidant; onderzocht voor bloeddruk en glucose- en vetstofwisseling." 
+           data-taste="duidelijk bitter, groen, droog" 
+           data-scent="groen, kruidig, licht olijfachtig" 
+           data-letter="O">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter O</span>
+          <h2 class="herb-name">Olijfblad</h2>
+          <div class="herb-latin">Olea europaea</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Antioxidant; onderzocht voor bloeddruk en glucose- en vetstofwisseling.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Oleuropeïne, hydroxytyrosol, verbascoside, flavonoïden</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Duidelijk bitter, groen, droog</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Groen, kruidig, licht olijfachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="rode klaver" 
+           data-latin="trifolium pratense" 
+           data-compounds="formononetine, biochanine a, genisteïne, daïdzeïne" 
+           data-action="bevat fyto-oestrogenen; onderzocht bij overgangsklachten." 
+           data-taste="licht zoet, grasachtig, zacht kruidig" 
+           data-scent="zacht bloemig, honingachtig, groen" 
+           data-letter="R">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter R</span>
+          <h2 class="herb-name">Rode klaver</h2>
+          <div class="herb-latin">Trifolium pratense</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Bevat fyto-oestrogenen; onderzocht bij overgangsklachten.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Formononetine, biochanine A, genisteïne, daïdzeïne</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Licht zoet, grasachtig, zacht kruidig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Zacht bloemig, honingachtig, groen</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="rozemarijn" 
+           data-latin="salvia rosmarinus" 
+           data-compounds="rozemarijnzuur, carnosol, carnosinezuur, kamfer" 
+           data-action="antioxidant; traditioneel voor spijsvertering; antimicrobieel onderzocht." 
+           data-taste="krachtig kruidig, licht bitter" 
+           data-scent="harsachtig, dennenachtig, kamferachtig" 
+           data-letter="R">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter R</span>
+          <h2 class="herb-name">Rozemarijn</h2>
+          <div class="herb-latin">Salvia rosmarinus</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Antioxidant; traditioneel voor spijsvertering; antimicrobieel onderzocht.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Rozemarijnzuur, carnosol, carnosinezuur, kamfer</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Krachtig kruidig, licht bitter</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Harsachtig, dennenachtig, kamferachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="salie" 
+           data-latin="salvia officinalis" 
+           data-compounds="rozemarijnzuur, thujon, kamfer, cineol, borneol" 
+           data-action="traditioneel voor mond/keel, spijsvertering en transpiratie." 
+           data-taste="sterk kruidig, bitter, licht peperig" 
+           data-scent="intens kruidig, kamferachtig" 
+           data-letter="S">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter S</span>
+          <h2 class="herb-name">Salie</h2>
+          <div class="herb-latin">Salvia officinalis</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor mond/keel, spijsvertering en transpiratie.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Rozemarijnzuur, thujon, kamfer, cineol, borneol</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Sterk kruidig, bitter, licht peperig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Intens kruidig, kamferachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a><a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="steranijs" 
+           data-latin="illicium verum" 
+           data-compounds="trans-anethol, shikiminezuur, limoneen, linalool" 
+           data-action="traditioneel voor spijsvertering en darmkrampen." 
+           data-taste="zoet, sterk anijsachtig" 
+           data-scent="intens zoet, anijsachtig" 
+           data-letter="S">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter S</span>
+          <h2 class="herb-name">Steranijs</h2>
+          <div class="herb-latin">Illicium verum</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor spijsvertering en darmkrampen.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Trans-anethol, shikiminezuur, limoneen, linalool</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Zoet, sterk anijsachtig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Intens zoet, anijsachtig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="venkel" 
+           data-latin="foeniculum vulgare" 
+           data-compounds="trans-anethol, fenchon, estragol, limoneen" 
+           data-action="traditioneel tegen gasvorming en darmkrampen; slijmoplossend." 
+           data-taste="zoet, anijsachtig, licht peperig" 
+           data-scent="zoet, anijsachtig, warm" 
+           data-letter="V">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter V</span>
+          <h2 class="herb-name">Venkel</h2>
+          <div class="herb-latin">Foeniculum vulgare</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel tegen gasvorming en darmkrampen; slijmoplossend.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Trans-anethol, fenchon, estragol, limoneen</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Zoet, anijsachtig, licht peperig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Zoet, anijsachtig, warm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="wilde tijm" 
+           data-latin="thymus serpyllum" 
+           data-compounds="thymol, carvacrol, linalool, rozemarijnzuur" 
+           data-action="traditioneel voor luchtwegen en spijsvertering; antimicrobieel onderzocht." 
+           data-taste="krachtig kruidig, licht bitter, pittig" 
+           data-scent="sterk kruidig, tijmachtig, warm" 
+           data-letter="W">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter W</span>
+          <h2 class="herb-name">Wilde tijm</h2>
+          <div class="herb-latin">Thymus serpyllum</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor luchtwegen en spijsvertering; antimicrobieel onderzocht.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Thymol, carvacrol, linalool, rozemarijnzuur</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Krachtig kruidig, licht bitter, pittig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Sterk kruidig, tijmachtig, warm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="wilgenbast" 
+           data-latin="salix alba" 
+           data-compounds="salicine, salicylaten, flavonoïden, tanninen" 
+           data-action="traditioneel voor pijn, koorts en gewrichtsklachten." 
+           data-taste="sterk bitter, wrang, houtachtig" 
+           data-scent="houtachtig, droog, licht zoet" 
+           data-letter="W">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter W</span>
+          <h2 class="herb-name">Wilgenbast</h2>
+          <div class="herb-latin">Salix alba</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Traditioneel voor pijn, koorts en gewrichtsklachten.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Salicine, salicylaten, flavonoïden, tanninen</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Sterk bitter, wrang, houtachtig</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Houtachtig, droog, licht zoet</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Painless</a>
+        </div>
+
+      </div>
+      <div class="herb-card" 
+           data-name="witte peper" 
+           data-latin="piper nigrum" 
+           data-compounds="piperine, vluchtige olie, β-caryofylleen, limoneen" 
+           data-action="stimuleert traditioneel de spijsvertering; piperine beïnvloedt de opname van sommige stoffen." 
+           data-taste="pittig, scherp, warm" 
+           data-scent="peperig, warm, kruidig" 
+           data-letter="W">
+        
+        <div class="herb-card-top">
+          <span class="herb-letter-badge">Letter W</span>
+          <h2 class="herb-name">Witte peper</h2>
+          <div class="herb-latin">Piper nigrum</div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Traditionele Werking
+            </div>
+            <p class="herb-action">Stimuleert traditioneel de spijsvertering; piperine beïnvloedt de opname van sommige stoffen.</p>
+          </div>
+
+          <div class="herb-content-block">
+            <div class="section-title">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              Inhoudsstoffen
+            </div>
+            <div class="herb-compounds">Piperine, vluchtige olie, β-caryofylleen, limoneen</div>
+          </div>
+
+          <div class="herb-sensory-grid">
+            <div class="sensory-item">
+              <strong>Smaak:</strong>
+              <span>Pittig, scherp, warm</span>
+            </div>
+            <div class="sensory-item">
+              <strong>Geur:</strong>
+              <span>Peperig, warm, kruidig</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="herb-blends-footer">
+          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
+          <a href="../index.html#signature-six" class="blend-tag">✦ Painless</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Fytotherapeutische Waarschuwing & Disclaimer conform officieel PDF document -->
+    <div class="disclaimer-card">
+      <h3>✦ Fytotherapeutische Kennis & Medische Disclaimer</h3>
+      <p>
+        <strong>Let op:</strong> De hier beschreven werkingen zijn gebaseerd op traditionele Europese herboristieke toepassingen en/of wetenschappelijke onderzoeksbevindingen. Zij zijn uitdrukkelijk geen vervanging voor professioneel medisch advies, diagnose of behandeling. 
+        Vooral wilgenbast, moerasspirea, ginkgo biloba, rode klaver en geconcentreerde kruidenextracten kunnen wisselwerkingen of contra-indicaties hebben met medicijnen (zoals bloedverdunners of aspirine). Raadpleeg bij zwangerschap, borstvoeding, medicijngebruik of aandoeningen altijd een behandelend arts of gecertificeerd fytotherapeut.
+      </p>
+    </div>
+
+    <footer class="abc-footer">
+      <p>© 2026 Garden of Jess • G&W Gezondheidswinkel Bio Rosa, Padjedijk 30, Purmerend</p>
+    </footer>
+
+  </div>
+
+  <script>
+    let currentTaste = 'all';
+    let currentLetter = 'all';
+
+    function setTasteFilter(taste, btn) {
+      currentTaste = taste;
+      document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterHerbs();
+    }
+
+    function setLetterFilter(letter, btn) {
+      currentLetter = letter;
+      document.querySelectorAll('.letter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterHerbs();
+    }
+
+    function filterHerbs() {
+      const q = document.getElementById('search-input').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.herb-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const name = card.getAttribute('data-name');
+        const latin = card.getAttribute('data-latin');
+        const compounds = card.getAttribute('data-compounds');
+        const action = card.getAttribute('data-action');
+        const taste = card.getAttribute('data-taste');
+        const scent = card.getAttribute('data-scent');
+        const letter = card.getAttribute('data-letter');
+
+        const matchesQuery = !q || name.includes(q) || latin.includes(q) || compounds.includes(q) || action.includes(q) || taste.includes(q) || scent.includes(q);
+        const matchesTaste = currentTaste === 'all' || taste.includes(currentTaste);
+        const matchesLetter = currentLetter === 'all' || letter === currentLetter;
+
+        if (matchesQuery && matchesTaste && matchesLetter) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const counter = document.getElementById('counter-info');
+      counter.textContent = `Toont ${visibleCount} van de 27 botanische kruiden`;
+    }
+  </script>
+</body>
+</html>
