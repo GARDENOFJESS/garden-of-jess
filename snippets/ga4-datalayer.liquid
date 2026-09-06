@@ -1,5 +1,5 @@
 {% comment %}
-  Garden of Jess — Google Analytics 4 (GA4) & E-Commerce DataLayer Snippet
+  Garden by Jess — Google Analytics 4 (GA4) & E-Commerce DataLayer Snippet
   Measurement ID: G-JESSGARDEN9
   Tracks standard e-commerce events: view_item, add_to_cart, begin_checkout, purchase
 {% endcomment %}
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       items: [{
         item_id: '{{ product.id }}',
         item_name: {{ product.title | json }},
-        item_brand: 'Garden of Jess',
+        item_brand: 'Garden by Jess',
         item_category: 'Signature Herbal Blends',
         price: {{ product.price | divided_by: 100.0 }},
         quantity: 1
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
           items: [{
             item_id: '{{ product.id }}',
             item_name: {{ product.title | json }},
-            item_brand: 'Garden of Jess',
+            item_brand: 'Garden by Jess',
             item_category: 'Signature Herbal Blends',
             price: {{ product.price | divided_by: 100.0 }},
             quantity: 1
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
           item_id: '{{ item.product_id }}',
           item_name: {{ item.product.title | json }},
-          item_brand: 'Garden of Jess',
+          item_brand: 'Garden by Jess',
           item_category: 'Signature Herbal Blends',
           price: {{ item.price | divided_by: 100.0 }},
           quantity: {{ item.quantity }}

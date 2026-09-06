@@ -1,6 +1,6 @@
-# Garden of Jess — Ambachtelijke Biologische Kruidenthee
+# Garden by Jess — Ambachtelijke Biologische Kruidenthee
 
-Officiële webwinkel en botanische ervaring voor **Garden of Jess**, ambachtelijke theemelanges met fytotherapeutische zorg samengesteld.
+Officiële webwinkel en botanische ervaring voor **Garden by Jess**, ambachtelijke theemelanges met fytotherapeutische zorg samengesteld.
 
 ## 🌿 De 6 Kenmerkende Melanges
 Elk geleverd in een 50-grams aroma- en lichtwerend stazakje voor **€7,95**:

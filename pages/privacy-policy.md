@@ -1,21 +1,21 @@
-# Privacybeleid — Garden of Jess
+# Privacybeleid — Garden by Jess
 
 **Ingangsdatum:** 3 september 2026  
 **Laatst bijgewerkt:** 3 september 2026  
-**Verwerkingsverantwoordelijke:** Garden of Jess B.V., Plantsoenlaan 14, 1012 JS Amsterdam, Nederland  
-**Contact:** `privacy@gardenofjess.com` | `care@gardenofjess.com`
+**Verwerkingsverantwoordelijke:** Garden by Jess B.V., Plantsoenlaan 14, 1012 JS Amsterdam, Nederland  
+**Contact:** `privacy@gardenbyjess.store` | `care@gardenbyjess.store`
 
 ---
 
 ## 1. Inleiding & Onze Privacybelofte
-Bij **Garden of Jess** behandelen wij uw persoonsgegevens met hetzelfde respect, dezelfde zuiverheid en zorg als onze biologisch gecertificeerde kruidenoogsten. Dit privacybeleid legt op heldere en transparante wijze uit hoe wij uw persoonsgegevens verzamelen, verwerken en beveiligen wanneer u `gardenofjess.com` bezoekt, een bestelling plaatst in ons atelier of contact opneemt met onze herboristen, in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG / GDPR) en de Nederlandse Uitvoeringswet AVG.
+Bij **Garden by Jess** behandelen wij uw persoonsgegevens met hetzelfde respect, dezelfde zuiverheid en zorg als onze biologisch gecertificeerde kruidenoogsten. Dit privacybeleid legt op heldere en transparante wijze uit hoe wij uw persoonsgegevens verzamelen, verwerken en beveiligen wanneer u `gardenbyjess.store` bezoekt, een bestelling plaatst in ons atelier of contact opneemt met onze herboristen, in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG / GDPR) en de Nederlandse Uitvoeringswet AVG.
 
 ---
 
 ## 2. Welke Gegevens Wij Verzamelen
 Wij verzamelen uitsluitend de strikt noodzakelijke gegevens om uw bestellingen accuraat uit te voeren en u van deskundig advies te voorzien:
-- **Bestel- en Transactiegegevens:** Volledige naam, afleveradres, factuuradres, e-mailadres, telefoonnummer en betalingsreferentie. *Let op: creditcard- en bankgegevens worden direct en versleuteld verwerkt door gecertificeerde PCI-DSS level-1 betaalproviders (zoals iDEAL via Mollie/Shopify Payments, Bancontact en Klarna). Garden of Jess heeft nimmer toegang tot uw volledige kaartnummers.*
-- **Correspondentie & Advies:** Vragen over theezetmethoden, kruideninteracties en berichten verzonden aan `care@gardenofjess.com`.
+- **Bestel- en Transactiegegevens:** Volledige naam, afleveradres, factuuradres, e-mailadres, telefoonnummer en betalingsreferentie. *Let op: creditcard- en bankgegevens worden direct en versleuteld verwerkt door gecertificeerde PCI-DSS level-1 betaalproviders (zoals iDEAL via Mollie/Shopify Payments, Bancontact en Klarna). Garden by Jess heeft nimmer toegang tot uw volledige kaartnummers.*
+- **Correspondentie & Advies:** Vragen over theezetmethoden, kruideninteracties en berichten verzonden aan `care@gardenbyjess.store`.
 - **Technische & Statistische Gegevens:** IP-adres, browsertype, apparaatgegevens en bezochte pagina's (uitsluitend verwerkt via privacyvriendelijke en geanonimiseerde Google Analytics 4 metingen).
 
 ---
@@ -45,7 +45,7 @@ Als betrokkene beschikt u over uitgebreide wettelijke privacyrechten:
 - **Recht op Beperking van de Verwerking:** U kunt de verwerking tijdelijk laten pauzeren.
 - **Recht op Dataportabiliteit:** U kunt uw gegevens in een gestructureerd digitaal formaat opvragen.
 
-Voor het uitoefenen van deze rechten kunt u een e-mail sturen naar `privacy@gardenofjess.com`. Wij behandelen en bevestigen uw verzoek **binnen 24 uur**.
+Voor het uitoefenen van deze rechten kunt u een e-mail sturen naar `privacy@gardenbyjess.store`. Wij behandelen en bevestigen uw verzoek **binnen 24 uur**.
 
 ---
 

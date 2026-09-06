@@ -1,5 +1,5 @@
 {% comment %}
-  Garden of Jess — LocalBusiness & Organization JSON-LD Schema
+  Garden by Jess — LocalBusiness & Organization JSON-LD Schema
   Establishes physical apothecary studio authority, Google Maps geocoding, and E-E-A-T entity graph
 {% endcomment %}
 
@@ -10,13 +10,13 @@
     {
       "@type": ["Store", "LocalBusiness"],
       "@id": "{{ shop.url }}/#localbusiness",
-      "name": "Garden of Jess — Botanical Herbal Studio & Tasting Room",
+      "name": "Garden by Jess — Botanical Herbal Studio & Tasting Room",
       "url": "{{ shop.url }}",
       "logo": {
         "@type": "ImageObject",
         "@id": "{{ shop.url }}/#logo",
         "url": "{{ 'garden_of_jess_logo.jpg' | asset_url }}",
-        "caption": "Garden of Jess Botanical Emblem"
+        "caption": "Garden by Jess Botanical Emblem"
       },
       "image": [
         "{{ 'og_share_image.jpg' | asset_url }}",
@@ -24,7 +24,7 @@
       ],
       "description": "Artisanal organic herbal apothecary and herbal tea tasting room founded by master herbalist Jess. Formulating the Signature Six clinical herbal infusions.",
       "telephone": "+31 20 894 3820",
-      "email": "care@gardenofjess.com",
+      "email": "care@gardenbyjess.store",
       "priceRange": "€€",
       "paymentAccepted": "Cash, Credit Card, iDEAL, Apple Pay, Bancontact",
       "currenciesAccepted": "EUR",
@@ -63,16 +63,16 @@
         "description": "B.Sc. in Phytotherapy & Herbal Sciences with over a decade of artisanal botanical formulation experience."
       },
       "sameAs": [
-        "https://www.instagram.com/gardenofjess",
-        "https://www.facebook.com/gardenofjessofficial",
-        "https://nl.pinterest.com/gardenofjess"
+        "https://www.instagram.com/gardenbyjess",
+        "https://www.facebook.com/gardenbyjessofficial",
+        "https://nl.pinterest.com/gardenbyjess"
       ]
     },
     {
       "@type": "WebSite",
       "@id": "{{ shop.url }}/#website",
       "url": "{{ shop.url }}",
-      "name": "Garden of Jess",
+      "name": "Garden by Jess",
       "publisher": {
         "@id": "{{ shop.url }}/#localbusiness"
       },

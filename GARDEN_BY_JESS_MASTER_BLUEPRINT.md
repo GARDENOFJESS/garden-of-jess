@@ -1,8 +1,8 @@
-# GARDEN OF JESS — MASTER SPECIFICATIE & COLLECTIEDOCUMENTATIE
+# GARDEN BY JESS — MASTER SPECIFICATIE & COLLECTIEDOCUMENTATIE
 
 **Formaat:** 50 gram in een hersluitbaar, composteerbaar aromabeschermend zakje  
 **Vaste Prijs:** €7,95 per zakje (alle 6 smaken)  
-**Merkidentiteit:** Garden of Jess — Ambachtelijk Biologisch Kruidenatelier Amsterdam  
+**Merkidentiteit:** Garden by Jess — Ambachtelijk Biologisch Kruidenatelier Amsterdam  
 **Kleurenpalet:**  
 - **Crème (Canvas):** `#F9F6F0`  
 - **Saliegroen (Accent & CTA):** `#6B7A55`  
