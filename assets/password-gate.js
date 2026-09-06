@@ -134,6 +134,8 @@
   window.lockGardenAtelier = function() {
     localStorage.removeItem(AUTH_KEY);
     sessionStorage.removeItem(AUTH_KEY);
+    localStorage.removeItem('garden_by_jess_key');
+    sessionStorage.removeItem('garden_by_jess_key');
     window.location.reload();
   };
 })();

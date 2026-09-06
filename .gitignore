@@ -5,3 +5,8 @@ desktop.ini
 
 # Logs
 *.log
+
+# Private unencrypted source folder (local only)
+_src/
+_src/*
+build_encrypted.py

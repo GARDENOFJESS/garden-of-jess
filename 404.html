@@ -2,139 +2,314 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pagina Niet Gevonden (404) | Garden by Jess</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Garden by Jess — Besloten Atelier & Proeflokaal</title>
+  <link rel="icon" type="image/jpeg" href="assets/garden_by_jess_logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --cream: #F9F6F0;
+      --card-bg: #FFFFFF;
       --sage: #6B7A55;
+      --sage-dark: #4F5C3E;
       --lavender: #8B7AA8;
       --deep-forest: #2D3823;
-      --border-sand: #EDE7DD;
+      --border: #EDE7DD;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background-color: var(--cream);
+      background: var(--cream);
+      background-image: radial-gradient(circle at 20% 20%, rgba(139, 122, 168, 0.06) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(107, 122, 85, 0.08) 0%, transparent 50%);
       font-family: 'Montserrat', sans-serif;
       color: var(--deep-forest);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
+      padding: 24px 16px;
     }
-    .card-404 {
-      background: #FFFFFF;
-      border: 1px solid var(--border-sand);
-      border-radius: 20px;
-      max-width: 640px;
+    .gate-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 44px 36px;
+      max-width: 440px;
       width: 100%;
-      padding: 56px 40px;
       text-align: center;
-      box-shadow: 0 16px 40px rgba(45, 56, 35, 0.07);
+      box-shadow: 0 20px 60px rgba(45, 56, 35, 0.1);
+      position: relative;
+    }
+    .logo-frame {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      padding: 3px;
+      background: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(45, 56, 35, 0.08);
+      border: 1px solid var(--border);
+    }
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
     }
     .eyebrow {
-      font-size: 12px;
-      letter-spacing: 2px;
+      font-size: 11px;
+      letter-spacing: 2.2px;
       text-transform: uppercase;
       color: var(--lavender);
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
     h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 40px;
-      margin-bottom: 16px;
-      line-height: 1.2;
+      font-size: 34px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      margin-bottom: 12px;
+      line-height: 1.15;
     }
-    p {
-      color: #556149;
-      font-size: 15px;
+    .desc {
+      font-size: 13.5px;
+      color: #55624A;
       line-height: 1.6;
-      margin-bottom: 32px;
+      margin-bottom: 26px;
     }
-    .btn-return {
-      display: inline-block;
+    .shield-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #EFF3EA;
+      border: 1px solid #DCE6D2;
+      color: var(--sage);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .input-code {
+      width: 100%;
+      padding: 14px 20px;
+      border: 1.5px solid #D8CFBC;
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: 16px;
+      text-align: center;
+      background: #FAF8F5;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      letter-spacing: 2px;
+    }
+    .input-code:focus {
+      border-color: var(--sage);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(107, 122, 85, 0.12);
+    }
+    .btn-submit {
       background: var(--sage);
-      color: #FFF;
-      padding: 14px 32px;
+      color: #FFFFFF;
+      border: none;
+      padding: 14px 28px;
       border-radius: 30px;
       font-size: 14px;
       font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(107, 122, 85, 0.25);
     }
-    .btn-return:hover { background: var(--deep-forest); }
-    .rec-box {
-      margin-top: 40px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border-sand);
-      text-align: left;
+    .btn-submit:hover {
+      background: var(--deep-forest);
+      transform: translateY(-1px);
     }
-    .rec-title {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--lavender);
-      font-weight: 700;
-      margin-bottom: 14px;
+    .btn-submit:disabled {
+      background: #B3BEA7;
+      cursor: not-allowed;
     }
-    .rec-links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    .rec-link {
-      background: var(--cream);
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 1px solid var(--border-sand);
-      text-decoration: none;
-      color: var(--deep-forest);
+    .error-msg {
+      display: none;
       font-size: 13px;
-      display: block;
+      color: #B23B3B;
+      background: #FDF2F2;
+      border: 1px solid #F5C6C6;
+      padding: 8px 14px;
+      border-radius: 12px;
+      margin-top: 4px;
     }
-    .rec-link strong { color: var(--sage); display: block; font-size: 13px; }
+    .gate-footer {
+      margin-top: 24px;
+      font-size: 11px;
+      color: #8C9682;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+    .shake { animation: shake 0.4s ease-in-out; }
   </style>
-  <!-- Besloten Atelier Wachtwoordpoort (1974) -->
-  <link rel="stylesheet" href="assets/password-gate.css">
-  <script src="assets/password-gate.js"></script>
 </head>
 <body>
 
-  <div class="card-404">
-    <div style="margin-bottom: 20px;">
-      <svg width="60" height="60" viewBox="0 0 64 64" fill="none" style="margin:0 auto;">
-        <path d="M32 4C32 4 28 16 20 22C12 28 4 32 4 32C4 32 16 36 22 44C28 52 32 60 32 60C32 60 36 48 44 42C52 36 60 32 60 32C60 32 48 28 42 20C36 12 32 4 32 4Z" stroke="#6B7A55" stroke-width="2.5" stroke-linecap="round"/>
-        <path d="M32 20V44M20 32H44" stroke="#8B7AA8" stroke-width="1.8" stroke-linecap="round"/>
-      </svg>
+  <div class="gate-card" id="gate-card">
+    <div class="logo-frame">
+      <img src="assets/garden_by_jess_logo.jpg" alt="Garden by Jess" class="logo-img">
     </div>
-
-    <p class="eyebrow">Foutcode 404 • Pad Niet Gevonden</p>
-    <h1>Even Verdwaald in de Kruidentuin?</h1>
-    <p>
-      Het botanische blad dat u zoekt is meegenomen door de wind. Zelfs in de meest zorgvuldig onderhouden kruidentuin dwaalt men weleens af. Laat ons u terugleiden naar onze rustgevende theemelanges.
+    <p class="eyebrow">Besloten Atelier & Proeflokaal</p>
+    <h1>Garden by Jess</h1>
+    <div class="shield-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Militaire AES-256-GCM Versleuteling</span>
+    </div>
+    <p class="desc">
+      De inhoud van deze pagina is end-to-end versleuteld. Voer de toegangscode in om het atelier te ontsleutelen en de collectie te laden.
     </p>
-
-    <a href="index.html" class="btn-return">Terug naar het Kruidenatelier →</a>
-
-    <div class="rec-box">
-      <div class="rec-title">Populaire Herstellende Melanges (€7,95 / 50g):</div>
-      <div class="rec-links">
-        <a href="index.html#signature-six" class="rec-link">
-          <strong>✦ Morning Rise</strong>
-          Munt, lavendel en ginkgo
-        </a>
-        <a href="index.html#signature-six" class="rec-link">
-          <strong>✦ Smooth Digest</strong>
-          Artisjok, steranijs en venkel
-        </a>
+    
+    <form class="form" id="gate-form" onsubmit="return false;">
+      <input 
+        type="password" 
+        id="gate-input" 
+        class="input-code" 
+        placeholder="Toegangscode..." 
+        autocomplete="current-password"
+        autofocus
+        required
+      >
+      <button type="submit" class="btn-submit" id="gate-btn">
+        Atelier Ontsleutelen →
+      </button>
+      <div class="error-msg" id="error-box">
+        Onjuiste toegangscode. De versleuteling kan niet worden ontcijferd.
       </div>
+    </form>
+
+    <div class="gate-footer">
+      © 2026 Garden by Jess B.V. • Padjedijk 30, Purmerend
     </div>
   </div>
 
+  <script id="encrypted-payload" type="application/json">
+{
+  "salt": "egL9RUnj0cPtSCMxdDzPww==",
+  "iv": "XJF7/ao+8TryYr2Y",
+  "ciphertext": "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"
+}
+  </script>
+
+  <script>
+    const AUTH_STORAGE_KEY = 'garden_by_jess_key';
+
+    async function decryptPayload(password) {
+      const payloadEl = document.getElementById('encrypted-payload');
+      if (!payloadEl) return null;
+      const data = JSON.parse(payloadEl.textContent);
+
+      const salt = Uint8Array.from(atob(data.salt), c => c.charCodeAt(0));
+      const iv = Uint8Array.from(atob(data.iv), c => c.charCodeAt(0));
+      const ciphertext = Uint8Array.from(atob(data.ciphertext), c => c.charCodeAt(0));
+
+      const encoder = new TextEncoder();
+      const passKey = await crypto.subtle.importKey(
+        'raw',
+        encoder.encode(password),
+        'PBKDF2',
+        false,
+        ['deriveKey']
+      );
+
+      const aesKey = await crypto.subtle.deriveKey(
+        {
+          name: 'PBKDF2',
+          salt: salt,
+          iterations: 100000,
+          hash: 'SHA-256'
+        },
+        passKey,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['decrypt']
+      );
+
+      const decrypted = await crypto.subtle.decrypt(
+        { name: 'AES-GCM', iv: iv },
+        aesKey,
+        ciphertext
+      );
+
+      const decoder = new TextDecoder('utf-8');
+      return decoder.decode(decrypted);
+    }
+
+    async function attemptUnlock(pwd) {
+      const btn = document.getElementById('gate-btn');
+      const errBox = document.getElementById('error-box');
+      const card = document.getElementById('gate-card');
+
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Bezig met ontsleutelen...';
+      }
+
+      try {
+        const html = await decryptPayload(pwd);
+        if (html) {
+          sessionStorage.setItem(AUTH_STORAGE_KEY, pwd);
+          localStorage.setItem(AUTH_STORAGE_KEY, pwd);
+          document.open();
+          document.write(html);
+          document.close();
+          return true;
+        }
+      } catch (e) {
+        console.warn('Decryption failed:', e);
+      }
+
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = 'Atelier Ontsleutelen →';
+      }
+      if (errBox) errBox.style.display = 'block';
+      if (card) {
+        card.classList.add('shake');
+        setTimeout(() => card.classList.remove('shake'), 450);
+      }
+      const input = document.getElementById('gate-input');
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+      return false;
+    }
+
+    // Check existing session for auto-unlock
+    (function checkAutoUnlock() {
+      const cached = sessionStorage.getItem(AUTH_STORAGE_KEY) || localStorage.getItem(AUTH_STORAGE_KEY);
+      if (cached) {
+        attemptUnlock(cached);
+      }
+    })();
+
+    document.getElementById('gate-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const val = document.getElementById('gate-input').value.trim();
+      if (val) attemptUnlock(val);
+    });
+  </script>
 </body>
 </html>

@@ -2,1828 +2,314 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kruiden ABC — Werking, Inhoudsstoffen, Smaak & Geur | Garden by Jess</title>
-  <meta name="description" content="Het officiële Kruiden ABC van Garden by Jess: een alfabetisch compendium van 27 botanische kruiden en planten met inhoudsstoffen, traditionele werking, smaak- en geurprofielen.">
-  
-  <script>
-    if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-      location.replace('https://' + location.host + location.pathname + location.search + location.hash);
-    }
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Garden by Jess — Besloten Atelier & Proeflokaal</title>
   <link rel="icon" type="image/jpeg" href="../assets/garden_by_jess_logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --cream: #F9F6F0;
-      --cream-card: #FFFFFF;
-      --cream-soft: #FAF7F2;
+      --card-bg: #FFFFFF;
       --sage: #6B7A55;
       --sage-dark: #4F5C3E;
-      --sage-light: #EBF0E4;
       --lavender: #8B7AA8;
-      --lavender-soft: #F3F0F7;
       --deep-forest: #2D3823;
-      --border-sand: #EDE7DD;
-      --gold-accent: #C5A059;
-      --shadow: 0 10px 30px rgba(45, 56, 35, 0.05);
-      --radius: 16px;
+      --border: #EDE7DD;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
-      background-color: var(--cream);
+      background: var(--cream);
+      background-image: radial-gradient(circle at 20% 20%, rgba(139, 122, 168, 0.06) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(107, 122, 85, 0.08) 0%, transparent 50%);
       font-family: 'Montserrat', sans-serif;
       color: var(--deep-forest);
-      line-height: 1.6;
-      padding: 40px 20px 80px;
-    }
-
-    .container {
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .nav-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border-sand);
-    }
-
-    .back-home {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--sage);
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .back-home:hover { color: var(--deep-forest); }
-
-    .brand-title-small {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      color: var(--deep-forest);
-    }
-
-    .hero-header {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 48px;
-    }
-
-    .eyebrow {
-      font-size: 13px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--lavender);
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(34px, 5vw, 52px);
-      font-weight: 600;
-      color: var(--deep-forest);
-      line-height: 1.15;
-      margin-bottom: 18px;
-    }
-
-    .lead-text {
-      font-size: 16px;
-      color: #55624A;
-      line-height: 1.7;
-    }
-
-    /* Zoekbalk & Filters */
-    .controls-panel {
-      background: var(--cream-card);
-      border: 1px solid var(--border-sand);
-      border-radius: var(--radius);
-      padding: 24px;
-      margin-bottom: 36px;
-      box-shadow: var(--shadow);
-    }
-
-    .search-box {
-      position: relative;
-      margin-bottom: 20px;
-    }
-
-    .search-input {
-      width: 100%;
-      padding: 14px 20px 14px 44px;
-      border: 1px solid #D8CFBC;
-      border-radius: 30px;
-      font-family: inherit;
-      font-size: 16px;
-      background: var(--cream-soft);
-      outline: none;
-      transition: all 0.2s;
-    }
-    .search-input:focus {
-      border-color: var(--sage);
-      background: #FFFFFF;
-      box-shadow: 0 0 0 3px rgba(107, 122, 85, 0.15);
-    }
-
-    .search-icon {
-      position: absolute;
-      left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--sage);
-    }
-
-    .filter-group {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      margin-top: 14px;
-    }
-
-    .filter-label {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--deep-forest);
-      margin-right: 6px;
-    }
-
-    .btn-filter {
-      background: var(--cream-soft);
-      border: 1px solid var(--border-sand);
-      color: var(--deep-forest);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .btn-filter:hover, .btn-filter.active {
-      background: var(--sage);
-      color: #FFFFFF;
-      border-color: var(--sage);
-    }
-
-    .alphabet-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px dashed var(--border-sand);
-    }
-
-    .letter-btn {
-      width: 32px;
-      height: 32px;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      background: var(--cream-soft);
-      border: 1px solid var(--border-sand);
-      color: var(--deep-forest);
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
+      padding: 24px 16px;
     }
-    .letter-btn:hover, .letter-btn.active {
-      background: var(--lavender);
-      color: #FFFFFF;
-      border-color: var(--lavender);
-    }
-
-    .counter-info {
-      font-size: 13px;
-      color: #7B856F;
-      margin-top: 14px;
-      font-weight: 500;
-    }
-
-    /* Grid van Kruidenkaarten */
-    .herbs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 28px;
-    }
-
-    @media (max-width: 768px) {
-      .herbs-grid { grid-template-columns: 1fr; }
-      body { padding: 24px 16px 60px; }
-      .controls-panel { padding: 18px 14px; }
-    }
-
-    .herb-card {
-      background: var(--cream-card);
-      border: 1px solid var(--border-sand);
-      border-radius: var(--radius);
-      padding: 30px 26px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.25s, box-shadow 0.25s;
+    .gate-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 44px 36px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(45, 56, 35, 0.1);
       position: relative;
     }
-    .herb-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 36px rgba(45, 56, 35, 0.09);
-      border-color: #D6CCBD;
+    .logo-frame {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      padding: 3px;
+      background: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(45, 56, 35, 0.08);
+      border: 1px solid var(--border);
     }
-
-    .herb-card-top {
-      margin-bottom: 18px;
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
     }
-
-    .herb-letter-badge {
-      display: inline-block;
+    .eyebrow {
       font-size: 11px;
-      font-weight: 700;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
       color: var(--lavender);
-      background: var(--lavender-soft);
-      padding: 3px 9px;
-      border-radius: 12px;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .herb-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
-      font-weight: 600;
-      color: var(--deep-forest);
-      line-height: 1.2;
-      margin-bottom: 4px;
-    }
-
-    .herb-latin {
-      font-style: italic;
-      font-size: 13px;
-      color: var(--sage);
-      margin-bottom: 16px;
-      font-family: 'Cormorant Garamond', serif;
-    }
-
-    .section-title {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       font-weight: 700;
-      color: #7B856F;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      margin-bottom: 8px;
     }
-
-    .herb-content-block {
-      margin-bottom: 14px;
-    }
-
-    .herb-action {
-      font-size: 14px;
-      color: var(--deep-forest);
-      line-height: 1.55;
-    }
-
-    .herb-compounds {
-      font-size: 13px;
-      color: #4A563D;
-      background: var(--cream-soft);
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: 1px solid var(--border-sand);
-      line-height: 1.5;
-    }
-
-    .herb-sensory-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid #F0ECE4;
-    }
-
-    .sensory-item {
-      font-size: 12.5px;
-    }
-    .sensory-item strong {
-      display: block;
-      color: var(--deep-forest);
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
       font-weight: 600;
-      margin-bottom: 2px;
+      color: var(--deep-forest);
+      margin-bottom: 12px;
+      line-height: 1.15;
     }
-    .sensory-item span {
-      color: #636E58;
+    .desc {
+      font-size: 13.5px;
+      color: #55624A;
+      line-height: 1.6;
+      margin-bottom: 26px;
     }
-
-    /* Melange koppeling onderaan kaart */
-    .herb-blends-footer {
-      margin-top: 20px;
-      padding-top: 16px;
-      border-top: 1px dashed var(--border-sand);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .blend-tag {
+    .shield-badge {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      background: var(--sage-light);
-      border: 1px solid #D6E3CB;
-      color: var(--sage-dark);
-      font-size: 12px;
-      font-weight: 600;
-      padding: 4px 10px;
+      gap: 6px;
+      background: #EFF3EA;
+      border: 1px solid #DCE6D2;
+      color: var(--sage);
+      padding: 5px 14px;
       border-radius: 20px;
-      text-decoration: none;
-      transition: all 0.2s;
+      font-size: 11.5px;
+      font-weight: 600;
+      margin-bottom: 22px;
     }
-    .blend-tag:hover {
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .input-code {
+      width: 100%;
+      padding: 14px 20px;
+      border: 1.5px solid #D8CFBC;
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: 16px;
+      text-align: center;
+      background: #FAF8F5;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      letter-spacing: 2px;
+    }
+    .input-code:focus {
+      border-color: var(--sage);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(107, 122, 85, 0.12);
+    }
+    .btn-submit {
       background: var(--sage);
       color: #FFFFFF;
-      border-color: var(--sage);
-    }
-
-    /* Disclaimer box */
-    .disclaimer-card {
-      background: #F4EFEB;
-      border-left: 5px solid var(--sage);
-      border-radius: var(--radius);
-      padding: 28px 32px;
-      margin-top: 60px;
-      box-shadow: var(--shadow);
-    }
-
-    .disclaimer-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      color: var(--deep-forest);
-      margin-bottom: 10px;
-    }
-
-    .disclaimer-card p {
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
       font-size: 14px;
-      color: #55604B;
-      line-height: 1.65;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(107, 122, 85, 0.25);
     }
-
-    /* Footer */
-    footer.abc-footer {
-      text-align: center;
-      margin-top: 50px;
+    .btn-submit:hover {
+      background: var(--deep-forest);
+      transform: translateY(-1px);
+    }
+    .btn-submit:disabled {
+      background: #B3BEA7;
+      cursor: not-allowed;
+    }
+    .error-msg {
+      display: none;
       font-size: 13px;
-      color: #7B856F;
+      color: #B23B3B;
+      background: #FDF2F2;
+      border: 1px solid #F5C6C6;
+      padding: 8px 14px;
+      border-radius: 12px;
+      margin-top: 4px;
     }
+    .gate-footer {
+      margin-top: 24px;
+      font-size: 11px;
+      color: #8C9682;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+    .shake { animation: shake 0.4s ease-in-out; }
   </style>
-  <!-- Besloten Atelier Wachtwoordpoort (1974) -->
-  <link rel="stylesheet" href="../assets/password-gate.css">
-  <script src="../assets/password-gate.js"></script>
 </head>
 <body>
 
-  <div class="container">
+  <div class="gate-card" id="gate-card">
+    <div class="logo-frame">
+      <img src="../assets/garden_by_jess_logo.jpg" alt="Garden by Jess" class="logo-img">
+    </div>
+    <p class="eyebrow">Besloten Atelier & Proeflokaal</p>
+    <h1>Garden by Jess</h1>
+    <div class="shield-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Militaire AES-256-GCM Versleuteling</span>
+    </div>
+    <p class="desc">
+      De inhoud van deze pagina is end-to-end versleuteld. Voer de toegangscode in om het atelier te ontsleutelen en de collectie te laden.
+    </p>
     
-    <!-- Top Navigatie -->
-    <div class="nav-top">
-      <a href="../index.html" class="back-home">← Terug naar het Kruidenatelier</a>
-      <span class="brand-title-small">Garden by Jess • Botanisch Compendium</span>
+    <form class="form" id="gate-form" onsubmit="return false;">
+      <input 
+        type="password" 
+        id="gate-input" 
+        class="input-code" 
+        placeholder="Toegangscode..." 
+        autocomplete="current-password"
+        autofocus
+        required
+      >
+      <button type="submit" class="btn-submit" id="gate-btn">
+        Atelier Ontsleutelen →
+      </button>
+      <div class="error-msg" id="error-box">
+        Onjuiste toegangscode. De versleuteling kan niet worden ontcijferd.
+      </div>
+    </form>
+
+    <div class="gate-footer">
+      © 2026 Garden by Jess B.V. • Padjedijk 30, Purmerend
     </div>
-
-    <!-- Header -->
-    <div class="hero-header">
-      <p class="eyebrow">Fytotherapeutische Kennisbank</p>
-      <h1>Kruiden ABC — Werking, Inhoudsstoffen, Smaak & Geur</h1>
-      <p class="lead-text">
-        Een diepgaand alfabetisch overzicht van de 27 zuivere kruiden, bloemen, zaden en basten die Jess selecteert en verwerkt in haar zes kenmerkende theemelanges.
-      </p>
-    </div>
-
-    <!-- Filter & Zoekpaneel -->
-    <div class="controls-panel">
-      <div class="search-box">
-        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="text" id="search-input" class="search-input" placeholder="Zoek op kruid, werkzame stof (bijv. cynarine, salicylaten, menthol), smaak of werking..." oninput="filterHerbs()">
-      </div>
-
-      <div class="filter-group">
-        <span class="filter-label">Smaakbeleving:</span>
-        <button class="btn-filter active" onclick="setTasteFilter('all', this)">Alles (27)</button>
-        <button class="btn-filter" onclick="setTasteFilter('bitter', this)">Bitter</button>
-        <button class="btn-filter" onclick="setTasteFilter('fris', this)">Fris & Citrus</button>
-        <button class="btn-filter" onclick="setTasteFilter('kruidig', this)">Kruidig</button>
-        <button class="btn-filter" onclick="setTasteFilter('zoet', this)">Zoet & Anijs</button>
-        <button class="btn-filter" onclick="setTasteFilter('aards', this)">Aards & Houtachtig</button>
-        <button class="btn-filter" onclick="setTasteFilter('pittig', this)">Pittig</button>
-      </div>
-
-      <div class="alphabet-nav" id="alphabet-nav">
-        <button class="letter-btn active" onclick="setLetterFilter('all', this)">Alle</button>
-        <button class="letter-btn" onclick="setLetterFilter('A', this)">A</button>
-        <button class="letter-btn" onclick="setLetterFilter('B', this)">B</button>
-        <button class="letter-btn" onclick="setLetterFilter('C', this)">C</button>
-        <button class="letter-btn" onclick="setLetterFilter('D', this)">D</button>
-        <button class="letter-btn" onclick="setLetterFilter('G', this)">G</button>
-        <button class="letter-btn" onclick="setLetterFilter('H', this)">H</button>
-        <button class="letter-btn" onclick="setLetterFilter('I', this)">I</button>
-        <button class="letter-btn" onclick="setLetterFilter('K', this)">K</button>
-        <button class="letter-btn" onclick="setLetterFilter('L', this)">L</button>
-        <button class="letter-btn" onclick="setLetterFilter('M', this)">M</button>
-        <button class="letter-btn" onclick="setLetterFilter('O', this)">O</button>
-        <button class="letter-btn" onclick="setLetterFilter('R', this)">R</button>
-        <button class="letter-btn" onclick="setLetterFilter('S', this)">S</button>
-        <button class="letter-btn" onclick="setLetterFilter('V', this)">V</button>
-        <button class="letter-btn" onclick="setLetterFilter('W', this)">W</button>
-      </div>
-
-      <div class="counter-info" id="counter-info">Toont alle 27 geselecteerde botanische kruiden</div>
-    </div>
-
-    <!-- Grid van alle 27 Kruiden -->
-    <div class="herbs-grid" id="herbs-grid">
-      <div class="herb-card" 
-           data-name="artisjokkruid" 
-           data-latin="cynara cardunculus" 
-           data-compounds="cynarine, chlorogeenzuur, luteoline, flavonoïden" 
-           data-action="ondersteunt traditioneel de spijsvertering en galfunctie; antioxidant." 
-           data-taste="bitter, kruidig, licht aards" 
-           data-scent="groen, kruidig, aards" 
-           data-letter="A">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter A</span>
-          <h2 class="herb-name">Artisjokkruid</h2>
-          <div class="herb-latin">Cynara cardunculus</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Ondersteunt traditioneel de spijsvertering en galfunctie; antioxidant.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Cynarine, chlorogeenzuur, luteoline, flavonoïden</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Bitter, kruidig, licht aards</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Groen, kruidig, aards</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="berkenblad" 
-           data-latin="betula pendula" 
-           data-compounds="flavonoïden, hyperoside, quercetine, tanninen" 
-           data-action="traditioneel vochtafdrijvend en gebruikt ter ondersteuning van de urinewegen." 
-           data-taste="mild bitter, groen, licht zoet" 
-           data-scent="fris, groen, licht houtachtig" 
-           data-letter="B">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter B</span>
-          <h2 class="herb-name">Berkenblad</h2>
-          <div class="herb-latin">Betula pendula</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel vochtafdrijvend en gebruikt ter ondersteuning van de urinewegen.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Flavonoïden, hyperoside, quercetine, tanninen</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Mild bitter, groen, licht zoet</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Fris, groen, licht houtachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="braamblad" 
-           data-latin="rubus fruticosus" 
-           data-compounds="tanninen, ellaginezuur, flavonoïden, fenolzuren" 
-           data-action="samentrekkend; traditioneel voor mond/keel en darmen." 
-           data-taste="licht bitter, wrang, groen" 
-           data-scent="fris, groen, zacht kruidig" 
-           data-letter="B">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter B</span>
-          <h2 class="herb-name">Braamblad</h2>
-          <div class="herb-latin">Rubus fruticosus</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Samentrekkend; traditioneel voor mond/keel en darmen.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Tanninen, ellaginezuur, flavonoïden, fenolzuren</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Licht bitter, wrang, groen</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Fris, groen, zacht kruidig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="brandnetel" 
-           data-latin="urtica dioica" 
-           data-compounds="mineralen, chlorofyl, flavonoïden, fenolzuren" 
-           data-action="traditioneel voor urinewegen en gewrichten; mineralenrijke plant." 
-           data-taste="groen, licht ziltig, kruidig" 
-           data-scent="fris, groen, grasachtig" 
-           data-letter="B">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter B</span>
-          <h2 class="herb-name">Brandnetel</h2>
-          <div class="herb-latin">Urtica dioica</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor urinewegen en gewrichten; mineralenrijke plant.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Mineralen, chlorofyl, flavonoïden, fenolzuren</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Groen, licht ziltig, kruidig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Fris, groen, grasachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="brandnetelzaad" 
-           data-latin="urtica dioica semen" 
-           data-compounds="vetzuren, sterolen, eiwitten, carotenoïden" 
-           data-action="traditioneel voedend en versterkend." 
-           data-taste="nootachtig, groen, licht aards" 
-           data-scent="grasachtig, nootachtig" 
-           data-letter="B">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter B</span>
-          <h2 class="herb-name">Brandnetelzaad</h2>
-          <div class="herb-latin">Urtica dioica semen</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voedend en versterkend.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Vetzuren, sterolen, eiwitten, carotenoïden</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Nootachtig, groen, licht aards</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Grasachtig, nootachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="cacaoboon" 
-           data-latin="theobroma cacao" 
-           data-compounds="theobromine, cafeïne, epicatechine, catechine, flavanolen" 
-           data-action="antioxidant; licht stimulerend; flavanolen zijn cardiovasculair onderzocht." 
-           data-taste="bitter, cacaoachtig, nootachtig" 
-           data-scent="warm, chocoladeachtig, geroosterd" 
-           data-letter="C">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter C</span>
-          <h2 class="herb-name">Cacaoboon</h2>
-          <div class="herb-latin">Theobroma cacao</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Antioxidant; licht stimulerend; flavanolen zijn cardiovasculair onderzocht.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Theobromine, cafeïne, epicatechine, catechine, flavanolen</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Bitter, cacaoachtig, nootachtig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Warm, chocoladeachtig, geroosterd</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="citroenverbena" 
-           data-latin="aloysia citrodora" 
-           data-compounds="verbascoside, citral, limoneen, flavonoïden" 
-           data-action="traditioneel rustgevend en ondersteunend voor de spijsvertering." 
-           data-taste="fris, citroenachtig, licht zoet" 
-           data-scent="sterk citroenachtig, fris" 
-           data-letter="C">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter C</span>
-          <h2 class="herb-name">Citroenverbena</h2>
-          <div class="herb-latin">Aloysia citrodora</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel rustgevend en ondersteunend voor de spijsvertering.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Verbascoside, citral, limoneen, flavonoïden</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Fris, citroenachtig, licht zoet</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Sterk citroenachtig, fris</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="dropplant" 
-           data-latin="agastache foeniculum" 
-           data-compounds="anethol, estragol, limoneen, flavonoïden" 
-           data-action="traditioneel voor spijsvertering en luchtwegen." 
-           data-taste="zoet, anijsachtig, licht muntachtig" 
-           data-scent="zoet, anijsachtig, kruidig" 
-           data-letter="D">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter D</span>
-          <h2 class="herb-name">Dropplant</h2>
-          <div class="herb-latin">Agastache foeniculum</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor spijsvertering en luchtwegen.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Anethol, estragol, limoneen, flavonoïden</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Zoet, anijsachtig, licht muntachtig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Zoet, anijsachtig, kruidig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="duizendblad" 
-           data-latin="achillea millefolium" 
-           data-compounds="flavonoïden, chlorogeenzuur, sesquiterpeenlactonen, etherische olie" 
-           data-action="traditioneel voor spijsvertering en menstruatie; samentrekkend." 
-           data-taste="bitter, kruidig, licht scherp" 
-           data-scent="kruidig, kamferachtig, groen" 
-           data-letter="D">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter D</span>
-          <h2 class="herb-name">Duizendblad</h2>
-          <div class="herb-latin">Achillea millefolium</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor spijsvertering en menstruatie; samentrekkend.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Flavonoïden, chlorogeenzuur, sesquiterpeenlactonen, etherische olie</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Bitter, kruidig, licht scherp</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Kruidig, kamferachtig, groen</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a><a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="ginkgo biloba" 
-           data-latin="ginkgo biloba" 
-           data-compounds="ginkgoliden, bilobalide, flavonglycosiden" 
-           data-action="onderzocht voor bloedcirculatie en cognitieve functies." 
-           data-taste="licht bitter, droog, aards" 
-           data-scent="groen, licht harsachtig" 
-           data-letter="G">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter G</span>
-          <h2 class="herb-name">Ginkgo biloba</h2>
-          <div class="herb-latin">Ginkgo biloba</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Onderzocht voor bloedcirculatie en cognitieve functies.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Ginkgoliden, bilobalide, flavonglycosiden</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Licht bitter, droog, aards</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Groen, licht harsachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="heermoes" 
-           data-latin="equisetum arvense" 
-           data-compounds="siliciumverbindingen, flavonoïden, fenolzuren, sterolen" 
-           data-action="traditioneel vochtafdrijvend; gebruikt voor huid, haar en nagels." 
-           data-taste="aards, groen, licht bitter" 
-           data-scent="grasachtig, aards" 
-           data-letter="H">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter H</span>
-          <h2 class="herb-name">Heermoes</h2>
-          <div class="herb-latin">Equisetum arvense</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel vochtafdrijvend; gebruikt voor huid, haar en nagels.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Siliciumverbindingen, flavonoïden, fenolzuren, sterolen</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Aards, groen, licht bitter</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Grasachtig, aards</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="ijslandsmos" 
-           data-latin="cetraria islandica" 
-           data-compounds="lichenine, isolichenine, slijmstoffen, lichenine-zuren" 
-           data-action="verzachtend voor keel en slijmvliezen; traditioneel bij hoest." 
-           data-taste="licht bitter, aards" 
-           data-scent="aards, mosachtig, droog" 
-           data-letter="I">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter I</span>
-          <h2 class="herb-name">IJslandsmos</h2>
-          <div class="herb-latin">Cetraria islandica</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Verzachtend voor keel en slijmvliezen; traditioneel bij hoest.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Lichenine, isolichenine, slijmstoffen, lichenine-zuren</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Licht bitter, aards</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Aards, mosachtig, droog</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="koningskaars" 
-           data-latin="verbascum thapsus" 
-           data-compounds="slijmstoffen, saponinen, flavonoïden, iridoïden" 
-           data-action="verzachtend voor keel en luchtwegen; traditioneel bij hoest." 
-           data-taste="mild, zacht kruidig, licht bitter" 
-           data-scent="zacht bloemig, honingachtig" 
-           data-letter="K">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter K</span>
-          <h2 class="herb-name">Koningskaars</h2>
-          <div class="herb-latin">Verbascum thapsus</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Verzachtend voor keel en luchtwegen; traditioneel bij hoest.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Slijmstoffen, saponinen, flavonoïden, iridoïden</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Mild, zacht kruidig, licht bitter</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Zacht bloemig, honingachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="lavendel" 
-           data-latin="lavandula angustifolia" 
-           data-compounds="linalool, linalylacetaat, cineol, flavonoïden" 
-           data-action="ontspannend en rustgevend; traditioneel voor slaap en stress." 
-           data-taste="bloemig, licht bitter, kruidig" 
-           data-scent="sterk bloemig, fris" 
-           data-letter="L">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter L</span>
-          <h2 class="herb-name">Lavendel</h2>
-          <div class="herb-latin">Lavandula angustifolia</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Ontspannend en rustgevend; traditioneel voor slaap en stress.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Linalool, linalylacetaat, cineol, flavonoïden</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Bloemig, licht bitter, kruidig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Sterk bloemig, fris</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="laurier" 
-           data-latin="laurus nobilis" 
-           data-compounds="1,8-cineol, linalool, eugenol, α-pineen" 
-           data-action="traditioneel voor spijsvertering en winderigheid." 
-           data-taste="kruidig, licht bitter, warm" 
-           data-scent="aromatisch, kruidig, eucalyptusachtig" 
-           data-letter="L">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter L</span>
-          <h2 class="herb-name">Laurier</h2>
-          <div class="herb-latin">Laurus nobilis</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor spijsvertering en winderigheid.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">1,8-cineol, linalool, eugenol, α-pineen</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Kruidig, licht bitter, warm</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Aromatisch, kruidig, eucalyptusachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="limoenblad" 
-           data-latin="citrus hystrix" 
-           data-compounds="citronellal, limoneen, linalool, citronellol" 
-           data-action="aromatisch; traditioneel gebruikt in voeding en kruidenthee." 
-           data-taste="fris, citrusachtig, licht bitter" 
-           data-scent="intens limoenachtig, citrus, bloemig" 
-           data-letter="L">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter L</span>
-          <h2 class="herb-name">Limoenblad</h2>
-          <div class="herb-latin">Citrus hystrix</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Aromatisch; traditioneel gebruikt in voeding en kruidenthee.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Citronellal, limoneen, linalool, citronellol</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Fris, citrusachtig, licht bitter</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Intens limoenachtig, citrus, bloemig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="moerasspirea" 
-           data-latin="filipendula ulmaria" 
-           data-compounds="salicylaten, flavonoïden, tanninen, fenolzuren" 
-           data-action="traditioneel voor gewrichten, pijn en koorts." 
-           data-taste="zoetig, bitter, licht amandelachtig" 
-           data-scent="zoet, honingachtig, amandelachtig" 
-           data-letter="M">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter M</span>
-          <h2 class="herb-name">Moerasspirea</h2>
-          <div class="herb-latin">Filipendula ulmaria</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor gewrichten, pijn en koorts.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Salicylaten, flavonoïden, tanninen, fenolzuren</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Zoetig, bitter, licht amandelachtig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Zoet, honingachtig, amandelachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Painless</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="munt" 
-           data-latin="mentha piperita" 
-           data-compounds="menthol, menthon, rozemarijnzuur, flavonoïden" 
-           data-action="traditioneel voor spijsvertering, misselijkheid en darmkrampen." 
-           data-taste="fris, koel, licht scherp" 
-           data-scent="sterk muntachtig, fris, koel" 
-           data-letter="M">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter M</span>
-          <h2 class="herb-name">Munt</h2>
-          <div class="herb-latin">Mentha piperita</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor spijsvertering, misselijkheid en darmkrampen.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Menthol, menthon, rozemarijnzuur, flavonoïden</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Fris, koel, licht scherp</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Sterk muntachtig, fris, koel</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="olijfblad" 
-           data-latin="olea europaea" 
-           data-compounds="oleuropeïne, hydroxytyrosol, verbascoside, flavonoïden" 
-           data-action="antioxidant; onderzocht voor bloeddruk en glucose- en vetstofwisseling." 
-           data-taste="duidelijk bitter, groen, droog" 
-           data-scent="groen, kruidig, licht olijfachtig" 
-           data-letter="O">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter O</span>
-          <h2 class="herb-name">Olijfblad</h2>
-          <div class="herb-latin">Olea europaea</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Antioxidant; onderzocht voor bloeddruk en glucose- en vetstofwisseling.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Oleuropeïne, hydroxytyrosol, verbascoside, flavonoïden</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Duidelijk bitter, groen, droog</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Groen, kruidig, licht olijfachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="rode klaver" 
-           data-latin="trifolium pratense" 
-           data-compounds="formononetine, biochanine a, genisteïne, daïdzeïne" 
-           data-action="bevat fyto-oestrogenen; onderzocht bij overgangsklachten." 
-           data-taste="licht zoet, grasachtig, zacht kruidig" 
-           data-scent="zacht bloemig, honingachtig, groen" 
-           data-letter="R">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter R</span>
-          <h2 class="herb-name">Rode klaver</h2>
-          <div class="herb-latin">Trifolium pratense</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Bevat fyto-oestrogenen; onderzocht bij overgangsklachten.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Formononetine, biochanine A, genisteïne, daïdzeïne</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Licht zoet, grasachtig, zacht kruidig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Zacht bloemig, honingachtig, groen</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="rozemarijn" 
-           data-latin="salvia rosmarinus" 
-           data-compounds="rozemarijnzuur, carnosol, carnosinezuur, kamfer" 
-           data-action="antioxidant; traditioneel voor spijsvertering; antimicrobieel onderzocht." 
-           data-taste="krachtig kruidig, licht bitter" 
-           data-scent="harsachtig, dennenachtig, kamferachtig" 
-           data-letter="R">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter R</span>
-          <h2 class="herb-name">Rozemarijn</h2>
-          <div class="herb-latin">Salvia rosmarinus</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Antioxidant; traditioneel voor spijsvertering; antimicrobieel onderzocht.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Rozemarijnzuur, carnosol, carnosinezuur, kamfer</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Krachtig kruidig, licht bitter</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Harsachtig, dennenachtig, kamferachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="salie" 
-           data-latin="salvia officinalis" 
-           data-compounds="rozemarijnzuur, thujon, kamfer, cineol, borneol" 
-           data-action="traditioneel voor mond/keel, spijsvertering en transpiratie." 
-           data-taste="sterk kruidig, bitter, licht peperig" 
-           data-scent="intens kruidig, kamferachtig" 
-           data-letter="S">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter S</span>
-          <h2 class="herb-name">Salie</h2>
-          <div class="herb-latin">Salvia officinalis</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor mond/keel, spijsvertering en transpiratie.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Rozemarijnzuur, thujon, kamfer, cineol, borneol</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Sterk kruidig, bitter, licht peperig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Intens kruidig, kamferachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a><a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="steranijs" 
-           data-latin="illicium verum" 
-           data-compounds="trans-anethol, shikiminezuur, limoneen, linalool" 
-           data-action="traditioneel voor spijsvertering en darmkrampen." 
-           data-taste="zoet, sterk anijsachtig" 
-           data-scent="intens zoet, anijsachtig" 
-           data-letter="S">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter S</span>
-          <h2 class="herb-name">Steranijs</h2>
-          <div class="herb-latin">Illicium verum</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor spijsvertering en darmkrampen.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Trans-anethol, shikiminezuur, limoneen, linalool</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Zoet, sterk anijsachtig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Intens zoet, anijsachtig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="venkel" 
-           data-latin="foeniculum vulgare" 
-           data-compounds="trans-anethol, fenchon, estragol, limoneen" 
-           data-action="traditioneel tegen gasvorming en darmkrampen; slijmoplossend." 
-           data-taste="zoet, anijsachtig, licht peperig" 
-           data-scent="zoet, anijsachtig, warm" 
-           data-letter="V">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter V</span>
-          <h2 class="herb-name">Venkel</h2>
-          <div class="herb-latin">Foeniculum vulgare</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel tegen gasvorming en darmkrampen; slijmoplossend.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Trans-anethol, fenchon, estragol, limoneen</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Zoet, anijsachtig, licht peperig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Zoet, anijsachtig, warm</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="wilde tijm" 
-           data-latin="thymus serpyllum" 
-           data-compounds="thymol, carvacrol, linalool, rozemarijnzuur" 
-           data-action="traditioneel voor luchtwegen en spijsvertering; antimicrobieel onderzocht." 
-           data-taste="krachtig kruidig, licht bitter, pittig" 
-           data-scent="sterk kruidig, tijmachtig, warm" 
-           data-letter="W">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter W</span>
-          <h2 class="herb-name">Wilde tijm</h2>
-          <div class="herb-latin">Thymus serpyllum</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor luchtwegen en spijsvertering; antimicrobieel onderzocht.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Thymol, carvacrol, linalool, rozemarijnzuur</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Krachtig kruidig, licht bitter, pittig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Sterk kruidig, tijmachtig, warm</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="wilgenbast" 
-           data-latin="salix alba" 
-           data-compounds="salicine, salicylaten, flavonoïden, tanninen" 
-           data-action="traditioneel voor pijn, koorts en gewrichtsklachten." 
-           data-taste="sterk bitter, wrang, houtachtig" 
-           data-scent="houtachtig, droog, licht zoet" 
-           data-letter="W">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter W</span>
-          <h2 class="herb-name">Wilgenbast</h2>
-          <div class="herb-latin">Salix alba</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Traditioneel voor pijn, koorts en gewrichtsklachten.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Salicine, salicylaten, flavonoïden, tanninen</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Sterk bitter, wrang, houtachtig</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Houtachtig, droog, licht zoet</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Painless</a>
-        </div>
-
-      </div>
-      <div class="herb-card" 
-           data-name="witte peper" 
-           data-latin="piper nigrum" 
-           data-compounds="piperine, vluchtige olie, β-caryofylleen, limoneen" 
-           data-action="stimuleert traditioneel de spijsvertering; piperine beïnvloedt de opname van sommige stoffen." 
-           data-taste="pittig, scherp, warm" 
-           data-scent="peperig, warm, kruidig" 
-           data-letter="W">
-        
-        <div class="herb-card-top">
-          <span class="herb-letter-badge">Letter W</span>
-          <h2 class="herb-name">Witte peper</h2>
-          <div class="herb-latin">Piper nigrum</div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Traditionele Werking
-            </div>
-            <p class="herb-action">Stimuleert traditioneel de spijsvertering; piperine beïnvloedt de opname van sommige stoffen.</p>
-          </div>
-
-          <div class="herb-content-block">
-            <div class="section-title">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              Inhoudsstoffen
-            </div>
-            <div class="herb-compounds">Piperine, vluchtige olie, β-caryofylleen, limoneen</div>
-          </div>
-
-          <div class="herb-sensory-grid">
-            <div class="sensory-item">
-              <strong>Smaak:</strong>
-              <span>Pittig, scherp, warm</span>
-            </div>
-            <div class="sensory-item">
-              <strong>Geur:</strong>
-              <span>Peperig, warm, kruidig</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="herb-blends-footer">
-          <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Painless</a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Fytotherapeutische Waarschuwing & Disclaimer conform officieel PDF document -->
-    <div class="disclaimer-card">
-      <h3>✦ Fytotherapeutische Kennis & Medische Disclaimer</h3>
-      <p>
-        <strong>Let op:</strong> De hier beschreven werkingen zijn gebaseerd op traditionele Europese herboristieke toepassingen en/of wetenschappelijke onderzoeksbevindingen. Zij zijn uitdrukkelijk geen vervanging voor professioneel medisch advies, diagnose of behandeling. 
-        Vooral wilgenbast, moerasspirea, ginkgo biloba, rode klaver en geconcentreerde kruidenextracten kunnen wisselwerkingen of contra-indicaties hebben met medicijnen (zoals bloedverdunners of aspirine). Raadpleeg bij zwangerschap, borstvoeding, medicijngebruik of aandoeningen altijd een behandelend arts of gecertificeerd fytotherapeut.
-      </p>
-    </div>
-
-    <footer class="abc-footer">
-      <p>© 2026 Garden by Jess • G&W Gezondheidswinkel Bio Rosa, Padjedijk 30, Purmerend • <a href="javascript:void(0)" onclick="lockGardenAtelier()" style="color:#7B856F; text-decoration:none;">🔒 Vergrendel</a></p>
-    </footer>
-
   </div>
 
+  <script id="encrypted-payload" type="application/json">
+{
+  "salt": "W40cvI1j4nOhbkt/1wOxaQ==",
+  "iv": "/b/eI1tMiOFwD+bc",
+  "ciphertext": "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"
+}
+  </script>
+
   <script>
-    let currentTaste = 'all';
-    let currentLetter = 'all';
+    const AUTH_STORAGE_KEY = 'garden_by_jess_key';
 
-    function setTasteFilter(taste, btn) {
-      currentTaste = taste;
-      document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      filterHerbs();
+    async function decryptPayload(password) {
+      const payloadEl = document.getElementById('encrypted-payload');
+      if (!payloadEl) return null;
+      const data = JSON.parse(payloadEl.textContent);
+
+      const salt = Uint8Array.from(atob(data.salt), c => c.charCodeAt(0));
+      const iv = Uint8Array.from(atob(data.iv), c => c.charCodeAt(0));
+      const ciphertext = Uint8Array.from(atob(data.ciphertext), c => c.charCodeAt(0));
+
+      const encoder = new TextEncoder();
+      const passKey = await crypto.subtle.importKey(
+        'raw',
+        encoder.encode(password),
+        'PBKDF2',
+        false,
+        ['deriveKey']
+      );
+
+      const aesKey = await crypto.subtle.deriveKey(
+        {
+          name: 'PBKDF2',
+          salt: salt,
+          iterations: 100000,
+          hash: 'SHA-256'
+        },
+        passKey,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['decrypt']
+      );
+
+      const decrypted = await crypto.subtle.decrypt(
+        { name: 'AES-GCM', iv: iv },
+        aesKey,
+        ciphertext
+      );
+
+      const decoder = new TextDecoder('utf-8');
+      return decoder.decode(decrypted);
     }
 
-    function setLetterFilter(letter, btn) {
-      currentLetter = letter;
-      document.querySelectorAll('.letter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      filterHerbs();
-    }
+    async function attemptUnlock(pwd) {
+      const btn = document.getElementById('gate-btn');
+      const errBox = document.getElementById('error-box');
+      const card = document.getElementById('gate-card');
 
-    function filterHerbs() {
-      const q = document.getElementById('search-input').value.toLowerCase().trim();
-      const cards = document.querySelectorAll('.herb-card');
-      let visibleCount = 0;
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Bezig met ontsleutelen...';
+      }
 
-      cards.forEach(card => {
-        const name = card.getAttribute('data-name');
-        const latin = card.getAttribute('data-latin');
-        const compounds = card.getAttribute('data-compounds');
-        const action = card.getAttribute('data-action');
-        const taste = card.getAttribute('data-taste');
-        const scent = card.getAttribute('data-scent');
-        const letter = card.getAttribute('data-letter');
-
-        const matchesQuery = !q || name.includes(q) || latin.includes(q) || compounds.includes(q) || action.includes(q) || taste.includes(q) || scent.includes(q);
-        const matchesTaste = currentTaste === 'all' || taste.includes(currentTaste);
-        const matchesLetter = currentLetter === 'all' || letter === currentLetter;
-
-        if (matchesQuery && matchesTaste && matchesLetter) {
-          card.style.display = 'flex';
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
+      try {
+        const html = await decryptPayload(pwd);
+        if (html) {
+          sessionStorage.setItem(AUTH_STORAGE_KEY, pwd);
+          localStorage.setItem(AUTH_STORAGE_KEY, pwd);
+          document.open();
+          document.write(html);
+          document.close();
+          return true;
         }
-      });
+      } catch (e) {
+        console.warn('Decryption failed:', e);
+      }
 
-      const counter = document.getElementById('counter-info');
-      counter.textContent = `Toont ${visibleCount} van de 27 botanische kruiden`;
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = 'Atelier Ontsleutelen →';
+      }
+      if (errBox) errBox.style.display = 'block';
+      if (card) {
+        card.classList.add('shake');
+        setTimeout(() => card.classList.remove('shake'), 450);
+      }
+      const input = document.getElementById('gate-input');
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+      return false;
     }
+
+    // Check existing session for auto-unlock
+    (function checkAutoUnlock() {
+      const cached = sessionStorage.getItem(AUTH_STORAGE_KEY) || localStorage.getItem(AUTH_STORAGE_KEY);
+      if (cached) {
+        attemptUnlock(cached);
+      }
+    })();
+
+    document.getElementById('gate-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const val = document.getElementById('gate-input').value.trim();
+      if (val) attemptUnlock(val);
+    });
   </script>
 </body>
 </html>

@@ -2,220 +2,314 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Onze Tuinkroniek — Smaak, Geur & Botanische Beleving | Garden by Jess</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Garden by Jess — Besloten Atelier & Proeflokaal</title>
+  <link rel="icon" type="image/jpeg" href="../assets/garden_by_jess_logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --cream: #F9F6F0;
+      --card-bg: #FFFFFF;
       --sage: #6B7A55;
+      --sage-dark: #4F5C3E;
       --lavender: #8B7AA8;
       --deep-forest: #2D3823;
-      --border-sand: #EDE7DD;
-      --card-bg: #FFFFFF;
+      --border: #EDE7DD;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background-color: var(--cream);
+      background: var(--cream);
+      background-image: radial-gradient(circle at 20% 20%, rgba(139, 122, 168, 0.06) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(107, 122, 85, 0.08) 0%, transparent 50%);
       font-family: 'Montserrat', sans-serif;
       color: var(--deep-forest);
-      line-height: 1.7;
-      padding: 60px 20px;
-    }
-    .journal-container {
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-    .back-home {
-      display: inline-flex;
+      min-height: 100vh;
+      display: flex;
       align-items: center;
-      gap: 6px;
-      color: var(--sage);
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      margin-bottom: 32px;
+      justify-content: center;
+      padding: 24px 16px;
     }
-    .back-home:hover { color: var(--deep-forest); }
-    .journal-header {
+    .gate-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 44px 36px;
+      max-width: 440px;
+      width: 100%;
       text-align: center;
-      margin-bottom: 56px;
+      box-shadow: 0 20px 60px rgba(45, 56, 35, 0.1);
+      position: relative;
+    }
+    .logo-frame {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      padding: 3px;
+      background: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(45, 56, 35, 0.08);
+      border: 1px solid var(--border);
+    }
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
     }
     .eyebrow {
-      font-size: 12px;
-      letter-spacing: 2.5px;
+      font-size: 11px;
+      letter-spacing: 2.2px;
       text-transform: uppercase;
       color: var(--lavender);
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 48px;
+      font-size: 34px;
       font-weight: 600;
       color: var(--deep-forest);
-      margin-bottom: 16px;
-      line-height: 1.2;
+      margin-bottom: 12px;
+      line-height: 1.15;
     }
-    .lead-text {
-      font-size: 16px;
-      color: #5C6750;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-    .articles-list {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .article-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-sand);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 12px 30px rgba(45, 56, 35, 0.05);
-      display: grid;
-      grid-template-columns: 1fr 1.8fr;
-      gap: 36px;
-      align-items: center;
-    }
-    @media (max-width: 768px) {
-      .article-card { grid-template-columns: 1fr; padding: 24px; }
-    }
-    .article-media img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 14px;
-      border: 1px solid var(--border-sand);
-    }
-    .article-meta {
-      font-size: 12px;
-      color: var(--sage);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-    .article-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
-      line-height: 1.25;
-      margin-bottom: 14px;
-      color: var(--deep-forest);
-    }
-    .article-excerpt {
-      font-size: 14px;
+    .desc {
+      font-size: 13.5px;
       color: #55624A;
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 26px;
     }
-    .btn-product-link {
+    .shield-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: var(--sage);
-      color: #FFF;
-      padding: 10px 22px;
-      border-radius: 30px;
-      font-size: 13px;
+      gap: 6px;
+      background: #EFF3EA;
+      border: 1px solid #DCE6D2;
+      color: var(--sage);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11.5px;
       font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s;
+      margin-bottom: 22px;
     }
-    .btn-product-link:hover { background: var(--deep-forest); }
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .input-code {
+      width: 100%;
+      padding: 14px 20px;
+      border: 1.5px solid #D8CFBC;
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: 16px;
+      text-align: center;
+      background: #FAF8F5;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      letter-spacing: 2px;
+    }
+    .input-code:focus {
+      border-color: var(--sage);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(107, 122, 85, 0.12);
+    }
+    .btn-submit {
+      background: var(--sage);
+      color: #FFFFFF;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(107, 122, 85, 0.25);
+    }
+    .btn-submit:hover {
+      background: var(--deep-forest);
+      transform: translateY(-1px);
+    }
+    .btn-submit:disabled {
+      background: #B3BEA7;
+      cursor: not-allowed;
+    }
+    .error-msg {
+      display: none;
+      font-size: 13px;
+      color: #B23B3B;
+      background: #FDF2F2;
+      border: 1px solid #F5C6C6;
+      padding: 8px 14px;
+      border-radius: 12px;
+      margin-top: 4px;
+    }
+    .gate-footer {
+      margin-top: 24px;
+      font-size: 11px;
+      color: #8C9682;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-8px); }
+      40%, 80% { transform: translateX(8px); }
+    }
+    .shake { animation: shake 0.4s ease-in-out; }
   </style>
-  <!-- Besloten Atelier Wachtwoordpoort (1974) -->
-  <link rel="stylesheet" href="../assets/password-gate.css">
-  <script src="../assets/password-gate.js"></script>
 </head>
 <body>
 
-  <div class="journal-container">
-    <a href="../index.html" class="back-home">← Terug naar de Webwinkel</a>
-
-    <div class="journal-header">
-      <p class="eyebrow">Botanische Kennisbank & Sfeerbeschrijvingen</p>
-      <h1>De Tuinkroniek</h1>
-      <p class="lead-text">
-        Verhandelingen over geur, smaak en het harmonieuze samenspel van botanische ingrediënten, geschreven door herborist Jess.
-      </p>
+  <div class="gate-card" id="gate-card">
+    <div class="logo-frame">
+      <img src="../assets/garden_by_jess_logo.jpg" alt="Garden by Jess" class="logo-img">
     </div>
+    <p class="eyebrow">Besloten Atelier & Proeflokaal</p>
+    <h1>Garden by Jess</h1>
+    <div class="shield-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span>Militaire AES-256-GCM Versleuteling</span>
+    </div>
+    <p class="desc">
+      De inhoud van deze pagina is end-to-end versleuteld. Voer de toegangscode in om het atelier te ontsleutelen en de collectie te laden.
+    </p>
+    
+    <form class="form" id="gate-form" onsubmit="return false;">
+      <input 
+        type="password" 
+        id="gate-input" 
+        class="input-code" 
+        placeholder="Toegangscode..." 
+        autocomplete="current-password"
+        autofocus
+        required
+      >
+      <button type="submit" class="btn-submit" id="gate-btn">
+        Atelier Ontsleutelen →
+      </button>
+      <div class="error-msg" id="error-box">
+        Onjuiste toegangscode. De versleuteling kan niet worden ontcijferd.
+      </div>
+    </form>
 
-    <div class="articles-list">
-
-      <!-- Artikel 1: Morning Rise -->
-      <article class="article-card">
-        <div class="article-media">
-          <img src="../assets/morning-rise.jpg" alt="Morning Rise Kruidenthee">
-        </div>
-        <div class="article-body">
-          <div class="article-meta">Ochtendritueel • 5 min leestijd</div>
-          <h2 class="article-title">De Frisheid van de Ochtend: Hoe Munt, Lavendel & Ginkgo de Dag Openen</h2>
-          <p class="article-excerpt">
-            De levendige tonen van munt worden prachtig afgerond door de bloemige zachtheid van Franse lavendel. Ginkgo biloba, duizendblad, braamblad, salie en brandnetelzaad geven deze thee een puur, groen en kruidig karakter om energiek en fris aan de dag te beginnen.
-          </p>
-          <a href="/#signature-six" class="btn-product-link">
-            Ontdek Morning Rise (€7,95 / 50g) →
-          </a>
-        </div>
-      </article>
-
-      <!-- Artikel 2: Painless -->
-      <article class="article-card">
-        <div class="article-media">
-          <img src="../assets/painless.jpg" alt="Painless Kruidenthee">
-        </div>
-        <div class="article-body">
-          <div class="article-meta">Aardse Rust • 6 min leestijd</div>
-          <h2 class="article-title">Karaktervol & Aards: De Traditie van Moerasspirea, Wilgenbast & Witte Peper</h2>
-          <p class="article-excerpt">
-            Moerasspirea en wilgenbast vormen een eeuwenoude botanische traditie voor een diepe, robuuste basis. Een subtiele toets van gemalen witte peper brengt een zachte, verwarmende gloed achterin de keel. Een thee voor wie houdt van puur en uitgesproken.
-          </p>
-          <a href="/#signature-six" class="btn-product-link">
-            Ontdek Painless (€7,95 / 50g) →
-          </a>
-        </div>
-      </article>
-
-      <!-- Artikel 3: Refresh -->
-      <article class="article-card">
-        <div class="article-media">
-          <img src="../assets/refresh.jpg" alt="Refresh Kruidenthee">
-        </div>
-        <div class="article-body">
-          <div class="article-meta">Verkwikkend • 4 min leestijd</div>
-          <h2 class="article-title">Sprankelende Citrus & Salie: Een Heldere Oase Gedurende de Dag</h2>
-          <p class="article-excerpt">
-            Salie en laurier brengen een elegante kruidige diepte, terwijl gedroogd limoenblad en citroenverbena een verfrissende citrusnoot toevoegen. Heermoes en jonge brandnetel zorgen voor een zuiver mineraalrijk fundament.
-          </p>
-          <a href="/#signature-six" class="btn-product-link">
-            Ontdek Refresh (€7,95 / 50g) →
-          </a>
-        </div>
-      </article>
-
-      <!-- Artikel 4: Smooth Digest -->
-      <article class="article-card">
-        <div class="article-media">
-          <img src="../assets/smooth-digest.jpg" alt="Smooth Digest Kruidenthee">
-        </div>
-        <div class="article-body">
-          <div class="article-meta">Na de Maaltijd • 5 min leestijd</div>
-          <h2 class="article-title">Het Evenwicht na het Diner: Zacht Bittere Artisjok & Zoete Steranijs</h2>
-          <p class="article-excerpt">
-            Een verfijnde kruidenmelange die helemaal draait om een aangenaam en evenwichtig theemoment na de maaltijd. De zachte bitterheid van artisjokkruid en duizendblad wordt harmonieus verzacht door zoete, warme venkel en steranijs.
-          </p>
-          <a href="/#signature-six" class="btn-product-link">
-            Ontdek Smooth Digest (€7,95 / 50g) →
-          </a>
-        </div>
-      </article>
-
+    <div class="gate-footer">
+      © 2026 Garden by Jess B.V. • Padjedijk 30, Purmerend
     </div>
   </div>
 
+  <script id="encrypted-payload" type="application/json">
+{
+  "salt": "U24IQ3ZxeW6CkRG5Hrzf6w==",
+  "iv": "K5E5491IqgDMMPft",
+  "ciphertext": "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"
+}
+  </script>
+
+  <script>
+    const AUTH_STORAGE_KEY = 'garden_by_jess_key';
+
+    async function decryptPayload(password) {
+      const payloadEl = document.getElementById('encrypted-payload');
+      if (!payloadEl) return null;
+      const data = JSON.parse(payloadEl.textContent);
+
+      const salt = Uint8Array.from(atob(data.salt), c => c.charCodeAt(0));
+      const iv = Uint8Array.from(atob(data.iv), c => c.charCodeAt(0));
+      const ciphertext = Uint8Array.from(atob(data.ciphertext), c => c.charCodeAt(0));
+
+      const encoder = new TextEncoder();
+      const passKey = await crypto.subtle.importKey(
+        'raw',
+        encoder.encode(password),
+        'PBKDF2',
+        false,
+        ['deriveKey']
+      );
+
+      const aesKey = await crypto.subtle.deriveKey(
+        {
+          name: 'PBKDF2',
+          salt: salt,
+          iterations: 100000,
+          hash: 'SHA-256'
+        },
+        passKey,
+        { name: 'AES-GCM', length: 256 },
+        false,
+        ['decrypt']
+      );
+
+      const decrypted = await crypto.subtle.decrypt(
+        { name: 'AES-GCM', iv: iv },
+        aesKey,
+        ciphertext
+      );
+
+      const decoder = new TextDecoder('utf-8');
+      return decoder.decode(decrypted);
+    }
+
+    async function attemptUnlock(pwd) {
+      const btn = document.getElementById('gate-btn');
+      const errBox = document.getElementById('error-box');
+      const card = document.getElementById('gate-card');
+
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Bezig met ontsleutelen...';
+      }
+
+      try {
+        const html = await decryptPayload(pwd);
+        if (html) {
+          sessionStorage.setItem(AUTH_STORAGE_KEY, pwd);
+          localStorage.setItem(AUTH_STORAGE_KEY, pwd);
+          document.open();
+          document.write(html);
+          document.close();
+          return true;
+        }
+      } catch (e) {
+        console.warn('Decryption failed:', e);
+      }
+
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = 'Atelier Ontsleutelen →';
+      }
+      if (errBox) errBox.style.display = 'block';
+      if (card) {
+        card.classList.add('shake');
+        setTimeout(() => card.classList.remove('shake'), 450);
+      }
+      const input = document.getElementById('gate-input');
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+      return false;
+    }
+
+    // Check existing session for auto-unlock
+    (function checkAutoUnlock() {
+      const cached = sessionStorage.getItem(AUTH_STORAGE_KEY) || localStorage.getItem(AUTH_STORAGE_KEY);
+      if (cached) {
+        attemptUnlock(cached);
+      }
+    })();
+
+    document.getElementById('gate-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const val = document.getElementById('gate-input').value.trim();
+      if (val) attemptUnlock(val);
+    });
+  </script>
 </body>
 </html>
