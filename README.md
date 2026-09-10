@@ -1,4 +1,4 @@
-# Garden by Jess — Ambachtelijke Biologische Kruidenthee
+# Garden by Jess — Ambachtelijke Ambachtelijke Kruidenthee
 
 Officiële webwinkel en botanische ervaring voor **Garden by Jess**, ambachtelijke theemelanges met fytotherapeutische zorg samengesteld.
 

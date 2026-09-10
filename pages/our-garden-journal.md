@@ -63,7 +63,7 @@ Voor langdurige intellectuele arbeid zonder cafeïne-onrust vertrouwt de fytothe
 
 Ware reiniging is geen uitputtende crashkuur, maar het aanvullen van vitale mineralen die de nierfiltratie en collageensynthese ondersteunen.
 
-- **Organisch Silicium (*Equisetum arvense* - Heermoes / Paardenstaart):**  
+- **Natuurlijk Silicium (*Equisetum arvense* - Heermoes / Paardenstaart):**  
   Heermoes is een van de oudste planten op aarde en concentreert oplosbaar kiezelzuur (silicium). Silicium is een onmisbare cofactor voor het enzym prolylhydroxylase, verantwoordelijk voor stevig collageen in bindweefsel, huid, nagels en blaaswand.
 - **Chlorofyl & IJzer (*Urtica dioica* - Grote Brandnetel):**  
   Rijk aan kalium, magnesium en bio-beschikbare spoorelementen. Werkt mild aquaretisch (vochtafdrijvend) om urinezuur af te voeren zonder de elektrolytenbalans te verstoren.

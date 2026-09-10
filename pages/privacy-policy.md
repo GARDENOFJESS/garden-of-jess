@@ -8,7 +8,7 @@
 ---
 
 ## 1. Inleiding & Onze Privacybelofte
-Bij **Garden by Jess** behandelen wij uw persoonsgegevens met hetzelfde respect, dezelfde zuiverheid en zorg als onze biologisch gecertificeerde kruidenoogsten. Dit privacybeleid legt op heldere en transparante wijze uit hoe wij uw persoonsgegevens verzamelen, verwerken en beveiligen wanneer u `gardenbyjess.store` bezoekt, een bestelling plaatst in ons atelier of contact opneemt met onze herboristen, in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG / GDPR) en de Nederlandse Uitvoeringswet AVG.
+Bij **Garden by Jess** behandelen wij uw persoonsgegevens met hetzelfde respect, dezelfde zuiverheid en zorg als onze ambachtelijk geteeld kruidenoogsten. Dit privacybeleid legt op heldere en transparante wijze uit hoe wij uw persoonsgegevens verzamelen, verwerken en beveiligen wanneer u `gardenbyjess.store` bezoekt, een bestelling plaatst in ons atelier of contact opneemt met onze herboristen, in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG / GDPR) en de Nederlandse Uitvoeringswet AVG.
 
 ---
 

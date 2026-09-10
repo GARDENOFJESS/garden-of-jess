@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Garden by Jess — Drukwerkspecificaties & Ronde Stickers (300 DPI)</title>
+  <meta name="description" content="Officiële technische drukwerkspecificaties en high-resolution 300 DPI stickerbestanden voor de 50g aromazakjes en theeblikken van Garden by Jess.">
+  <link rel="icon" type="image/jpeg" href="assets/garden_by_jess_logo.jpg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #F9F6F0;
+      --cream-card: #FFFFFF;
+      --sage: #6B7A55;
+      --sage-dark: #4F5C3E;
+      --sage-light: #EBF0E4;
+      --lavender: #8B7AA8;
+      --deep-forest: #2D3823;
+      --muted-earth: #7A856D;
+      --border-sand: #EDE7DD;
+      --cutline: #D83B01;
+      --shadow-subtle: 0 10px 30px rgba(45, 56, 35, 0.05);
+      --shadow-hover: 0 16px 36px rgba(45, 56, 35, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--cream);
+      font-family: 'Montserrat', -apple-system, sans-serif;
+      color: var(--deep-forest);
+      line-height: 1.6;
+      font-size: 15px;
+      padding-bottom: 80px;
+    }
+
+    /* Top Utility Bar */
+    .top-bar {
+      background: white;
+      border-bottom: 1px solid var(--border-sand);
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    .top-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .back-link {
+      color: var(--sage);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--sage-dark); }
+    .btn-action {
+      background: var(--sage);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-action:hover { background: var(--sage-dark); transform: translateY(-1px); }
+
+    /* Header Section */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px 0 24px;
+    }
+    .header-box {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .header-badge {
+      display: inline-block;
+      background: var(--sage-light);
+      color: var(--sage-dark);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .lead-text {
+      font-size: 16px;
+      color: var(--muted-earth);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* Print Specs Banner */
+    .specs-banner {
+      background: white;
+      border: 1px solid var(--border-sand);
+      border-radius: 12px;
+      padding: 24px 32px;
+      margin-bottom: 48px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .spec-item h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted-earth);
+      margin-bottom: 4px;
+    }
+    .spec-item p {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--deep-forest);
+    }
+
+    /* Grid of 7 Circular Stickers */
+    .section-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted-earth);
+      font-size: 14px;
+      margin-bottom: 36px;
+    }
+    .stickers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+    .sticker-card {
+      background: white;
+      border: 1px solid var(--border-sand);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: var(--shadow-subtle);
+      transition: all 0.28s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sticker-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--sage);
+    }
+    .sticker-preview-wrapper {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 20px auto;
+    }
+    .sticker-preview-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(45, 56, 35, 0.08);
+      display: block;
+    }
+    .cutline-overlay {
+      position: absolute;
+      top: -4px; left: -4px; right: -4px; bottom: -4px;
+      border: 2px dashed var(--cutline);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .sticker-info h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      margin-bottom: 4px;
+    }
+    .sticker-flora {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--sage);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .sticker-desc {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 18px;
+      min-height: 38px;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--cream);
+      color: var(--deep-forest);
+      border: 1px solid var(--border-sand);
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      width: 100%;
+    }
+    .btn-download:hover {
+      background: var(--sage);
+      color: white;
+      border-color: var(--sage);
+    }
+
+    /* Packaging Details & Ordering Guide */
+    .details-card {
+      background: white;
+      border: 1px solid var(--border-sand);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 48px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .details-card h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--deep-forest);
+    }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 24px;
+    }
+    .guide-step {
+      background: var(--cream);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border-sand);
+    }
+    .guide-step-number {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      background: var(--sage);
+      color: white;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .guide-step h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--deep-forest);
+    }
+    .guide-step p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Color Swatches Table */
+    .swatches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .swatch-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--cream);
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--border-sand);
+    }
+    .swatch-color {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      border: 1px solid rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+    .swatch-info h5 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .swatch-info p {
+      font-size: 11px;
+      color: #666;
+    }
+
+    /* Print Styles */
+    @media print {
+      body { background: white; padding: 0; }
+      .top-bar { display: none; }
+      .btn-download, .btn-action { display: none; }
+      .container { max-width: 100%; padding: 10px; }
+      .stickers-grid { gap: 16px; grid-template-columns: repeat(3, 1fr); }
+      .sticker-card { box-shadow: none; border: 1px solid #ccc; padding: 16px; }
+      .sticker-preview-wrapper { width: 160px; height: 160px; }
+      .details-card { box-shadow: none; border: 1px solid #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <a href="index.html" class="back-link">
+        ← Terug naar Garden by Jess Atelier
+      </a>
+      <div style="display: flex; gap: 10px;">
+        <button class="btn-action" onclick="window.print()">
+          🖨️ Print Sheet / Opslaan als PDF
+        </button>
+        <a href="STICKER_PRINT_SPECIFICATIONS.md" class="btn-action" style="background: var(--deep-forest);">
+          📄 Specificaties (Markdown)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <!-- Page Header -->
+    <div class="header-box">
+      <div class="header-badge">Drukwerk & Verpakkingslijn • 300 DPI Print-Ready</div>
+      <h1>Ronde Stickers & Verpakkingsdrukwerk</h1>
+      <p class="lead-text">
+        Officieel drukwerkpakket voor de 50g aromazakjes en theeblikken van <strong>Garden by Jess</strong>. 
+        Elke theemelange heeft haar eigen unieke ronde embleem met de specifieke kruiden van die melange.
+      </p>
+    </div>
+
+    <!-- Quick Technical Specs Banner -->
+    <div class="specs-banner">
+      <div class="spec-item">
+        <h4>Vorm & Stanslijn</h4>
+        <p>Rond (Die-Cut / Kiss-Cut)</p>
+      </div>
+      <div class="spec-item">
+        <h4>Diameter Formaat</h4>
+        <p>ø 50 mm / ø 60 mm</p>
+      </div>
+      <div class="spec-item">
+        <h4>Drukwerk Resolutie</h4>
+        <p>300 DPI (High Resolution)</p>
+      </div>
+      <div class="spec-item">
+        <h4>Afloop (Bleed)</h4>
+        <p>3.0 mm met veilige zone</p>
+      </div>
+      <div class="spec-item">
+        <h4>Kleurprofiel</h4>
+        <p>CMYK Fogra39 / PMS Match</p>
+      </div>
+    </div>
+
+    <!-- 7 Circular Stickers Grid -->
+    <div class="section-title">De 7 Officiële Ronde Stickers</div>
+    <div class="section-subtitle">Klik op 'Download 300 DPI PNG' om het printbestand direct aan te leveren bij de drukker.</div>
+
+    <div class="stickers-grid">
+      
+      <!-- 01. Hoofdmerk Logo -->
+      <div class="sticker-card">
+        <div class="sticker-preview-wrapper">
+          <img src="assets/stickers/01_Main_Brand_Logo_Sticker.png" alt="Garden by Jess Hoofdmerk Logo" class="sticker-preview-img">
+          <div class="cutline-overlay" title="Ronde stanslijn (ø 50mm / ø 60mm)"></div>
+        </div>
+        <div class="sticker-info">
+          <h3>01. Hoofdmerk Logo</h3>
+          <div class="sticker-flora">Lavendel & Rozemarijn</div>
+          <div class="sticker-desc">Het kenmerkende atelier-embleem voor deksels, sluitzegels en algemene merkverpakkingen.</div>
+        </div>
+        <a href="assets/stickers/01_Main_Brand_Logo_Sticker.png" download="Garden_by_Jess_Logo_Sticker.png" class="btn-download">
+          ⬇️ Download 300 DPI PNG
+        </a>
+      </div>
+
+      <!-- 02. Morning Rise -->
+      <div class="sticker-card">
+        <div class="sticker-preview-wrapper">
+          <img src="assets/stickers/02_Morning_Rise_Sticker.png" alt="Morning Rise Sticker" class="sticker-preview-img">
+          <div class="cutline-overlay" title="Ronde stanslijn (ø 50mm / ø 60mm)"></div>
+        </div>
+        <div class="sticker-info">
+          <h3>02. Morning Rise</h3>
+          <div class="sticker-flora">Munt & Lavendel</div>
+          <div class="sticker-desc">Ronde sticker met levendige gekartelde muntblaadjes en bloeiende lavendelbloesems.</div>
+        </div>
+        <a href="assets/stickers/02_Morning_Rise_Sticker.png" download="Morning_Rise_Sticker_300DPI.png" class="btn-download">
+          ⬇️ Download 300 DPI PNG
+        </a>
+      </div>
+
+      <!-- 03. Painless -->
+      <div class="sticker-card">
+        <div class="sticker-preview-wrapper">
+          <img src="assets/stickers/03_Painless_Sticker.png" alt="Painless Sticker" class="sticker-preview-img">
+          <div class="cutline-overlay" title="Ronde stanslijn (ø 50mm / ø 60mm)"></div>
+        </div>
+        <div class="sticker-info">
+          <h3>03. Painless</h3>
+          <div class="sticker-flora">Moerasspirea & Wilgenblad</div>
+          <div class="sticker-desc">Ronde sticker met fijne crèmewitte bloemknoppen en slanke, elegante wilgentakjes.</div>
+        </div>
+        <a href="assets/stickers/03_Painless_Sticker.png" download="Painless_Sticker_300DPI.png" class="btn-download">
+          ⬇️ Download 300 DPI PNG
+        </a>
+      </div>
+
+      <!-- 04. Refresh -->
+      <div class="sticker-card">
+        <div class="sticker-preview-wrapper">
+          <img src="assets/stickers/04_Refresh_Sticker.png" alt="Refresh Sticker" class="sticker-preview-img">
+          <div class="cutline-overlay" title="Ronde stanslijn (ø 50mm / ø 60mm)"></div>
+        </div>
+        <div class="sticker-info">
+          <h3>04. Refresh</h3>
+          <div class="sticker-flora">Salie & Laurier / Verbena</div>
+          <div class="sticker-desc">Ronde sticker met fluwelige saliebladeren en aromatische laurier- en citroenverbena.</div>
+        </div>
+        <a href="assets/stickers/04_Refresh_Sticker.png" download="Refresh_Sticker_300DPI.png" class="btn-download">
+          ⬇️ Download 300 DPI PNG
+        </a>
+      </div>
+
+      <!-- 05. Immunitea -->
+      <div class="sticker-card">
+        <div class="sticker-preview-wrapper">
+          <img src="assets/stickers/05_Immunitea_Sticker.png" alt="Immunitea Sticker" class="sticker-preview-img">
+          <div class="cutline-overlay" title="Ronde stanslijn (ø 50mm / ø 60mm)"></div>
+        </div>
+        <div class="sticker-info">
+          <h3>05. Immunitea</h3>
+          <div class="sticker-flora">Olijftak & Rozemarijn</div>
+          <div class="sticker-desc">Ronde sticker met zilvergroene olijftak met olijfjes en frisse rozemarijnnaalden.</div>
+        </div>
+        <a href="assets/stickers/05_Immunitea_Sticker.png" download="Immunitea_Sticker_300DPI.png" class="btn-download">
+          ⬇️ Download 300 DPI PNG
+        </a>
+      </div>
+
+      <!-- 06. Smooth Digest -->
+      <div class="sticker-card">
+        <div class="sticker-preview-wrapper">
+          <img src="assets/stickers/06_Smooth_Digest_Sticker.png" alt="Smooth Digest Sticker" class="sticker-preview-img">
+          <div class="cutline-overlay" title="Ronde stanslijn (ø 50mm / ø 60mm)"></div>
+        </div>
+        <div class="sticker-info">
+          <h3>06. Smooth Digest</h3>
+          <div class="sticker-flora">Steranijs & Venkelkruid</div>
+          <div class="sticker-desc">Ronde sticker met karakteristieke 8-puntige steranijs en fijn geveerd venkelblad met zaden.</div>
+        </div>
+        <a href="assets/stickers/06_Smooth_Digest_Sticker.png" download="Smooth_Digest_Sticker_300DPI.png" class="btn-download">
+          ⬇️ Download 300 DPI PNG
+        </a>
+      </div>
+
+      <!-- 07. Breath Free -->
+      <div class="sticker-card">
+        <div class="sticker-preview-wrapper">
+          <img src="assets/stickers/07_Breath_Free_Sticker.png" alt="Breath Free Sticker" class="sticker-preview-img">
+          <div class="cutline-overlay" title="Ronde stanslijn (ø 50mm / ø 60mm)"></div>
+        </div>
+        <div class="sticker-info">
+          <h3>07. Breath Free</h3>
+          <div class="sticker-flora">Koningskaars, Tijm & Klaver</div>
+          <div class="sticker-desc">Ronde sticker met goudgele toortsboutjes, paarse rode klaver en wilde tijm.</div>
+        </div>
+        <a href="assets/stickers/07_Breath_Free_Sticker.png" download="Breath_Free_Sticker_300DPI.png" class="btn-download">
+          ⬇️ Download 300 DPI PNG
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Official Brand Colors for Print -->
+    <div class="details-card">
+      <h2>Officiële Drukwerkkleuren (CMYK & Pantone)</h2>
+      <p style="color: #666; font-size: 14px; margin-bottom: 20px;">
+        Zorg dat de drukker onderstaande kleurwaarden hanteert voor een consistente, warme en ambachtelijke uitstraling:
+      </p>
+
+      <div class="swatches-grid">
+        <div class="swatch-card">
+          <div class="swatch-color" style="background: #F9F6F0;"></div>
+          <div class="swatch-info">
+            <h5>Canvas Crème</h5>
+            <p>HEX: #F9F6F0<br>CMYK: 2 / 2 / 5 / 0<br>PMS: Warm Gray 1 C</p>
+          </div>
+        </div>
+
+        <div class="swatch-card">
+          <div class="swatch-color" style="background: #6B7A55;"></div>
+          <div class="swatch-info">
+            <h5>Saliegroen</h5>
+            <p>HEX: #6B7A55<br>CMYK: 50 / 30 / 70 / 15<br>PMS: 5763 C</p>
+          </div>
+        </div>
+
+        <div class="swatch-card">
+          <div class="swatch-color" style="background: #2D3823;"></div>
+          <div class="swatch-info">
+            <h5>Diep Woudgroen</h5>
+            <p>HEX: #2D3823<br>CMYK: 70 / 50 / 80 / 60<br>PMS: 5605 C</p>
+          </div>
+        </div>
+
+        <div class="swatch-card">
+          <div class="swatch-color" style="background: #8B7AA8;"></div>
+          <div class="swatch-info">
+            <h5>Lavendelpaars</h5>
+            <p>HEX: #8B7AA8<br>CMYK: 40 / 45 / 15 / 0<br>PMS: 5285 C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How to Order Guide -->
+    <div class="details-card">
+      <h2>Bestelinstructies voor Stickerleveranciers</h2>
+      <div class="guide-grid">
+        
+        <div class="guide-step">
+          <div class="guide-step-number">1</div>
+          <h4>StickerApp.nl</h4>
+          <p>
+            Kies <strong>Ronde Stickers</strong> • Formaat: <strong>50 mm</strong> (of 60 mm).<br>
+            Materiaal: <strong>Matte Stickers</strong> of <strong>Kraftpapier</strong>.<br>
+            Upload de PNG hierboven en controleer de automatische stanslijn.
+          </p>
+        </div>
+
+        <div class="guide-step">
+          <div class="guide-step-number">2</div>
+          <h4>Drukwerkdeal.nl</h4>
+          <p>
+            Kies <strong>Stickers op rol</strong> voor snelle handmatige verwerking.<br>
+            Vorm: <strong>Rond ø 50 mm</strong>.<br>
+            Materiaal: <strong>Mat papier</strong> met permanente belijming.
+          </p>
+        </div>
+
+        <div class="guide-step">
+          <div class="guide-step-number">3</div>
+          <h4>Sticker Mule</h4>
+          <p>
+            Kies <strong>Circle Stickers</strong> • Formaat: <strong>51 mm (2 inch)</strong>.<br>
+            Upload de 300 DPI PNG.<br>
+            Ontvang binnen 4 uur een gratis digitale drukproef (proof).
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

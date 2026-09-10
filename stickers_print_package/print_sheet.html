@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garden by Jess — Sticker & Label Drukwerkspecificaties (Print Sheet)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #F9F6F0;
+      --sage: #6B7A55;
+      --deep-forest: #2D3823;
+      --lavender: #8B7AA8;
+      --sand: #EDE7DD;
+      --cutline: #D83B01;
+      --bleed: #0078D4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #EAE6DF;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--deep-forest);
+      padding: 40px 20px;
+      line-height: 1.5;
+    }
+    .sheet-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .control-bar {
+      background: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .control-bar h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: var(--deep-forest);
+    }
+    .btn-print {
+      background: var(--sage);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .btn-print:hover { background: #4F5C3E; }
+    
+    .print-sheet {
+      background: white;
+      padding: 48px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      margin-bottom: 32px;
+    }
+    .sheet-header {
+      border-bottom: 2px solid var(--sand);
+      padding-bottom: 20px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .brand-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 600;
+      color: var(--deep-forest);
+      letter-spacing: 0.5px;
+    }
+    .sheet-meta {
+      font-size: 12px;
+      color: #666;
+      text-align: right;
+    }
+
+    /* Grid of Circular Stickers */
+    .stickers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .sticker-card {
+      background: var(--cream);
+      border: 1px solid var(--sand);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+    }
+    .preview-box {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 16px auto;
+      position: relative;
+      border-radius: 50%;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+    .preview-box img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+    .cutline-indicator {
+      position: absolute;
+      top: -4px; left: -4px; right: -4px; bottom: -4px;
+      border: 2px dashed var(--cutline);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .sticker-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .sticker-flora {
+      font-size: 11px;
+      color: var(--sage);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .sticker-specs {
+      font-size: 11px;
+      color: #777;
+      background: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--sand);
+      display: inline-block;
+    }
+
+    /* Specs & Colors table */
+    .specs-section {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 32px;
+    }
+    .specs-section h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .specs-table th, .specs-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--sand);
+      text-align: left;
+    }
+    .specs-table th {
+      font-weight: 600;
+      color: var(--sage);
+    }
+    .color-swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-right: 6px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .control-bar { display: none; }
+      .print-sheet { box-shadow: none; padding: 20px; border-radius: 0; }
+      .stickers-grid { gap: 20px; }
+      .preview-box { width: 170px; height: 170px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet-wrapper">
+    
+    <div class="control-bar">
+      <div>
+        <h1>Garden by Jess — Drukwerk & Sticker Sheet</h1>
+        <p style="font-size: 13px; color: #666;">Compleet overzicht van alle 7 ronde stickers (300 DPI, 3mm afloop / cutline)</p>
+      </div>
+      <button class="btn-print" onclick="window.print()">
+        🖨️ Drukwerk Sheet Printen / Opslaan als PDF
+      </button>
+    </div>
+
+    <div class="print-sheet">
+      <div class="sheet-header">
+        <div>
+          <div class="brand-title">GARDEN by JESS</div>
+          <div style="font-size: 14px; color: #555;">Officiële Ronde Sticker Collectie • 50g Aromazakjes & Theeblikken</div>
+        </div>
+        <div class="sheet-meta">
+          <strong>Formaat:</strong> Rond ø 50mm / ø 60mm<br>
+          <strong>Resolutie:</strong> 300 DPI (High-Res)<br>
+          <strong>Kleurprofiel:</strong> CMYK / Fogra39<br>
+          <strong>Afloop (Bleed):</strong> 3.0 mm
+        </div>
+      </div>
+
+      <div class="stickers-grid">
+        
+        <!-- 1. Hoofdmerk Logo -->
+        <div class="sticker-card">
+          <div class="preview-box">
+            <img src="circular_stickers/01_Main_Brand_Logo_Sticker.png" alt="Hoofdmerk Logo">
+            <div class="cutline-indicator" title="Stanslijn (Die-Cut)"></div>
+          </div>
+          <div class="sticker-name">01. Hoofdmerk Logo</div>
+          <div class="sticker-flora">Lavendel & Rozemarijn</div>
+          <div class="sticker-specs">Bestand: <code>01_Main_Brand_Logo_Sticker.png</code></div>
+        </div>
+
+        <!-- 2. Morning Rise -->
+        <div class="sticker-card">
+          <div class="preview-box">
+            <img src="circular_stickers/02_Morning_Rise_Sticker.png" alt="Morning Rise Sticker">
+            <div class="cutline-indicator" title="Stanslijn (Die-Cut)"></div>
+          </div>
+          <div class="sticker-name">02. Morning Rise</div>
+          <div class="sticker-flora">Munt & Lavendel</div>
+          <div class="sticker-specs">Bestand: <code>02_Morning_Rise_Sticker.png</code></div>
+        </div>
+
+        <!-- 3. Painless -->
+        <div class="sticker-card">
+          <div class="preview-box">
+            <img src="circular_stickers/03_Painless_Sticker.png" alt="Painless Sticker">
+            <div class="cutline-indicator" title="Stanslijn (Die-Cut)"></div>
+          </div>
+          <div class="sticker-name">03. Painless</div>
+          <div class="sticker-flora">Moerasspirea & Wilgenblad</div>
+          <div class="sticker-specs">Bestand: <code>03_Painless_Sticker.png</code></div>
+        </div>
+
+        <!-- 4. Refresh -->
+        <div class="sticker-card">
+          <div class="preview-box">
+            <img src="circular_stickers/04_Refresh_Sticker.png" alt="Refresh Sticker">
+            <div class="cutline-indicator" title="Stanslijn (Die-Cut)"></div>
+          </div>
+          <div class="sticker-name">04. Refresh</div>
+          <div class="sticker-flora">Salie & Laurier / Verbena</div>
+          <div class="sticker-specs">Bestand: <code>04_Refresh_Sticker.png</code></div>
+        </div>
+
+        <!-- 5. Immunitea -->
+        <div class="sticker-card">
+          <div class="preview-box">
+            <img src="circular_stickers/05_Immunitea_Sticker.png" alt="Immunitea Sticker">
+            <div class="cutline-indicator" title="Stanslijn (Die-Cut)"></div>
+          </div>
+          <div class="sticker-name">05. Immunitea</div>
+          <div class="sticker-flora">Olijftak & Rozemarijn</div>
+          <div class="sticker-specs">Bestand: <code>05_Immunitea_Sticker.png</code></div>
+        </div>
+
+        <!-- 6. Smooth Digest -->
+        <div class="sticker-card">
+          <div class="preview-box">
+            <img src="circular_stickers/06_Smooth_Digest_Sticker.png" alt="Smooth Digest Sticker">
+            <div class="cutline-indicator" title="Stanslijn (Die-Cut)"></div>
+          </div>
+          <div class="sticker-name">06. Smooth Digest</div>
+          <div class="sticker-flora">Steranijs & Venkel</div>
+          <div class="sticker-specs">Bestand: <code>06_Smooth_Digest_Sticker.png</code></div>
+        </div>
+
+        <!-- 7. Breath Free -->
+        <div class="sticker-card">
+          <div class="preview-box">
+            <img src="circular_stickers/07_Breath_Free_Sticker.png" alt="Breath Free Sticker">
+            <div class="cutline-indicator" title="Stanslijn (Die-Cut)"></div>
+          </div>
+          <div class="sticker-name">07. Breath Free</div>
+          <div class="sticker-flora">Koningskaars, Tijm & Rode Klaver</div>
+          <div class="sticker-specs">Bestand: <code>07_Breath_Free_Sticker.png</code></div>
+        </div>
+
+      </div>
+
+      <!-- Technische Specificaties -->
+      <div class="specs-section">
+        <h3>Technische Drukwerkspecificaties voor de Drukker</h3>
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>Specificatie</th>
+              <th>Aanbevolen Waarde</th>
+              <th>Opmerkingen voor Drukker (StickerApp / Drukwerkdeal / Sticker Mule)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Sticker Vorm</strong></td>
+              <td>Rond (Die-Cut / Kiss-Cut)</td>
+              <td>Cirkelvormige stanslijn langs de buitenring met 3mm marge</td>
+            </tr>
+            <tr>
+              <td><strong>Diameter Formaat</strong></td>
+              <td>ø 50 mm (of ø 60 mm)</td>
+              <td>Ideaal voor 50g stazakjes (kraft/wit) en de deksels van theeblikken</td>
+            </tr>
+            <tr>
+              <td><strong>Materiaal & Afwerking</strong></td>
+              <td>Mat Papier / Kraft of Mat Vinyl (Soft-Touch)</td>
+              <td>Geeft de authentieke, ambachtelijke ambachtelijke natuurlijke uitstraling zonder glans</td>
+            </tr>
+            <tr>
+              <td><strong>Resolutie & Kleur</strong></td>
+              <td>300 DPI • CMYK Fogra39</td>
+              <td>Alle bronbestanden in de map <code>circular_stickers/</code> zijn op 300 DPI geëxporteerd</td>
+            </tr>
+            <tr>
+              <td><strong>Kleurenpalet</strong></td>
+              <td colspan="2">
+                <span class="color-swatch" style="background: #F9F6F0;"></span> <strong>Canvas Crème:</strong> #F9F6F0 (C:2 M:2 Y:5 K:0)<br>
+                <span class="color-swatch" style="background: #6B7A55;"></span> <strong>Saliegroen:</strong> #6B7A55 (C:50 M:30 Y:70 K:15)<br>
+                <span class="color-swatch" style="background: #2D3823;"></span> <strong>Diep Woudgroen:</strong> #2D3823 (C:70 M:50 Y:80 K:60)<br>
+                <span class="color-swatch" style="background: #8B7AA8;"></span> <strong>Lavendelpaars:</strong> #8B7AA8 (C:40 M:45 Y:15 K:0)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
