@@ -1,0 +1,64 @@
+:root { --sage: #456039; --deep-forest: #2d422e; }
+html { scroll-behavior: smooth; }
+body { background: #f7f6ef; }
+button, select, input { font: inherit; }
+button { cursor: pointer; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid #65794d; outline-offset: 4px; }
+.hero-header { max-width: 850px; padding: 38px 12px 30px; position: relative; }
+.hero-header::before { content: ''; position: absolute; width: 135px; height: 230px; left: -100px; top: 0; background: url('botanical-sprig.svg') center / contain no-repeat; opacity: .25; pointer-events: none; }
+.hero-header h1 { font-size: clamp(44px, 6vw, 76px); font-weight: 400; line-height: 1.05; letter-spacing: -.03em; }
+.hero-header h1 em { color: #718052; }
+.hero-header .eyebrow { color: #516446; font-size: 10px; letter-spacing: .22em; }
+.lead-text { font-size: 15px; max-width: 650px; margin: 24px auto 0; }
+.controls-panel { background: #eef0e6; border: 1px solid #d5ddca; box-shadow: none; border-radius: 18px; }
+.search-input { background: #fff; font-size: 16px; min-height: 56px; }
+.search-label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+.explorer-tools { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; padding: 20px 0; }
+.explorer-tools label { font-size: 11px; font-weight: 600; display: grid; gap: 7px; }
+.explorer-tools select, .explorer-tools button { padding: 10px 15px; min-height: 44px; border: 1px solid #b9c5ac; border-radius: 8px; background: #fff; color: #2d422e; }
+.explorer-tools button[aria-pressed="true"] { background: #304731; color: white; }
+.btn-filter, .letter-btn { min-height: 44px; min-width: 44px; }
+.counter-info { color: #3d5135; font-size: 13px; }
+.herbs-grid { align-items: start; }
+.herb-card { border: 1px solid #dce1d3; box-shadow: none; overflow: hidden; transition: box-shadow .25s ease, transform .25s ease; }
+.herb-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px #30473112; }
+.herb-card-top { background-image: url('botanical-sprig.svg'); background-position: right -20px top 15px; background-size: 90px; background-repeat: no-repeat; }
+.herb-name { font-size: 30px; }
+.herb-latin { color: #617154; }
+.explorer-ready .herb-card .herb-content-block { display: none; }
+.herb-actions { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 0 24px 20px; }
+.herb-actions button { min-height: 44px; padding: 10px 14px; border-radius: 8px; border: 1px solid #b9c5ac; background: #f6f7f0; color: #304731; font-size: 12px; }
+.herb-actions .detail-button { background: #304731; border-color: #304731; color: white; }
+.herb-actions button[aria-pressed="true"] { background: #e0e8d4; }
+.explorer-empty { text-align: center; padding: 55px 20px; border: 1px dashed #adba9e; border-radius: 16px; }
+.explorer-empty h2 { font: 36px 'Cormorant Garamond', Georgia, serif; margin-bottom: 12px; }
+.explorer-empty button { min-height: 44px; margin-top: 20px; padding: 10px 20px; border: 0; border-radius: 8px; background: #304731; color: #fff; }
+.herb-dialog { margin: auto; width: min(640px, calc(100% - 32px)); max-height: 88dvh; border: 1px solid #d5ddca; border-radius: 20px; padding: 28px; background: #fafaf5; color: #2d422e; overflow-y: auto; }
+.herb-dialog::backdrop { background: #182719aa; backdrop-filter: blur(5px); }
+.dialog-close { display: block; margin-left: auto; min-height: 44px; padding: 8px 14px; border: 1px solid #b9c5ac; border-radius: 8px; background: #fff; color: #304731; }
+.herb-dialog .herb-card-top { padding: 18px 0; }
+.herb-dialog .herb-content-block { margin-top: 24px; }
+.herb-dialog .herb-name { font-size: 44px; }
+.herb-dialog .herb-blends-footer { border-radius: 12px; }
+.dialog-navigation { display: flex; justify-content: space-between; gap: 16px; margin-top: 24px; }
+.dialog-navigation button { border: 0; background: none; color: #304731; min-height: 44px; padding: 8px; }
+.dialog-navigation button:disabled { opacity: .4; cursor: default; }
+@media (max-width: 768px) {
+ body { padding: 20px 16px 50px; }
+ .brand-title-small { display: none; }
+ .nav-top { margin-bottom: 16px; }
+ .hero-header { padding: 28px 0 10px; }
+ .hero-header::before { display: none; }
+ .controls-panel { padding: 20px 16px; }
+ .explorer-tools { gap: 10px; }
+ .explorer-tools label { width: 100%; }
+ .explorer-tools select { width: 100%; }
+ .herbs-grid { grid-template-columns: 1fr; }
+ .herb-dialog { padding: 18px; }
+ .herb-actions { padding-inline: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+}
