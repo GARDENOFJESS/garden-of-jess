@@ -1,0 +1,123 @@
+/* Shared polish for the atelier's existing visual identity. */
+/* Botanical editorial direction: linen, forest green, generous type. */
+body { background: #f7f5ef; }
+.announcement-bar { background: #304731; font-size: 10px; letter-spacing: .08em; }
+header.site-header { background: rgba(247,245,239,.96); }
+.header-inner { height: 92px; }
+.hero-section { padding: 76px 0 86px; background: #f1f0e8; overflow: clip; }
+.hero-section::before { content: ''; position: absolute; width: 280px; height: 480px; left: -125px; bottom: -110px; background: url('botanical-sprig.svg') center / contain no-repeat; opacity: .20; transform: rotate(24deg); pointer-events: none; }
+.hero-grid { grid-template-columns: 1.1fr 1fr; gap: 72px; position: relative; }
+.atelier-kicker { font-size: 10px; font-weight: 600; letter-spacing: .2em; color: #536249; margin-bottom: 26px; line-height: 1.8; }
+.atelier-kicker span { margin: 0 7px; }
+.hero-content .hero-title { font-size: clamp(48px, 5.4vw, 78px); line-height: .99; font-weight: 400; margin-bottom: 28px; }
+.hero-title em { color: #67794e; font-weight: 400; }
+.hero-section .hero-image-card { border-radius: 48% 48% 4px 4px; overflow: hidden; border: 8px solid #faf9f4; box-shadow: 0 20px 55px #34452b15; }
+.hero-section .hero-image-card img { aspect-ratio: 4 / 5; }
+.hero-image-wrap::after { content: 'SMAAK · GEUR · BELEVING'; display: block; text-align: right; font-size: 9px; letter-spacing: .24em; padding-top: 18px; color: #536249; }
+.hero-floating-badge { display: none; }
+.hero-section .hero-cta-group { gap: 12px; flex-wrap: wrap; }
+.btn-primary, .btn-add-cart, .btn-checkout { background: #304731; box-shadow: none; }
+.btn-primary:hover, .btn-add-cart:hover, .btn-checkout:hover { background: #49633b; box-shadow: 0 8px 20px #30473118; }
+.story-link { display: inline-flex; gap: 18px; align-items: center; font-size: 12px; margin-top: 30px; padding: 10px 0; border-bottom: 1px solid #bac1ae; }
+.story-link span { font-size: 20px; }
+.credentials-strip { background: #e8ecdf; border: 0; }
+.cred-text h4 { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; }
+.cred-text p { color: #536249; }
+.collection-section { background: #faf9f5; padding: 100px 0; }
+.section-title { letter-spacing: -.02em; text-wrap: balance; }
+.product-card { box-shadow: none; border: 1px solid #dedfce; transition: transform .25s ease, box-shadow .25s ease; }
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px #30473112; }
+.product-card img { transition: transform .65s cubic-bezier(.2,.65,.3,1); }
+.product-card:hover img { transform: scale(1.045); }
+.filter-tabs { gap: 10px; }
+.filter-tab { border-radius: 6px; }
+.origin-story-section { background: #e9eddf; padding: 110px 0; position: relative; }
+.origin-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 90px; align-items: start; }
+.origin-visual { position: sticky; top: 125px; }
+.origin-photo { border-radius: 220px 220px 4px 4px; overflow: hidden; }
+.origin-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.origin-photo-caption { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 35px; line-height: 1.2; margin: 28px 0; }
+.origin-steps { display: flex; flex-wrap: wrap; gap: 14px; padding-top: 20px; border-top: 1px solid #b3bda5; font-size: 10px; letter-spacing: .06em; }
+.origin-story-card { max-width: none; }
+.origin-logo-wrap { display: none; }
+.origin-story-card .origin-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(38px, 4vw, 56px); font-weight: 500; line-height: 1.08; text-align: left; color: #304731; margin-bottom: 20px; }
+.origin-subtitle { text-align: left; font-size: 14px; }
+.origin-body { font-size: 15px; line-height: 1.95; }
+.origin-body p { margin-bottom: 24px; }
+.origin-quote { border-top: 1px solid #b3bda5; padding-top: 26px; text-align: left; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 29px; }
+.science-section { background: #f5f1e8; }
+.reviews-section { border-bottom: 1px solid #e1e3d8; }
+.site-footer { background: #263c2c; }
+.scroll-progress { position: fixed; left: 0; top: 0; height: 3px; width: 100%; transform: scaleX(0); transform-origin: left; background: #9aaf77; z-index: 5000; pointer-events: none; }
+.back-to-top { position: fixed; right: 22px; bottom: 26px; width: 46px; height: 46px; border: 1px solid #b9c2ac; border-radius: 50%; background: #faf9f5; color: #304731; font-size: 22px; z-index: 1100; box-shadow: 0 4px 18px #30473115; }
+.nav-link[aria-current="location"] { color: #304731; text-decoration: underline; text-underline-offset: 7px; }
+.mobile-sticky-cta { transition: transform .25s ease, opacity .25s ease; }
+.mobile-sticky-cta.is-away { transform: translateY(110%); opacity: 0; pointer-events: none; }
+@media (max-width: 1000px) {
+ .hero-grid { gap: 32px; }
+ .origin-layout { gap: 36px; }
+}
+@media (max-width: 768px) {
+ .header-inner { height: 72px; }
+ .hero-section { padding: 38px 0 44px; }
+ .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+ .hero-content .hero-title { font-size: clamp(43px, 11vw, 64px); }
+ .atelier-kicker { font-size: 9px; letter-spacing: .13em; margin-bottom: 20px; }
+ .hero-section .hero-image-card { max-width: 460px; margin: auto; }
+ .hero-section .hero-image-card img { aspect-ratio: 5 / 4; }
+ .hero-trust-row { gap: 9px; }
+ .origin-layout { grid-template-columns: 1fr; gap: 40px; }
+ .origin-visual { position: static; }
+ .origin-photo img { aspect-ratio: 5 / 4; }
+ .origin-photo-caption { font-size: 29px; }
+ .origin-story-section { padding: 60px 0; }
+ .origin-body { font-size: 15px; }
+ .back-to-top { bottom: 92px; right: 14px; }
+ .filter-tabs { scroll-snap-type: x proximity; }
+ .filter-tab { scroll-snap-align: start; }
+ .footer-bottom { padding-bottom: 90px; }
+}
+:root { --muted-earth: #59664e; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid #4f5c3e; outline-offset: 4px; }
+section[id] { scroll-margin-top: 110px; }
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 6000; background: #fff; padding: 14px 22px; border: 2px solid #4f5c3e; }
+.skip-link:focus { top: 16px; }
+.hero-title { text-wrap: balance; letter-spacing: -.025em; }
+.hero-subtitle { max-width: 54ch; font-size: 16px; line-height: 1.85; }
+.hero-subtitle strong { display: block; margin-top: 18px; color: var(--deep-forest); }
+.hero-image-card img { aspect-ratio: 1 / 1; object-fit: cover; }
+.nav-left { gap: 18px; }
+.nav-link { display: inline-flex; align-items: center; min-height: 44px; }
+.btn-primary, .btn-secondary, .btn-add-cart, .btn-quick-view, .filter-tab { min-height: 44px; }
+.filter-tab[aria-pressed="true"] { outline: 2px solid var(--sage-dark); outline-offset: 2px; }
+.product-card { border-radius: 16px; }
+.cart-item-qty button { width: 44px; height: 44px; border: 1px solid var(--border-dark); background: var(--cream); color: var(--deep-forest); border-radius: 8px; font-size: 22px; }
+.cart-item-qty { gap: 12px; }
+.cart-order-note { font-size: 13px; line-height: 1.65; color: #55624a; margin-bottom: 16px; }
+.cart-empty { padding: 36px 8px; text-align: center; }
+.cart-empty h3 { font-size: 28px; }
+.cart-empty p { margin: 16px 0 24px; }
+.cart-drawer, .mobile-nav-drawer { height: 100dvh; }
+.cart-drawer { max-width: min(420px, 100%); }
+.cart-items-list { min-height: 0; }
+.footer-bottom > div { flex-wrap: wrap; }
+.faq-question { min-height: 48px; }
+.modal-card { max-height: 90dvh; overflow-y: auto; }
+@media (min-width: 769px) and (max-width: 1100px) {
+  .nav-left { gap: 10px; font-size: 11px; }
+  .nav-right { gap: 10px; }
+}
+@media (max-width: 768px) {
+  .hero-title { font-size: clamp(38px, 10vw, 56px); line-height: 1.05; }
+  .hero-subtitle { font-size: 15px; }
+  .hero-cta-group { align-items: stretch; }
+  .hero-cta-group > * { justify-content: center; }
+  .filter-tabs { padding: 6px 4px 14px; }
+  .mobile-sticky-cta { padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+  .cart-footer { padding-bottom: max(20px, env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
