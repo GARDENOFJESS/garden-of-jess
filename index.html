@@ -29,9 +29,19 @@
   <link rel="apple-touch-icon" href="assets/garden_by_jess_logo.jpg">
 
   <script>
-    if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-      location.replace('https://' + location.host + location.pathname + location.search + location.hash);
-    }
+    (function() {
+      if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        return;
+      }
+      var p = location.pathname;
+      if (p.endsWith('/index.html')) {
+        var clean = p.slice(0, -10) || '/';
+        history.replaceState(null, '', clean + location.search + location.hash);
+      } else if (p.endsWith('.html')) {
+        history.replaceState(null, '', p.slice(0, -5) + location.search + location.hash);
+      }
+    })();
   </script>
 
   <!-- Schema.org Structured Data -->
@@ -1752,8 +1762,8 @@
 
       <nav class="nav-left">
         <a href="#signature-six" class="nav-link">De Collectie</a>
-        <a href="pages/kruiden-abc.html" class="nav-link">Kruiden ABC</a>
-        <a href="pages/our-garden-journal.html" class="nav-link">Onze Tuinkroniek</a>
+        <a href="/pages/kruiden-abc" class="nav-link">Kruiden ABC</a>
+        <a href="/pages/our-garden-journal" class="nav-link">Onze Tuinkroniek</a>
         <a href="#over-jess" class="nav-link">Over Jess</a>
         <a href="#bedrijfskaartje" class="nav-link">Bedrijfskaartje</a>
         <a href="#proeflokaal" class="nav-link">Afhalen & Bezorging</a>
@@ -1765,7 +1775,7 @@
 
       <div class="nav-right">
         <a href="/homemade/" class="nav-link homemade-nav">Homemade by Jess ↗</a>
-        <a href="pages/contact.html" class="nav-link" style="display:none; @media(min-width:769px){display:inline;}">Contact</a>
+        <a href="/pages/contact" class="nav-link" style="display:none; @media(min-width:769px){display:inline;}">Contact</a>
         <button class="btn-header-cart" onclick="toggleCart()" aria-label="Winkelmand openen">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
           <span>Kruidentas</span>
@@ -1789,12 +1799,12 @@
       <a href="/homemade/">♡ Homemade by Jess — Chocoladetaarten</a>
       <a href="#signature-six" onclick="toggleMobileMenu()">🌿 De 6 Smaken (€7,95)</a>
       <a href="#bedrijfskaartje" onclick="toggleMobileMenu()">🏷️ Bedrijfskaartje (Thee & Taart)</a>
-      <a href="pages/kruiden-abc.html" onclick="toggleMobileMenu()">📚 Kruiden ABC (27 Planten & Werking)</a>
-      <a href="pages/our-garden-journal.html" onclick="toggleMobileMenu()">📖 Onze Tuinkroniek (Artikelen)</a>
+      <a href="/pages/kruiden-abc" onclick="toggleMobileMenu()">📚 Kruiden ABC (27 Planten & Werking)</a>
+      <a href="/pages/our-garden-journal" onclick="toggleMobileMenu()">📖 Onze Tuinkroniek (Artikelen)</a>
       <a href="#over-jess" onclick="toggleMobileMenu()">👩‍🌾 Over Jess & Atelier</a>
       <a href="#proeflokaal" onclick="toggleMobileMenu()">📍 Afhalen, Bezorging & Bio Rosa</a>
       <a href="#faq" onclick="toggleMobileMenu()">❓ Veelgestelde Vragen</a>
-      <a href="pages/contact.html" onclick="toggleMobileMenu()">✉️ Contact & Advies</a>
+      <a href="/pages/contact" onclick="toggleMobileMenu()">✉️ Contact & Advies</a>
     </div>
     <div class="mobile-nav-footer">
       <button class="btn-primary" style="width:100%; justify-content:center; margin-bottom:12px;" onclick="toggleMobileMenu(); openQuiz();">
@@ -2091,7 +2101,7 @@
         </p>
       </div>
       <div>
-        <a href="pages/kruiden-abc.html" class="btn-primary" style="padding: 16px 32px; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+        <a href="/pages/kruiden-abc" class="btn-primary" style="padding: 16px 32px; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
           Bekijk het Kruiden ABC (27 Kruiden) →
         </a>
       </div>
@@ -2191,7 +2201,7 @@
     <div class="container">
       <div class="business-card-feature-card">
         <div class="business-card-feature-visual">
-          <div class="business-card-frame" onclick="window.open('print-sheet.html#bedrijfskaartje', '_blank')" title="Klik om het bedrijfskaartje in printkwaliteit te bekijken">
+          <div class="business-card-frame" onclick="window.open('/print-sheet#bedrijfskaartje', '_blank')" title="Klik om het bedrijfskaartje in printkwaliteit te bekijken">
             <img src="assets/garden_by_jess_bedrijfskaartje.jpg" alt="Officieel Bedrijfskaartje Garden by Jess — thee & taart" width="1024" height="682" loading="lazy" decoding="async">
           </div>
           <div class="card-tactile-caption">
@@ -2222,7 +2232,7 @@
             </div>
           </div>
           <div class="card-feature-actions">
-            <a href="print-sheet.html#bedrijfskaartje" class="btn-primary" target="_blank">
+            <a href="/print-sheet#bedrijfskaartje" class="btn-primary" target="_blank">
               Bekijk Drukwerkspecificaties & Print Sheet →
             </a>
             <a href="assets/garden_by_jess_bedrijfskaartje.jpg" download="Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart.jpg" class="btn-secondary-outline">
@@ -2321,7 +2331,7 @@
               </svg>
               <span>Vraag Jessica via WhatsApp ↗</span>
             </a>
-            <a href="pages/contact.html" class="btn-primary" style="background:#FFF; color:#2D3748; border:1px solid #CBD5E1; font-size:13.5px; display:inline-flex; align-items:center; gap:8px;">
+            <a href="/pages/contact" class="btn-primary" style="background:#FFF; color:#2D3748; border:1px solid #CBD5E1; font-size:13.5px; display:inline-flex; align-items:center; gap:8px;">
               <svg width="18" height="14" viewBox="52 42 88 66" fill="none" aria-hidden="true">
                 <path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6"/>
                 <path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15"/>
@@ -2468,16 +2478,16 @@
       <div class="footer-col">
         <h4>Kruidenatelier & Service</h4>
         <ul class="footer-links">
-          <li><a href="pages/kruiden-abc.html">Kruiden ABC (27 Planten & Werking)</a></li>
-          <li><a href="pages/our-garden-journal.html">Onze Tuinkroniek (Artikelen)</a></li>
+          <li><a href="/pages/kruiden-abc">Kruiden ABC (27 Planten & Werking)</a></li>
+          <li><a href="/pages/our-garden-journal">Onze Tuinkroniek (Artikelen)</a></li>
           <li><a href="#over-jess">Over Jess & Het Atelier</a></li>
           <li><a href="/homemade/">Homemade by Jess — Chocoladetaarten</a></li>
-          <li><a href="pages/contact.html">Proeflokaal & Contact</a></li>
+          <li><a href="/pages/contact">Proeflokaal & Contact</a></li>
           <li><a href="#bedrijfskaartje">🏷️ Ons Bedrijfskaartje (Thee & Taart)</a></li>
-          <li><a href="print-sheet.html" target="_blank" style="color:#D2DEC8; font-weight:600;">🖨️ Drukwerk, Kaartjes & Stickers (Print Sheet)</a></li>
+          <li><a href="/print-sheet" target="_blank" style="color:#D2DEC8; font-weight:600;">🖨️ Drukwerk, Kaartjes & Stickers (Print Sheet)</a></li>
           <li><a href="#faq">Veelgestelde Vragen</a></li>
-          <li><a href="pages/privacy-policy.html">Privacybeleid (AVG)</a></li>
-          <li><a href="404.html">Vriendelijke 404 Pagina</a></li>
+          <li><a href="/pages/privacy-policy">Privacybeleid (AVG)</a></li>
+          <li><a href="/404">Vriendelijke 404 Pagina</a></li>
         </ul>
       </div>
 
@@ -2486,17 +2496,17 @@
         <p style="color:#B8C2AF; font-size:12.5px; line-height:1.6;">
           Vragen over onze melanges of zetadvies? Neem contact op met Jess.
         </p>
-        <a class="btn-primary" href="pages/contact.html">Stel uw vraag →</a>
+        <a class="btn-primary" href="/pages/contact">Stel uw vraag →</a>
       </div>
     </div>
 
     <div class="container footer-bottom">
       <div>© 2026 Garden by Jess. Ambachtelijk bereid aan Voorkamp 14, Beets. Afhalen bij het atelier of Bio Rosa, Padjedijk 30, Purmerend.</div>
       <div style="display:flex; gap:18px;">
-        <a href="pages/privacy-policy.html">Privacybeleid</a>
-        <a href="print-sheet.html#bedrijfskaartje" target="_blank">Bedrijfskaartje & Drukwerk</a>
-        <a href="pages/contact.html">Algemene Voorwaarden</a>
-        <a href="pages/thank-you.html">Bestelbevestiging Voorbeeld</a>
+        <a href="/pages/privacy-policy">Privacybeleid</a>
+        <a href="/print-sheet#bedrijfskaartje" target="_blank">Bedrijfskaartje & Drukwerk</a>
+        <a href="/pages/contact">Algemene Voorwaarden</a>
+        <a href="/pages/thank-you">Bestelbevestiging Voorbeeld</a>
       </div>
     </div>
   </footer>
@@ -2549,7 +2559,7 @@
         </svg>
         <span>Bestellen via WhatsApp ↗</span>
       </a>
-      <a href="pages/contact.html" class="btn-checkout email-checkout">
+      <a href="/pages/contact" class="btn-checkout email-checkout">
         <svg width="20" height="15" viewBox="52 42 88 66" fill="none" aria-hidden="true">
           <path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6"/>
           <path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15"/>
@@ -2654,7 +2664,7 @@
       const checkout = document.querySelector('.email-checkout');
       checkout.hidden = !cart.length;
       const selection = cart.map(item => `${item.qty} × ${item.name}`).join('\n');
-      checkout.href = 'pages/contact.html?selection=' + encodeURIComponent(selection);
+      checkout.href = '/pages/contact?selection=' + encodeURIComponent(selection);
       const whatsapp = document.getElementById('cart-whatsapp');
       whatsapp.hidden = !cart.length;
       const orderLines = cart.map(item => `${item.qty} × ${item.name} (50 g) — €${(item.qty * item.price).toFixed(2).replace('.', ',')}`).join('\n');

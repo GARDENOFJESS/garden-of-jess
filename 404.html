@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <script>
+    (function() {
+      if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        return;
+      }
+      var p = location.pathname;
+      if (p.endsWith('/index.html')) {
+        var clean = p.slice(0, -10) || '/';
+        history.replaceState(null, '', clean + location.search + location.hash);
+      } else if (p.endsWith('.html')) {
+        history.replaceState(null, '', p.slice(0, -5) + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina Niet Gevonden (404) | Garden by Jess</title>
@@ -135,16 +150,16 @@
       Het botanische blad dat u zoekt is meegenomen door de wind. Zelfs in de meest zorgvuldig onderhouden kruidentuin dwaalt men weleens af. Laat ons u terugleiden naar onze rustgevende theemelanges.
     </p>
 
-    <a href="index.html" class="btn-return">Terug naar het Kruidenatelier →</a>
+    <a href="/" class="btn-return">Terug naar het Kruidenatelier →</a>
 
     <div class="rec-box">
       <div class="rec-title">Populaire Herstellende Melanges (€7,95 / 50g):</div>
       <div class="rec-links">
-        <a href="index.html#signature-six" class="rec-link">
+        <a href="/#signature-six" class="rec-link">
           <strong>✦ Morning Rise</strong>
           Munt, lavendel en ginkgo
         </a>
-        <a href="index.html#signature-six" class="rec-link">
+        <a href="/#signature-six" class="rec-link">
           <strong>✦ Smooth Digest</strong>
           Artisjok, steranijs en venkel
         </a>

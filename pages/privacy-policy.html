@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <script>
+    (function() {
+      if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        return;
+      }
+      var p = location.pathname;
+      if (p.endsWith('/index.html')) {
+        var clean = p.slice(0, -10) || '/';
+        history.replaceState(null, '', clean + location.search + location.hash);
+      } else if (p.endsWith('.html')) {
+        history.replaceState(null, '', p.slice(0, -5) + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacybeleid (AVG) | Garden by Jess</title>
   <meta name="description" content="Privacybeleid van Garden by Jess conform de AVG. Lees hoe wij zorgvuldig omgaan met persoonsgegevens bij bestellingen en contact via WhatsApp of e-mail.">
-  <link rel="canonical" href="https://gardenbyjess.store/pages/privacy-policy.html">
+  <link rel="canonical" href="https://gardenbyjess.store/pages/privacy-policy">
   <meta name="theme-color" content="#2D3823">
 
   <link rel="icon" type="image/jpeg" href="../assets/garden_by_jess_logo.jpg">
@@ -17,7 +32,7 @@
   <meta property="og:site_name" content="Garden by Jess">
   <meta property="og:title" content="Privacybeleid (AVG) | Garden by Jess">
   <meta property="og:description" content="Eerlijk en transparant over privacy en gegevensbescherming bij Garden by Jess en Homemade by Jess.">
-  <meta property="og:url" content="https://gardenbyjess.store/pages/privacy-policy.html">
+  <meta property="og:url" content="https://gardenbyjess.store/pages/privacy-policy">
   <meta property="og:image" content="https://gardenbyjess.store/assets/social-share.jpg">
   <meta property="og:image:secure_url" content="https://gardenbyjess.store/assets/social-share.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -137,7 +152,7 @@
 <body>
 
   <div class="policy-container">
-    <a href="../index.html" class="back-home">← Terug naar de Webwinkel</a>
+    <a href="/" class="back-home">← Terug naar de Webwinkel</a>
 
     <div class="policy-card">
       <p class="eyebrow">Wettelijke Privacywaarborging</p>

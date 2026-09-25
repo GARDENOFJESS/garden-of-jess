@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <script>
+    (function() {
+      if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        return;
+      }
+      var p = location.pathname;
+      if (p.endsWith('/index.html')) {
+        var clean = p.slice(0, -10) || '/';
+        history.replaceState(null, '', clean + location.search + location.hash);
+      } else if (p.endsWith('.html')) {
+        history.replaceState(null, '', p.slice(0, -5) + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Garden by Jess — Drukwerkspecificaties & Ronde Stickers (300 DPI)</title>
   <meta name="description" content="Officiële technische drukwerkspecificaties en high-resolution 300 DPI stickerbestanden voor de 50g aromazakjes en theeblikken van Garden by Jess.">
-  <link rel="canonical" href="https://gardenbyjess.store/print-sheet.html">
+  <link rel="canonical" href="https://gardenbyjess.store/print-sheet">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#2D3823">
   <link rel="icon" type="image/jpeg" href="assets/garden_by_jess_logo.jpg">
@@ -17,7 +32,7 @@
   <meta property="og:site_name" content="Garden by Jess">
   <meta property="og:title" content="Garden by Jess — Drukwerkspecificaties & Ronde Stickers">
   <meta property="og:description" content="Officiële technische drukwerkspecificaties en 300 DPI bestanden van Garden by Jess.">
-  <meta property="og:url" content="https://gardenbyjess.store/print-sheet.html">
+  <meta property="og:url" content="https://gardenbyjess.store/print-sheet">
   <meta property="og:image" content="https://gardenbyjess.store/assets/card-social-share.jpg">
   <meta property="og:image:secure_url" content="https://gardenbyjess.store/assets/card-social-share.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -433,7 +448,7 @@
   <!-- Top Action Bar -->
   <div class="top-bar">
     <div class="top-bar-inner">
-      <a href="index.html" class="back-link">
+      <a href="/" class="back-link">
         ← Terug naar Garden by Jess Atelier
       </a>
       <div style="display: flex; gap: 10px; flex-wrap: wrap;">

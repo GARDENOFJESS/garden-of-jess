@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <script>
+    (function() {
+      if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        return;
+      }
+      var p = location.pathname;
+      if (p.endsWith('/index.html')) {
+        var clean = p.slice(0, -10) || '/';
+        history.replaceState(null, '', clean + location.search + location.hash);
+      } else if (p.endsWith('.html')) {
+        history.replaceState(null, '', p.slice(0, -5) + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bestelling Bevestigd — Hartelijk Dank | Garden by Jess</title>
   <meta name="description" content="Hartelijk dank voor je bestelling bij Garden by Jess. We hebben je theebestelling ontvangen en nemen snel contact op!">
   <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://gardenbyjess.store/pages/thank-you.html">
+  <link rel="canonical" href="https://gardenbyjess.store/pages/thank-you">
   <meta name="theme-color" content="#2D3823">
 
   <link rel="icon" type="image/jpeg" href="../assets/garden_by_jess_logo.jpg">
@@ -18,7 +33,7 @@
   <meta property="og:site_name" content="Garden by Jess">
   <meta property="og:title" content="Bestelling Bevestigd — Hartelijk Dank | Garden by Jess">
   <meta property="og:description" content="Hartelijk dank voor je theebestelling bij Jessica!">
-  <meta property="og:url" content="https://gardenbyjess.store/pages/thank-you.html">
+  <meta property="og:url" content="https://gardenbyjess.store/pages/thank-you">
   <meta property="og:image" content="https://gardenbyjess.store/assets/social-share.jpg">
   <meta property="og:image:secure_url" content="https://gardenbyjess.store/assets/social-share.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -227,7 +242,7 @@
       </div>
     </div>
 
-    <a href="../index.html" class="cta-return">Terug naar het Kruidenatelier →</a>
+    <a href="/" class="cta-return">Terug naar het Kruidenatelier →</a>
   </div>
 
 </body>

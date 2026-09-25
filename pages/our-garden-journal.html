@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <script>
+    (function() {
+      if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        return;
+      }
+      var p = location.pathname;
+      if (p.endsWith('/index.html')) {
+        var clean = p.slice(0, -10) || '/';
+        history.replaceState(null, '', clean + location.search + location.hash);
+      } else if (p.endsWith('.html')) {
+        history.replaceState(null, '', p.slice(0, -5) + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Onze Tuinkroniek — Smaak, Geur & Botanische Beleving | Garden by Jess</title>
   <meta name="description" content="Onze Tuinkroniek: het botanische verhaal van Jessica. Over seizoenen, het plukken en drogen van kruiden, en de ambachtelijke theemelanges aan de Voorkamp in Beets.">
-  <link rel="canonical" href="https://gardenbyjess.store/pages/our-garden-journal.html">
+  <link rel="canonical" href="https://gardenbyjess.store/pages/our-garden-journal">
   <meta name="theme-color" content="#2D3823">
 
   <link rel="icon" type="image/jpeg" href="../assets/garden_by_jess_logo.jpg">
@@ -17,7 +32,7 @@
   <meta property="og:site_name" content="Garden by Jess">
   <meta property="og:title" content="Onze Tuinkroniek — Het Botanische Verhaal | Garden by Jess">
   <meta property="og:description" content="Lees over onze kruidentuin aan de Voorkamp in Beets, het natuurlijke drogingsproces en de passie voor pure theemelanges.">
-  <meta property="og:url" content="https://gardenbyjess.store/pages/our-garden-journal.html">
+  <meta property="og:url" content="https://gardenbyjess.store/pages/our-garden-journal">
   <meta property="og:image" content="https://gardenbyjess.store/assets/social-share.jpg">
   <meta property="og:image:secure_url" content="https://gardenbyjess.store/assets/social-share.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -38,7 +53,7 @@
     "@type": "BlogPosting",
     "headline": "Onze Tuinkroniek — Smaak, Geur & Botanische Beleving",
     "description": "Het botanische verhaal achter onze kruidentuin en theemelanges in Beets.",
-    "url": "https://gardenbyjess.store/pages/our-garden-journal.html",
+    "url": "https://gardenbyjess.store/pages/our-garden-journal",
     "image": "https://gardenbyjess.store/assets/social-share.jpg",
     "inLanguage": "nl-NL",
     "author": {
@@ -184,7 +199,7 @@
 <body>
 
   <div class="journal-container">
-    <a href="../index.html" class="back-home">← Terug naar de Webwinkel</a>
+    <a href="/" class="back-home">← Terug naar de Webwinkel</a>
 
     <div class="journal-header">
       <p class="eyebrow">Botanische Kennisbank & Sfeerbeschrijvingen</p>

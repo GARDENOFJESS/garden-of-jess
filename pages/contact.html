@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+  <script>
+    (function() {
+      if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        return;
+      }
+      var p = location.pathname;
+      if (p.endsWith('/index.html')) {
+        var clean = p.slice(0, -10) || '/';
+        history.replaceState(null, '', clean + location.search + location.hash);
+      } else if (p.endsWith('.html')) {
+        history.replaceState(null, '', p.slice(0, -5) + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact & Bestellen | Garden by Jess (Thee & Taart)</title>
   <meta name="description" content="Direct contact met Jessica van Garden by Jess & Homemade by Jess. Bestel theezakjes (€7,95) of verse chocoladetaart. Voorkamp 14 in Beets, tel: 06 4161 5544.">
-  <link rel="canonical" href="https://gardenbyjess.store/pages/contact.html">
+  <link rel="canonical" href="https://gardenbyjess.store/pages/contact">
   <meta name="theme-color" content="#2D3823">
 
   <link rel="icon" type="image/jpeg" href="../assets/garden_by_jess_logo.jpg">
@@ -17,7 +32,7 @@
   <meta property="og:site_name" content="Garden by Jess">
   <meta property="og:title" content="Contact & Bestellen | Garden by Jess (Thee & Taart)">
   <meta property="og:description" content="Direct contact met Jessica via WhatsApp of e-mail. Afhalen in Beets & Purmerend, of bezorging in regio Noord-Holland. Tel: 06 4161 5544.">
-  <meta property="og:url" content="https://gardenbyjess.store/pages/contact.html">
+  <meta property="og:url" content="https://gardenbyjess.store/pages/contact">
   <meta property="og:image" content="https://gardenbyjess.store/assets/card-social-share.jpg">
   <meta property="og:image:secure_url" content="https://gardenbyjess.store/assets/card-social-share.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -37,7 +52,7 @@
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Contact & Bestellen | Garden by Jess",
-    "url": "https://gardenbyjess.store/pages/contact.html",
+    "url": "https://gardenbyjess.store/pages/contact",
     "mainEntity": {
       "@type": "LocalBusiness",
       "name": "Garden by Jess",
@@ -228,7 +243,7 @@
 <body>
 
   <div class="contact-container">
-    <a href="../index.html" class="back-home">← Terug naar de Webwinkel</a>
+    <a href="/" class="back-home">← Terug naar de Webwinkel</a>
 
     <div class="header-center">
       <p class="eyebrow">Atelier & Persoonlijk Contact</p>
@@ -338,12 +353,12 @@
 
         <!-- Bedrijfskaartje Preview -->
         <div style="margin-bottom:20px; border-radius:12px; overflow:hidden; border:1px solid #EDE7DD; box-shadow:0 8px 24px rgba(45,56,35,0.08); background:#F9F6F0;">
-          <a href="../print-sheet.html#bedrijfskaartje" target="_blank" title="Bekijk het officiële bedrijfskaartje in printkwaliteit">
+          <a href="/print-sheet#bedrijfskaartje" target="_blank" title="Bekijk het officiële bedrijfskaartje in printkwaliteit">
             <img src="../assets/garden_by_jess_bedrijfskaartje.jpg" alt="Officieel Bedrijfskaartje Garden by Jess — thee & taart" style="width:100%; height:auto; display:block;">
           </a>
           <div style="padding:10px 14px; background:#FFFFFF; display:flex; justify-content:space-between; align-items:center; font-size:12px; border-top:1px solid #EDE7DD;">
             <span style="color:#55624A; font-weight:600;">🏷️ Officieel Bedrijfskaartje "Thee & Taart"</span>
-            <a href="../print-sheet.html#bedrijfskaartje" target="_blank" style="color:var(--sage); text-decoration:none; font-weight:700;">Print Sheet & Specs →</a>
+            <a href="/print-sheet#bedrijfskaartje" target="_blank" style="color:var(--sage); text-decoration:none; font-weight:700;">Print Sheet & Specs →</a>
           </div>
         </div>
 

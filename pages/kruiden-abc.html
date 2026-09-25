@@ -5,13 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kruiden ABC — Werking, Inhoudsstoffen, Smaak & Geur | Garden by Jess</title>
   <meta name="description" content="Het officiële Kruiden ABC van Garden by Jess: een alfabetisch compendium van 27 botanische kruiden en planten met inhoudsstoffen, traditionele werking, smaak- en geurprofielen.">
-  <link rel="canonical" href="https://gardenbyjess.store/pages/kruiden-abc.html">
+  <link rel="canonical" href="https://gardenbyjess.store/pages/kruiden-abc">
   <meta name="theme-color" content="#2D3823">
   
   <script>
-    if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-      location.replace('https://' + location.host + location.pathname + location.search + location.hash);
-    }
+    (function() {
+      if (location.protocol === 'http:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        return;
+      }
+      var p = location.pathname;
+      if (p.endsWith('/index.html')) {
+        var clean = p.slice(0, -10) || '/';
+        history.replaceState(null, '', clean + location.search + location.hash);
+      } else if (p.endsWith('.html')) {
+        history.replaceState(null, '', p.slice(0, -5) + location.search + location.hash);
+      }
+    })();
   </script>
   <link rel="icon" type="image/jpeg" href="../assets/garden_by_jess_logo.jpg">
   <link rel="apple-touch-icon" href="../assets/garden_by_jess_logo.jpg">
@@ -22,7 +32,7 @@
   <meta property="og:site_name" content="Garden by Jess">
   <meta property="og:title" content="Kruiden ABC — Botanische Kennis & Heilzame Werking | Garden by Jess">
   <meta property="og:description" content="Het officiële compendium van 27 heilzame theekruiden: inhoudsstoffen, smaakprofielen en werking van Jessica.">
-  <meta property="og:url" content="https://gardenbyjess.store/pages/kruiden-abc.html">
+  <meta property="og:url" content="https://gardenbyjess.store/pages/kruiden-abc">
   <meta property="og:image" content="https://gardenbyjess.store/assets/social-share.jpg">
   <meta property="og:image:secure_url" content="https://gardenbyjess.store/assets/social-share.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -43,7 +53,7 @@
     "@type": "Article",
     "headline": "Kruiden ABC — Werking, Inhoudsstoffen, Smaak & Geur",
     "description": "Het officiële Kruiden ABC van Garden by Jess: een compendium van 27 botanische theekruiden.",
-    "url": "https://gardenbyjess.store/pages/kruiden-abc.html",
+    "url": "https://gardenbyjess.store/pages/kruiden-abc",
     "image": "https://gardenbyjess.store/assets/social-share.jpg",
     "inLanguage": "nl-NL",
     "author": {
@@ -456,7 +466,7 @@
     
     <!-- Top Navigatie -->
     <div class="nav-top">
-      <a href="../index.html" class="back-home">← Terug naar het Kruidenatelier</a>
+      <a href="/" class="back-home">← Terug naar het Kruidenatelier</a>
       <span class="brand-title-small">Garden by Jess • Botanisch Compendium</span>
     </div>
 
@@ -555,7 +565,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
+          <a href="/#signature-six" class="blend-tag">✦ Smooth Digest</a>
         </div>
 
       </div>
@@ -603,7 +613,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
+          <a href="/#signature-six" class="blend-tag">✦ Immunitea</a>
         </div>
 
       </div>
@@ -651,7 +661,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+          <a href="/#signature-six" class="blend-tag">✦ Morning Rise</a>
         </div>
 
       </div>
@@ -699,7 +709,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+          <a href="/#signature-six" class="blend-tag">✦ Refresh</a>
         </div>
 
       </div>
@@ -747,7 +757,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+          <a href="/#signature-six" class="blend-tag">✦ Morning Rise</a>
         </div>
 
       </div>
@@ -795,7 +805,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
+          <a href="/#signature-six" class="blend-tag">✦ Immunitea</a>
         </div>
 
       </div>
@@ -843,7 +853,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+          <a href="/#signature-six" class="blend-tag">✦ Refresh</a>
         </div>
 
       </div>
@@ -891,7 +901,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+          <a href="/#signature-six" class="blend-tag">✦ Breath Free</a>
         </div>
 
       </div>
@@ -939,7 +949,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a><a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
+          <a href="/#signature-six" class="blend-tag">✦ Morning Rise</a><a href="/#signature-six" class="blend-tag">✦ Smooth Digest</a>
         </div>
 
       </div>
@@ -987,7 +997,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+          <a href="/#signature-six" class="blend-tag">✦ Morning Rise</a>
         </div>
 
       </div>
@@ -1035,7 +1045,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+          <a href="/#signature-six" class="blend-tag">✦ Refresh</a>
         </div>
 
       </div>
@@ -1083,7 +1093,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+          <a href="/#signature-six" class="blend-tag">✦ Breath Free</a>
         </div>
 
       </div>
@@ -1131,7 +1141,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+          <a href="/#signature-six" class="blend-tag">✦ Breath Free</a>
         </div>
 
       </div>
@@ -1179,7 +1189,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+          <a href="/#signature-six" class="blend-tag">✦ Morning Rise</a>
         </div>
 
       </div>
@@ -1227,7 +1237,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+          <a href="/#signature-six" class="blend-tag">✦ Refresh</a>
         </div>
 
       </div>
@@ -1275,7 +1285,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+          <a href="/#signature-six" class="blend-tag">✦ Refresh</a>
         </div>
 
       </div>
@@ -1323,7 +1333,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Painless</a>
+          <a href="/#signature-six" class="blend-tag">✦ Painless</a>
         </div>
 
       </div>
@@ -1371,7 +1381,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a>
+          <a href="/#signature-six" class="blend-tag">✦ Morning Rise</a>
         </div>
 
       </div>
@@ -1419,7 +1429,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
+          <a href="/#signature-six" class="blend-tag">✦ Immunitea</a>
         </div>
 
       </div>
@@ -1467,7 +1477,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+          <a href="/#signature-six" class="blend-tag">✦ Breath Free</a>
         </div>
 
       </div>
@@ -1515,7 +1525,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Immunitea</a>
+          <a href="/#signature-six" class="blend-tag">✦ Immunitea</a>
         </div>
 
       </div>
@@ -1563,7 +1573,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Morning Rise</a><a href="../index.html#signature-six" class="blend-tag">✦ Refresh</a>
+          <a href="/#signature-six" class="blend-tag">✦ Morning Rise</a><a href="/#signature-six" class="blend-tag">✦ Refresh</a>
         </div>
 
       </div>
@@ -1611,7 +1621,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
+          <a href="/#signature-six" class="blend-tag">✦ Smooth Digest</a>
         </div>
 
       </div>
@@ -1659,7 +1669,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Smooth Digest</a>
+          <a href="/#signature-six" class="blend-tag">✦ Smooth Digest</a>
         </div>
 
       </div>
@@ -1707,7 +1717,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Breath Free</a>
+          <a href="/#signature-six" class="blend-tag">✦ Breath Free</a>
         </div>
 
       </div>
@@ -1755,7 +1765,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Painless</a>
+          <a href="/#signature-six" class="blend-tag">✦ Painless</a>
         </div>
 
       </div>
@@ -1803,7 +1813,7 @@
 
         <div class="herb-blends-footer">
           <span style="font-size: 11px; font-weight:700; text-transform:uppercase; color:#7B856F;">In Melange:</span>
-          <a href="../index.html#signature-six" class="blend-tag">✦ Painless</a>
+          <a href="/#signature-six" class="blend-tag">✦ Painless</a>
         </div>
 
       </div>

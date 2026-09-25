@@ -27,21 +27,21 @@ for relative in files:
         text=(source/relative).read_text(encoding='utf-8').replace(old_origin,public_origin)
         if relative.endswith('.html'):
             for slug in slugs:
-                text=text.replace(f'href="{slug}"',f'href="/homemade/{slug}.html"')
-                text=text.replace(f'href="{public_origin}/{slug}"',f'href="{public_origin}/{slug}.html"')
-                text=text.replace(f'content="{public_origin}/{slug}"',f'content="{public_origin}/{slug}.html"')
+                text=text.replace(f'href="{slug}"',f'href="/homemade/{slug}"')
+                text=text.replace(f'href="{public_origin}/{slug}"',f'href="{public_origin}/{slug}"')
+                text=text.replace(f'content="{public_origin}/{slug}"',f'content="{public_origin}/{slug}"')
             text=text.replace('href="/"','href="/homemade/"').replace('href="/#','href="/homemade/#')
             text=text.replace('href="/assets/','href="/homemade/assets/').replace('href="/style.css"','href="/homemade/style.css"')
             text=text.replace('</header>','<a class="garden-return" href="/">← Garden by Jess · Kruidenthee</a></header>',1)
         if relative in ['sitemap.xml','llms.txt']:
             for slug in slugs:
-                text=re.sub(re.escape(public_origin+'/'+slug)+r'(?=[<)#\s]|$)',public_origin+'/'+slug+'.html',text)
+                text=re.sub(re.escape(public_origin+'/'+slug)+r'(?=[<)#\s]|$)',public_origin+'/'+slug,text)
         if relative=='style.css':
             text+='\n.garden-return{font-size:11px;color:var(--muted);text-decoration:underline}.header{flex-wrap:wrap}.header .garden-return{flex-basis:100%;text-align:right;margin-top:-25px}@media(max-width:700px){.header{height:125px}.header .garden-return{margin-top:-18px;font-size:10px}}\n'
         (target).write_text(text,encoding='utf-8')
     else: shutil.copy2(source/relative,target)
 
-urls=['https://gardenbyjess.store/']+['https://gardenbyjess.store/'+x for x in sources if x not in ['index.html','404.html','pages/thank-you.html']]+[public_origin+'/']+[public_origin+'/'+slug+'.html' for slug in slugs]
+urls=['https://gardenbyjess.store/']+[('https://gardenbyjess.store/'+x).replace('.html','') for x in sources if x not in ['index.html','404.html','pages/thank-you.html']]+[public_origin+'/']+[public_origin+'/'+slug for slug in slugs]
 (root/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+url+'</loc></url>' for url in urls)+'</urlset>',encoding='utf-8')
 (root/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: https://gardenbyjess.store/sitemap.xml\n',encoding='utf-8')
 print(f'Built {len(sources)} unlocked Garden pages and {len(files)} safe Homemade files.')
