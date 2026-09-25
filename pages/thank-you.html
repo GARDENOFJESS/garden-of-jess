@@ -2,299 +2,206 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Garden by Jess — Besloten Atelier & Proeflokaal</title>
-  <link rel="icon" type="image/jpeg" href="../assets/garden_by_jess_logo.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bestelling Bevestigd — Hartelijk Dank | Garden by Jess</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --cream: #F9F6F0;
-      --card-bg: #FFFFFF;
       --sage: #6B7A55;
-      --sage-dark: #4F5C3E;
       --lavender: #8B7AA8;
       --deep-forest: #2D3823;
-      --border: #EDE7DD;
+      --card-bg: #FFFFFF;
+      --border-color: #EDE8DF;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: var(--cream);
-      background-image: radial-gradient(circle at 20% 20%, rgba(139, 122, 168, 0.06) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(107, 122, 85, 0.08) 0%, transparent 50%);
+      background-color: var(--cream);
       font-family: 'Montserrat', sans-serif;
       color: var(--deep-forest);
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px 16px;
+      padding: 40px 20px;
     }
-    .gate-card {
+    .thank-you-card {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 44px 36px;
-      max-width: 440px;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      max-width: 640px;
       width: 100%;
+      padding: 48px 36px;
       text-align: center;
-      box-shadow: 0 20px 60px rgba(45, 56, 35, 0.1);
+      box-shadow: 0 16px 40px rgba(107, 122, 85, 0.08);
       position: relative;
     }
-    .logo-frame {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 20px;
+    .brand-emblem {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 24px;
       border-radius: 50%;
-      padding: 3px;
-      background: #FFFFFF;
-      box-shadow: 0 8px 24px rgba(45, 56, 35, 0.08);
-      border: 1px solid var(--border);
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-color);
     }
-    .logo-img {
-      width: 100%;
-      height: 100%;
+    .brand-emblem img {
+      width: 78px;
+      height: 78px;
       border-radius: 50%;
       object-fit: cover;
     }
     .eyebrow {
-      font-size: 11px;
-      letter-spacing: 2.2px;
+      font-size: 12px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--lavender);
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 8px;
     }
     h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
+      font-size: 36px;
       font-weight: 600;
       color: var(--deep-forest);
-      margin-bottom: 12px;
-      line-height: 1.15;
+      margin-bottom: 16px;
+      line-height: 1.2;
     }
-    .desc {
-      font-size: 13.5px;
-      color: #55624A;
-      line-height: 1.6;
-      margin-bottom: 26px;
-    }
-    .form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .input-code {
-      width: 100%;
-      padding: 14px 20px;
-      border: 1.5px solid #D8CFBC;
+    .order-status {
+      display: inline-block;
+      background: #F1F5EB;
+      color: var(--sage);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 18px;
       border-radius: 30px;
-      font-family: inherit;
-      font-size: 16px;
-      text-align: center;
+      margin-bottom: 24px;
+    }
+    p.lead-text {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #5C6552;
+      margin-bottom: 32px;
+    }
+    .steps-box {
       background: #FAF8F5;
-      outline: none;
-      box-sizing: border-box;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      letter-spacing: 2px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 32px;
     }
-    .input-code:focus {
-      border-color: var(--sage);
-      background: #FFFFFF;
-      box-shadow: 0 0 0 4px rgba(107, 122, 85, 0.12);
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      line-height: 1.5;
     }
-    .btn-submit {
+    .step-item:last-child { margin-bottom: 0; }
+    .step-number {
       background: var(--sage);
-      color: #FFFFFF;
-      border: none;
-      padding: 14px 28px;
+      color: #FFF;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .social-section {
+      border-top: 1px solid var(--border-color);
+      padding-top: 24px;
+      margin-top: 20px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .social-btn {
+      color: var(--sage);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+    .social-btn:hover {
+      background: var(--sage);
+      color: #FFF;
+      border-color: var(--sage);
+    }
+    .cta-return {
+      display: inline-block;
+      background: var(--sage);
+      color: #F9F6F0;
+      text-decoration: none;
+      padding: 14px 32px;
       border-radius: 30px;
       font-size: 14px;
       font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 6px 18px rgba(107, 122, 85, 0.25);
-    }
-    .btn-submit:hover {
-      background: var(--deep-forest);
-      transform: translateY(-1px);
-    }
-    .btn-submit:disabled {
-      background: #B3BEA7;
-      cursor: not-allowed;
-    }
-    .error-msg {
-      display: none;
-      font-size: 13px;
-      color: #B23B3B;
-      background: #FDF2F2;
-      border: 1px solid #F5C6C6;
-      padding: 8px 14px;
-      border-radius: 12px;
-      margin-top: 4px;
-    }
-    .gate-footer {
       margin-top: 24px;
-      font-size: 11px;
-      color: #8C9682;
+      transition: background 0.2s;
     }
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      20%, 60% { transform: translateX(-8px); }
-      40%, 80% { transform: translateX(8px); }
+    .cta-return:hover {
+      background: var(--deep-forest);
     }
-    .shake { animation: shake 0.4s ease-in-out; }
   </style>
 </head>
 <body>
 
-  <div class="gate-card" id="gate-card">
-    <div class="logo-frame">
-      <img src="../assets/garden_by_jess_logo.jpg" alt="Garden by Jess" class="logo-img">
+  <div class="thank-you-card">
+    <div class="brand-emblem">
+      <img src="../assets/garden_by_jess_logo.jpg" alt="Garden by Jess Logo">
     </div>
-    <p class="eyebrow">Besloten Atelier & Proeflokaal</p>
-    <h1>Garden by Jess</h1>
-    <p class="desc">
-      Onze theecollectie en het botanisch compendium zijn momenteel uitsluitend toegankelijk voor genodigden. Voer de toegangscode in om het atelier te betreden.
-    </p>
-    
-    <form class="form" id="gate-form" onsubmit="return false;">
-      <label for="gate-input">Uw toegangscode</label>
-      <input 
-        type="password" 
-        id="gate-input" 
-        class="input-code" 
-        placeholder="Toegangscode..." 
-        autocomplete="current-password"
-        autofocus
-        required
-      >
-      <button type="submit" class="btn-submit" id="gate-btn">
-        Atelier Betreden →
-      </button>
-      <div class="error-msg" id="error-box" role="alert">
-        Onjuiste toegangscode. Controleer uw code en probeer opnieuw.
-      </div>
-    </form>
 
-    <div class="gate-footer">
-      © 2026 Garden by Jess B.V. • Padjedijk 30, Purmerend
+    <p class="eyebrow">Atelierverzending Bevestigd</p>
+    <h1>Uw Rustgevende Ritueel Begint</h1>
+    <div class="order-status">✦ Bestelling #GOJ-7849 is Succesvol Ontvangen ✦</div>
+
+    <p class="lead-text">
+      Hartelijk dank dat u <em>Garden by Jess</em> verwelkomt in uw dagelijkse welzijnsroutine. Jess en ons botanische team wegen, melangeren en verzegelen uw verse kruiden op dit moment met de hand.
+    </p>
+
+    <div class="steps-box">
+      <div class="step-item">
+        <span class="step-number">1</span>
+        <div><strong>Ambachtelijk Verpakt (Binnen 24u):</strong> Uw theekruiden worden luchtdicht verzegeld in onze aroma-beschermende 50g zakjes met stevige gripsluiting.</div>
+      </div>
+      <div class="step-item">
+        <span class="step-number">2</span>
+        <div><strong>Klimaatneutrale Verzending:</strong> U ontvangt een track & trace code zodra PostNL uw pakket heeft gescand.</div>
+      </div>
+      <div class="step-item">
+        <span class="step-number">3</span>
+        <div><strong>Persoonlijk Herborist Contact:</strong> Vragen over zettemperaturen of kruideninteracties? Beantwoord simpelweg uw orderbevestiging. Wij garanderen een reactie binnen 24 uur.</div>
+      </div>
     </div>
+
+    <div class="social-section">
+      <p style="font-size: 13px; color: #7B856F;">Sluit u aan bij onze botanische kring & ontdek mindful theerituelen:</p>
+      <div class="social-links">
+        <a href="https://instagram.com/gardenbyjess" class="social-btn" target="_blank" rel="noopener">Instagram (@gardenbyjess)</a>
+        <a href="https://pinterest.com/gardenbyjess" class="social-btn" target="_blank" rel="noopener">Pinterest Rituelen</a>
+        <a href="mailto:care@gardenbyjess.store" class="social-btn">E-mail Jess</a>
+      </div>
+    </div>
+
+    <a href="../index.html" class="cta-return">Terug naar het Kruidenatelier →</a>
   </div>
 
-  <script id="encrypted-payload" type="application/json">
-{
-  "salt": "dfXlXpYJ/BjzYSGR4GOhLQ==",
-  "iv": "u3dmM1em+lb56TrQ",
-  "ciphertext": "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"
-}
-  </script>
-
-  <script>
-    const AUTH_STORAGE_KEY = 'garden_by_jess_key';
-
-    async function decryptPayload(password) {
-      const payloadEl = document.getElementById('encrypted-payload');
-      if (!payloadEl) return null;
-      const data = JSON.parse(payloadEl.textContent);
-
-      const salt = Uint8Array.from(atob(data.salt), c => c.charCodeAt(0));
-      const iv = Uint8Array.from(atob(data.iv), c => c.charCodeAt(0));
-      const ciphertext = Uint8Array.from(atob(data.ciphertext), c => c.charCodeAt(0));
-
-      const encoder = new TextEncoder();
-      const passKey = await crypto.subtle.importKey(
-        'raw',
-        encoder.encode(password),
-        'PBKDF2',
-        false,
-        ['deriveKey']
-      );
-
-      const aesKey = await crypto.subtle.deriveKey(
-        {
-          name: 'PBKDF2',
-          salt: salt,
-          iterations: 100000,
-          hash: 'SHA-256'
-        },
-        passKey,
-        { name: 'AES-GCM', length: 256 },
-        false,
-        ['decrypt']
-      );
-
-      const decrypted = await crypto.subtle.decrypt(
-        { name: 'AES-GCM', iv: iv },
-        aesKey,
-        ciphertext
-      );
-
-      const decoder = new TextDecoder('utf-8');
-      return decoder.decode(decrypted);
-    }
-
-    async function attemptUnlock(pwd) {
-      const btn = document.getElementById('gate-btn');
-      const errBox = document.getElementById('error-box');
-      const card = document.getElementById('gate-card');
-
-      if (btn) {
-        btn.disabled = true;
-        btn.textContent = 'Bezig met verifiëren...';
-      }
-
-      try {
-        const html = await decryptPayload(pwd);
-        if (html) {
-          sessionStorage.setItem('garden_by_jess_auth', 'granted');
-          sessionStorage.setItem(AUTH_STORAGE_KEY, pwd);
-          localStorage.setItem(AUTH_STORAGE_KEY, pwd);
-          document.open();
-          document.write(html);
-          document.close();
-          return true;
-        }
-      } catch (e) {
-        console.warn('Decryption failed:', e);
-      }
-
-      if (btn) {
-        btn.disabled = false;
-        btn.textContent = 'Atelier Betreden →';
-      }
-      if (errBox) errBox.style.display = 'block';
-      if (card) {
-        card.classList.add('shake');
-        setTimeout(() => card.classList.remove('shake'), 450);
-      }
-      const input = document.getElementById('gate-input');
-      if (input) {
-        input.value = '';
-        input.focus();
-      }
-      return false;
-    }
-
-    // Check existing session for auto-unlock
-    (function checkAutoUnlock() {
-      const cached = sessionStorage.getItem(AUTH_STORAGE_KEY) || localStorage.getItem(AUTH_STORAGE_KEY);
-      if (cached) {
-        attemptUnlock(cached);
-      }
-    })();
-
-    document.getElementById('gate-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const val = document.getElementById('gate-input').value.trim();
-      if (val) attemptUnlock(val);
-    });
-  </script>
 </body>
 </html>

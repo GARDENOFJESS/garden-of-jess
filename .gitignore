@@ -10,3 +10,6 @@ desktop.ini
 _src/
 _src/*
 build_encrypted.py
+
+# Homemade raw workspace (local only; public storefront published to /homemade/):
+HomeMade By Jess/

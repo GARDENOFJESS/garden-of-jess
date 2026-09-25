@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gardenbyjess.store/homemade/sitemap.xml

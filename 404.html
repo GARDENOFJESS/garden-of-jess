@@ -2,299 +2,136 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Garden by Jess — Besloten Atelier & Proeflokaal</title>
-  <link rel="icon" type="image/jpeg" href="assets/garden_by_jess_logo.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Niet Gevonden (404) | Garden by Jess</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --cream: #F9F6F0;
-      --card-bg: #FFFFFF;
       --sage: #6B7A55;
-      --sage-dark: #4F5C3E;
       --lavender: #8B7AA8;
       --deep-forest: #2D3823;
-      --border: #EDE7DD;
+      --border-sand: #EDE7DD;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: var(--cream);
-      background-image: radial-gradient(circle at 20% 20%, rgba(139, 122, 168, 0.06) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(107, 122, 85, 0.08) 0%, transparent 50%);
+      background-color: var(--cream);
       font-family: 'Montserrat', sans-serif;
       color: var(--deep-forest);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px 16px;
+      padding: 40px 20px;
     }
-    .gate-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 44px 36px;
-      max-width: 440px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(45, 56, 35, 0.1);
-      position: relative;
-    }
-    .logo-frame {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 20px;
-      border-radius: 50%;
-      padding: 3px;
+    .card-404 {
       background: #FFFFFF;
-      box-shadow: 0 8px 24px rgba(45, 56, 35, 0.08);
-      border: 1px solid var(--border);
-    }
-    .logo-img {
+      border: 1px solid var(--border-sand);
+      border-radius: 20px;
+      max-width: 640px;
       width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
+      padding: 56px 40px;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(45, 56, 35, 0.07);
     }
     .eyebrow {
-      font-size: 11px;
-      letter-spacing: 2.2px;
+      font-size: 12px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--lavender);
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
     h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
-      font-weight: 600;
-      color: var(--deep-forest);
-      margin-bottom: 12px;
-      line-height: 1.15;
+      font-size: 40px;
+      margin-bottom: 16px;
+      line-height: 1.2;
     }
-    .desc {
-      font-size: 13.5px;
-      color: #55624A;
+    p {
+      color: #556149;
+      font-size: 15px;
       line-height: 1.6;
-      margin-bottom: 26px;
+      margin-bottom: 32px;
     }
-    .form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .input-code {
-      width: 100%;
-      padding: 14px 20px;
-      border: 1.5px solid #D8CFBC;
-      border-radius: 30px;
-      font-family: inherit;
-      font-size: 16px;
-      text-align: center;
-      background: #FAF8F5;
-      outline: none;
-      box-sizing: border-box;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      letter-spacing: 2px;
-    }
-    .input-code:focus {
-      border-color: var(--sage);
-      background: #FFFFFF;
-      box-shadow: 0 0 0 4px rgba(107, 122, 85, 0.12);
-    }
-    .btn-submit {
+    .btn-return {
+      display: inline-block;
       background: var(--sage);
-      color: #FFFFFF;
-      border: none;
-      padding: 14px 28px;
+      color: #FFF;
+      padding: 14px 32px;
       border-radius: 30px;
       font-size: 14px;
       font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 6px 18px rgba(107, 122, 85, 0.25);
+      text-decoration: none;
+      transition: background 0.2s;
     }
-    .btn-submit:hover {
-      background: var(--deep-forest);
-      transform: translateY(-1px);
+    .btn-return:hover { background: var(--deep-forest); }
+    .rec-box {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-sand);
+      text-align: left;
     }
-    .btn-submit:disabled {
-      background: #B3BEA7;
-      cursor: not-allowed;
+    .rec-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--lavender);
+      font-weight: 700;
+      margin-bottom: 14px;
     }
-    .error-msg {
-      display: none;
+    .rec-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .rec-link {
+      background: var(--cream);
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border-sand);
+      text-decoration: none;
+      color: var(--deep-forest);
       font-size: 13px;
-      color: #B23B3B;
-      background: #FDF2F2;
-      border: 1px solid #F5C6C6;
-      padding: 8px 14px;
-      border-radius: 12px;
-      margin-top: 4px;
+      display: block;
     }
-    .gate-footer {
-      margin-top: 24px;
-      font-size: 11px;
-      color: #8C9682;
-    }
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      20%, 60% { transform: translateX(-8px); }
-      40%, 80% { transform: translateX(8px); }
-    }
-    .shake { animation: shake 0.4s ease-in-out; }
+    .rec-link strong { color: var(--sage); display: block; font-size: 13px; }
   </style>
 </head>
 <body>
 
-  <div class="gate-card" id="gate-card">
-    <div class="logo-frame">
-      <img src="assets/garden_by_jess_logo.jpg" alt="Garden by Jess" class="logo-img">
+  <div class="card-404">
+    <div style="margin-bottom: 20px;">
+      <svg width="60" height="60" viewBox="0 0 64 64" fill="none" style="margin:0 auto;">
+        <path d="M32 4C32 4 28 16 20 22C12 28 4 32 4 32C4 32 16 36 22 44C28 52 32 60 32 60C32 60 36 48 44 42C52 36 60 32 60 32C60 32 48 28 42 20C36 12 32 4 32 4Z" stroke="#6B7A55" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M32 20V44M20 32H44" stroke="#8B7AA8" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
     </div>
-    <p class="eyebrow">Besloten Atelier & Proeflokaal</p>
-    <h1>Garden by Jess</h1>
-    <p class="desc">
-      Onze theecollectie en het botanisch compendium zijn momenteel uitsluitend toegankelijk voor genodigden. Voer de toegangscode in om het atelier te betreden.
-    </p>
-    
-    <form class="form" id="gate-form" onsubmit="return false;">
-      <label for="gate-input">Uw toegangscode</label>
-      <input 
-        type="password" 
-        id="gate-input" 
-        class="input-code" 
-        placeholder="Toegangscode..." 
-        autocomplete="current-password"
-        autofocus
-        required
-      >
-      <button type="submit" class="btn-submit" id="gate-btn">
-        Atelier Betreden →
-      </button>
-      <div class="error-msg" id="error-box" role="alert">
-        Onjuiste toegangscode. Controleer uw code en probeer opnieuw.
-      </div>
-    </form>
 
-    <div class="gate-footer">
-      © 2026 Garden by Jess B.V. • Padjedijk 30, Purmerend
+    <p class="eyebrow">Foutcode 404 • Pad Niet Gevonden</p>
+    <h1>Even Verdwaald in de Kruidentuin?</h1>
+    <p>
+      Het botanische blad dat u zoekt is meegenomen door de wind. Zelfs in de meest zorgvuldig onderhouden kruidentuin dwaalt men weleens af. Laat ons u terugleiden naar onze rustgevende theemelanges.
+    </p>
+
+    <a href="index.html" class="btn-return">Terug naar het Kruidenatelier →</a>
+
+    <div class="rec-box">
+      <div class="rec-title">Populaire Herstellende Melanges (€7,95 / 50g):</div>
+      <div class="rec-links">
+        <a href="index.html#signature-six" class="rec-link">
+          <strong>✦ Morning Rise</strong>
+          Munt, lavendel en ginkgo
+        </a>
+        <a href="index.html#signature-six" class="rec-link">
+          <strong>✦ Smooth Digest</strong>
+          Artisjok, steranijs en venkel
+        </a>
+      </div>
     </div>
   </div>
 
-  <script id="encrypted-payload" type="application/json">
-{
-  "salt": "ej76litx4m5hoJ5p7YU3ow==",
-  "iv": "L/wIsOeFaowB+u4P",
-  "ciphertext": "sz+Y1/H3cV4BXGivmrLLCIS3GWAVJctZ5zP7Ez/I0WUs4E2XH2w3oPCsbg1LLYqg3/CQRp6XNMnhj7NTk7+cakqmBw9Ywup9qYvR0mBXNVmEECBmCjCHYa6yxn/zsBshGW9Sd1FYy7X8jjWZ20FDqQXZbawWhNPKuYaug7UNzWiDm18ZKuHjnQnyKgr5a5XaxsP4KOD4z3l/2Hw6Tviz+ln+W3lPk/Zz9w6W+87kbyeC1FsuLVTYd5M6sIr1hstYa9+xWrhk1kGVXV3JJe2ljS8wEtEVeawlcjPf069doChaUCkx7keKlVvgyqhNCL7K9qPKw1efmMOjbKlZicEvMtnx7480gkhqHELbin41r351cjzzmDz/pp3vhwndbi7bUkxzmt2kxZokVTRn+6lNiG3pPzhJ8xcFSbo2LYOCj2/qvA+RSDv/aM3rahqUO+3II1RLadEjeua3BuSi2ZktqI7EI3OmAJZTNKTI0sNnOFy5GB4hMblKkC8ySulpNNgAxk34HXFFm+HyD1gDmfQl39b9vGUxbcpoF4ny58kpNyiS9wRpk18JdvdebLcFX1YmOtFbXaqnDpxpNZGZp6G4aPkzciOYrLGStmQc6fSNawAUN4489mL1XMciBVVMlWJcai1pWm40tWPG4hZ10yQpr52WyHBhU6gsUO5jN/ZZ5uxZloPW+lq84mfWR9KmXg/ATV492EopxoFooivuRNCFTSP0Y2VEdIZ+YDGrhWk5apgcchnfppA7ob2HOT45pSFQpcX+2XotZMwT2v7iqFkcgNQP5vmd94D9YkHdn07CyG0ai1ntIY7hOvkf0xAe4OZDng0U3ZFgmKdX9kqlV3Vwnr299SJbRAau9r+ABte5KFO8t6sYU/a9kC250f5nceI2U4zeuLO/CuvkVX1AGUC+5bzx+kII/i06h/m3Tq1ej5zHZcMftFWO8DlBIodRKOVAUliHg4BWrdVvRx9guIugCdJJh9Q/AqXNrhFSuspeGXgm6FXjLKCDJZ3IGaElDb+Sf3zQe49ioPieu+UmZ9xoKkKLcilS4F0fVILb4gBWqSK5zbdTVujYupdnzvo8zjPcArnoRiJ0InJOJqFT/02TFb50JOUi0otq4Dq6qShGw8jH2AJmyazZX6TOzdioUxaCc8QbIsxUwYhqLFrU3hZTXetESbTr1VKY3Mz6Vr1svRX4rU93rnnuCofUskNq1cYPVlrK4lYrFSwmweo1mB7lq5mmaknGNTXPGEWcjtJbRMXfVDWA9ZPj+WcGSG37Un2b1MhVx2HudR8pnWLHmnsIyeK0eI1a+yqSIWYhowmyha1IllItw69O8GAeT0cUHWKjDCpIVQBVnLRCJkaUMghLrwMw5n+1ywObzyPy2oZO6mYSa9kO7DkE8u4u+AyFS2k3SQ46qoO2NIdnYDrWzYVZo5c5BrRSQjXr/mj/CTv7E1+QGG5KTYfZEkAOzAnfTANHeuDjIgMoheGLqa3QFFil+fRu3Km6xoMyQIqcyIU+9NVQErElKztfhCskfxXCbnfHIC8cIB6/EiDSH9FeFFYeshWqlbtbhEGgCUdoo2jkZZmNtSvzZHhMUInaFMPJm8dbRwjGNKPzKzixKRyJLIUZyMXGIzCqmGjC+zjNzlg6WSdCNYqT6QBg8C3bY4uq8BLd3o1bBmrpz7qXBQBS0y1IzxHsG16SC5OJpXxbOtPVuFz3NCbG2xQaaE5DhFMdxHlzKxNG5jDzHEBJRE46J+n9xPL3w265uQ1KV10yNZ509GWS3orhiZytRka72OZNdgFm+SJSLZf/3w1NwXN2V4ufBAU5lwcbsXiHxd8dNGIa9mnsn/9FQnSBjNOsViGifBmAi5HtmGwdjZM+Odw9B4mBmINxFQ96k4UZ6F4pTYiL1skAz/ViZlnGIxAu6aX653MT+SJFR2TzwrK+OqR9NPN9tvDOQx1gr3EP0ZlxrDHgR4ObGOZEdAU3jul5rCoZdMDaselElehIVmlQqkALKk4zuO4CWIpW9Xq+6imIpYqZ9MgLYWVVpZJObHkPBD4i6+90B+OWgkbniNwChWEiuQFK6/mTEFkHfYhS9tnjsqaD6bJQfCjcBs1NoKrM3hhsjjOnenpuBGJdnGJEwD13czDDZ6wH3kCuuFs5sT83mF7Q6+G4jFg0JeR534UlLR+LEMufAuyGNlyxJdNTG2L7Z0Mwtxzf7eKKxxPmq7IRrtdkvvnGlfKh/k4VA9tkU1cRB4u7c+lTzSR7SHFWBUD+GFECDipCMqtblp+fz+miPCn2ISBrVYl1jQsRjD+2KK7cwvMLz9UYtvgQbCSa3gbSPBT0ej9d2z9Yz0o9GT+Xj36yU/RFYcoeJaYMwfoCQSxenxqe41NOeUAaVZjwtWaD7G+NcNt0ZU2Z/EBoChW1gSMfVQflxMBlrcbAuuqWrB+NsGU8SkUGJlJJNyePrwgLmI+/hRnYOlw7WeufpaPhujgkGj3Dkjezm/Q80pTjmmmnnayJuOahuP+lIsruv05NNYhCcEl3/UWuXktT/PeIK7UoZEBBW2VjwXHzlFDTIyWvT/sJHl6WGTOpgs6QE1lasQ5YuWnvJjAZXCWruRtXYhA4uWYJ0NlnvYV7N0KmOnrsKAeL9RYfia+vY74GRyuwQOeGN0ivtYFDIyfsh2yTcU+ZTX96iMO5z0UqYBUYyki+eyizXsNsd/Ax9LL11PgFowHrRWuy3mOWJ0cZT5pLtRkJpGbweYOaNjV5a4SpvIBJChUsrsWFYpwqExfyEMb7hUjak5nvHxGxw16s9IHfpcsw23DXQF+g41L8+/VCR9/dU+r7HNoYZWTL/NJ8DmuRzsh0BhyBX3YRWtiii/NTqh8AKMdwGWzF/Ia+pEkoY9yX0IZih1uudO5iRLZyhkEhLo36heTBAfMbFYde9xpM+ovSXxLBK+ESiuv3YkvJuDpV1E5aXu4mw91Q5J/4bDiVMtUhz+0ZBpnm1AbcI6C12eP6TupvT88/chH+sIdBHQ3VOvAHdhw9UloNFi8B+NCjAv7AwruO2cSahNYnvSsZektTjo6LfkCehBXFNP8eEjedEGE3RwNckw/7pNujxv1hAqfuE1UFcyZ3SKt0LH7E/nQel7FtHkCpqOkGyHPosQue+BylW070wyKi/wEokpEoSImtqRgpNd686qJF12wFwGkudR89mrMdZE61j7ZkThn2PfvAfDh93i3fhDaIxCz5RDOFSX6c66Xd7uNHHIehqdTdUUUZu5cP8+ZyTMePcdwwhsJsB2v2hrbGWwxbW7mC3cAcmXLCnNc9DVFt9jIYImv+PgEGvuijLmDg1cyiTcY/QQsMCLLCJ3inxIh/OHBtHvlzdyDvm5++thMusDfVIxE5wFEo0eSgioZAt//wsysIsrOIFrl/NfqdEtXPxqVZHogdBvHII0fSyZwRUlQOIl0xwrVZ/kSwnuXZZNaeHNRo2o5rkMDL6KXb6CBOUEsb6LXXCXDm4x7W6riekobko43ApYJpDjxFOGTKOcF7MZFcaa5gyoHt/+LD46my06U1r2PGNdZyO8DC76zGlTxlTq/tsEVk1Sil0ApZLW3Jrh2W+RfUWyfgeug77MPvPf6GuYdAdeFmdjkdzyPkbrdKAZR8P6kDeJhUy6s0CyfkN2uaXBnxNIIh5DVR3foQrtg8LrcnV37fM/eue0845aD1yjweuXjjgOWF1Zk58tCL6nBx3medaF+yqqd+PSih6QWwQk+6GkOZ864YjT9WCOXQqH40S1QIKyKLLkCdMf85mva5CpgAexSn/BuLkulU/IUC+arQbfIcshuoP5ELwgt0TQSUjXpw+SiBKSMvbXh8nyAsGKCBt78Uoztm1vp9lonqeETg1rIvCWh2dkMNkTqFYQuLupkYGgi+qMeZv1I6RJ7QVJTmfAmZSLnjvQQgq79E/HHtkRSH55HwNFPSZIbO7G8EttUUGBPcpknJs690Y3VVKe2cIpv1fED0o7jIaVwjGvDzuWQGejWG5WRaoTsYk94Qby/5abx+6J2f7CssqRcMmEP7VC1pP7j3JUXNUaFb4u6kUsTDRcb/kdLQP2dct/rC8fDt8PDPzMaekgxLBUA+YFCJxF3+G9qxrH+HvhYkZUYzWk/fxHHaGFKzM0GI+M5+R5ZdLPyx9fQgohhnFbxEnPlaN818l/vPU64PmX4oqQpEv/hVh7KcLCJY7lv+TtkhNmjinK6ADDjX2oHQ29ab1vSf8ufr/HhfEV3D/AY9RaQAaU4He2yWQ7cHMaTX4aBJajvC3J5h/Bt5t0M3aHVKiaY8Iv3WKuSeO+givRFmWuUD/jmTqX/QP5nfMN8l1zdm4qrjaLuq6Dyn8ev3ssHwualrM75u9wK6BGQZX4ulpbqF0EHNP/18WSgH0Kqk0ABRLCt7Qn5qdOjK06Wd55Ikd6vs8VeQrGO8+dKz4nB1JP6h/FGxA5TiVa69UgE/Le2DYbKfzoABXNjKC8RF7EFXD8ZaPeAzpNq2Jzrk2NqCn50eAD26UG78TAWIWBWTchQ18YU3H4rEcTDF6eFwsofznu5+BGG6bmAfUw6GVexr/oeIuJQNBu2z7404vM+XUPgwILnawPJQAPsRL/r5ZU34cDAAlhq3qVG0hJRP3eVYutZdBoxew0uU/1pqe1QO8+nmSYNMDSI+2CSkkOjcwC4Xuioi1j8YGKxpP7akTA2PB6TmRtISFj/dfJDg6q8cwDZB/k7ahY//O5ZQYOQCV/RD3GCLsH2QypfvMTip5zxU5Mu4QSmih1OIrGs7FXcIvCbO8kxOjxkuKHMtV4ra/tKkAFI0aJY4ubj9WgtRwuca9fXL7km9NZeIgyz9q8Dl7ihrnKlYnandVSD/Uhf8yTmIIDqOR6nQbq3rYOs7r/vmKOQXf2N6+S2qlVXfDfZfue9S7RgXC3d1UKe54oke+faHUCwU7Q0+S6yhWi9tiGKhrMvhfEPiXyJM1HSnB/QeUc7GnOBRyTr83lEYVby5v4carFl6SR0QhaDq2q5F0/fmlSxkCj1thieoqlaRWd7jJ0gP76twsHDHzA7WjWPj3FNQiJwuEdJo5Rs53nk5Vg/GN8WGKax0u/MLJxsFE1QEfWJBJEFCkOBi3Q0Bt7itX85NSdB58lBMjAHSski8tlLGAdUR899c+qwV+mKIP9/el4jRGSFjsE8uLH0UzwVqja/l6wE496H2tM+DlSBiw9N2I92ry9hlpVCUiexO0MBxHKmAsisTw+01nQXSYreIVf85ey11va09EbFEVyX6P+TiYRVoDFIHP2jwR4GjHZW0hhGSE9Tb753EEI5bxslsx4cQQcoRLjBiDFXzmDilas2OYZ2uCgFnNajSVg54eij6qmnuQdqkTOeIm1R5Q7Rzqsbh8w8C50FldTebSlmtmjPymPEVsrATAfko1QCaihrC6AWfQD916LxHAPSxk2nYSq5gFQDFINar0MEqW0BSLN6+IjLXc8KPExSn2+ABESV+DAXo1V53dCUGRM2HTY6EQTrGTrXSVtRtgLOzc9jVMKm+FA6aDOpYLDctxLmxkswWydWnOPiiebW1i0+ILoo6KlJMpHd5rgupQZ2gxdF+y3TvNFrtKK89EHPwTPMQd0aLfxQ+2mFl7nM5vAf/kZmkZQQ24lsi9astMpDE5oDIpQfI71m98Af6TlFMzN9ZIe1Fz9u+Wb0vzPCvjzx0ccJbKZ/BDChBpNZ0hSdj40S5NZardFqAsbbCmdmVuov5Ym41bffZ2MnMvEWz49TjwgWzWTsKtfLrf86aKVVQtEiAsQSgw0AJ5vBc/T9fX9kCkibayoPMxBVsgC7sJsFglEor1IY6tZeOmVJGgvFx7wYRLjFiksqt0neEM1kRLBL0ew=="
-}
-  </script>
-
-  <script>
-    const AUTH_STORAGE_KEY = 'garden_by_jess_key';
-
-    async function decryptPayload(password) {
-      const payloadEl = document.getElementById('encrypted-payload');
-      if (!payloadEl) return null;
-      const data = JSON.parse(payloadEl.textContent);
-
-      const salt = Uint8Array.from(atob(data.salt), c => c.charCodeAt(0));
-      const iv = Uint8Array.from(atob(data.iv), c => c.charCodeAt(0));
-      const ciphertext = Uint8Array.from(atob(data.ciphertext), c => c.charCodeAt(0));
-
-      const encoder = new TextEncoder();
-      const passKey = await crypto.subtle.importKey(
-        'raw',
-        encoder.encode(password),
-        'PBKDF2',
-        false,
-        ['deriveKey']
-      );
-
-      const aesKey = await crypto.subtle.deriveKey(
-        {
-          name: 'PBKDF2',
-          salt: salt,
-          iterations: 100000,
-          hash: 'SHA-256'
-        },
-        passKey,
-        { name: 'AES-GCM', length: 256 },
-        false,
-        ['decrypt']
-      );
-
-      const decrypted = await crypto.subtle.decrypt(
-        { name: 'AES-GCM', iv: iv },
-        aesKey,
-        ciphertext
-      );
-
-      const decoder = new TextDecoder('utf-8');
-      return decoder.decode(decrypted);
-    }
-
-    async function attemptUnlock(pwd) {
-      const btn = document.getElementById('gate-btn');
-      const errBox = document.getElementById('error-box');
-      const card = document.getElementById('gate-card');
-
-      if (btn) {
-        btn.disabled = true;
-        btn.textContent = 'Bezig met verifiëren...';
-      }
-
-      try {
-        const html = await decryptPayload(pwd);
-        if (html) {
-          sessionStorage.setItem('garden_by_jess_auth', 'granted');
-          sessionStorage.setItem(AUTH_STORAGE_KEY, pwd);
-          localStorage.setItem(AUTH_STORAGE_KEY, pwd);
-          document.open();
-          document.write(html);
-          document.close();
-          return true;
-        }
-      } catch (e) {
-        console.warn('Decryption failed:', e);
-      }
-
-      if (btn) {
-        btn.disabled = false;
-        btn.textContent = 'Atelier Betreden →';
-      }
-      if (errBox) errBox.style.display = 'block';
-      if (card) {
-        card.classList.add('shake');
-        setTimeout(() => card.classList.remove('shake'), 450);
-      }
-      const input = document.getElementById('gate-input');
-      if (input) {
-        input.value = '';
-        input.focus();
-      }
-      return false;
-    }
-
-    // Check existing session for auto-unlock
-    (function checkAutoUnlock() {
-      const cached = sessionStorage.getItem(AUTH_STORAGE_KEY) || localStorage.getItem(AUTH_STORAGE_KEY);
-      if (cached) {
-        attemptUnlock(cached);
-      }
-    })();
-
-    document.getElementById('gate-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const val = document.getElementById('gate-input').value.trim();
-      if (val) attemptUnlock(val);
-    });
-  </script>
 </body>
 </html>
