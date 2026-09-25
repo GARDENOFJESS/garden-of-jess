@@ -8,8 +8,11 @@
   <link rel="icon" type="image/jpeg" href="assets/garden_by_jess_logo.jpg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Password Gate voor Besloten Drukwerk (Code: 1974) -->
+  <link rel="stylesheet" href="assets/password-gate.css">
+  <script src="assets/print-gate.js" defer></script>
 
   <style>
     :root {
@@ -246,6 +249,68 @@
       border-color: var(--sage);
     }
 
+    /* Business Card Showcase */
+    .card-showcase-section {
+      background: white;
+      border: 1px solid var(--border-sand);
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 56px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .card-showcase-header {
+      margin-bottom: 24px;
+    }
+    .card-badge-format {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--sage-light);
+      color: var(--sage-dark);
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .business-card-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .business-card-grid { grid-template-columns: 1fr; }
+    }
+    .business-card-preview-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(45, 56, 35, 0.12), 0 2px 6px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid var(--border-sand);
+      background: #F9F6F0;
+    }
+    .business-card-preview-wrap:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 50px rgba(45, 56, 35, 0.18);
+    }
+    .business-card-preview-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card-cutline-box {
+      position: absolute;
+      top: 8px; left: 8px; right: 8px; bottom: 8px;
+      border: 1.5px dashed var(--cutline);
+      border-radius: 6px;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
     /* Packaging Details & Ordering Guide */
     .details-card {
       background: white;
@@ -337,6 +402,8 @@
       .top-bar { display: none; }
       .btn-download, .btn-action { display: none; }
       .container { max-width: 100%; padding: 10px; }
+      .card-showcase-section { box-shadow: none; border: 1px solid #ccc; margin-bottom: 24px; padding: 16px; }
+      .business-card-preview-wrap { box-shadow: none; border: 1px solid #ccc; max-width: 85mm; margin: 0 auto; }
       .stickers-grid { gap: 16px; grid-template-columns: repeat(3, 1fr); }
       .sticker-card { box-shadow: none; border: 1px solid #ccc; padding: 16px; }
       .sticker-preview-wrapper { width: 160px; height: 160px; }
@@ -352,9 +419,12 @@
       <a href="index.html" class="back-link">
         ← Terug naar Garden by Jess Atelier
       </a>
-      <div style="display: flex; gap: 10px;">
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
         <button class="btn-action" onclick="window.print()">
           🖨️ Print Sheet / Opslaan als PDF
+        </button>
+        <button class="btn-action" onclick="lockPrintSheet()" style="background: transparent; color: var(--deep-forest); border: 1px solid var(--border-sand);" title="Vergrendel de drukwerkpagina opnieuw">
+          🔒 Vergrendelen
         </button>
         <a href="STICKER_PRINT_SPECIFICATIONS.md" class="btn-action" style="background: var(--deep-forest);">
           📄 Specificaties (Markdown)
@@ -367,22 +437,22 @@
     
     <!-- Page Header -->
     <div class="header-box">
-      <div class="header-badge">Drukwerk & Verpakkingslijn • 300 DPI Print-Ready</div>
-      <h1>Ronde Stickers & Verpakkingsdrukwerk</h1>
+      <div class="header-badge">Drukwerk & Huisstijl • 300 DPI Print-Ready</div>
+      <h1>Bedrijfskaartjes & Ronde Verpakkingsstickers</h1>
       <p class="lead-text">
-        Officieel drukwerkpakket voor de 50g aromazakjes en theeblikken van <strong>Garden by Jess</strong>. 
-        Elke theemelange heeft haar eigen unieke ronde embleem met de specifieke kruiden van die melange.
+        Officieel drukwerkpakket voor het visitekaartje ("thee & taart") en de 50g aromazakjes en theeblikken van <strong>Garden by Jess</strong>. 
+        Compleet met 300 DPI drukbestanden, afloop en materiaalspecificaties voor lokale en online drukkerijen.
       </p>
     </div>
 
     <!-- Quick Technical Specs Banner -->
     <div class="specs-banner">
       <div class="spec-item">
-        <h4>Vorm & Stanslijn</h4>
-        <p>Rond (Die-Cut / Kiss-Cut)</p>
+        <h4>Bedrijfskaartje</h4>
+        <p>85 × 55 mm (Rechthoek)</p>
       </div>
       <div class="spec-item">
-        <h4>Diameter Formaat</h4>
+        <h4>Ronde Stickers</h4>
         <p>ø 50 mm / ø 60 mm</p>
       </div>
       <div class="spec-item">
@@ -391,11 +461,53 @@
       </div>
       <div class="spec-item">
         <h4>Afloop (Bleed)</h4>
-        <p>3.0 mm met veilige zone</p>
+        <p>2.0 – 3.0 mm met veilige zone</p>
       </div>
       <div class="spec-item">
         <h4>Kleurprofiel</h4>
         <p>CMYK Fogra39 / PMS Match</p>
+      </div>
+    </div>
+
+    <!-- Officiële Bedrijfskaartjes Section -->
+    <div class="card-showcase-section" id="bedrijfskaartje">
+      <div class="card-showcase-header">
+        <span class="card-badge-format">✨ Officieel Bedrijfskaartje • 85 × 55 mm</span>
+        <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:32px; color:var(--deep-forest); margin-bottom:8px;">
+          Visitekaartje "Garden by Jess — thee & taart"
+        </h2>
+        <p style="color:var(--muted-earth); font-size:14px;">
+          Het officiële representatieve merkkaartje van Jessica voor Garden by Jess & Homemade by Jess. Bestemd voor bijsluiting in theepakketten, verzenddozen, taartdozen en uitreiking op markten en proeverijen.
+        </p>
+      </div>
+
+      <div class="business-card-grid">
+        <div class="business-card-preview-wrap">
+          <img src="assets/garden_by_jess_bedrijfskaartje.jpg" alt="Garden by Jess — thee & taart Bedrijfskaartje (85x55mm)">
+          <div class="card-cutline-box" title="Snijlijn (85 × 55 mm met 2 mm bleed)"></div>
+        </div>
+        <div class="business-card-details">
+          <h3 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:24px; color:var(--deep-forest); margin-bottom:12px;">
+            Ambachtelijk Visitekaartje
+          </h3>
+          <p style="font-size:13.5px; color:#555; line-height:1.6; margin-bottom:16px;">
+            Verenigt het kruidenthee-atelier en de chocoladetaarten in één harmonieus geheel. Links de gedetailleerde botanische kamille- en kruidenillustratie, rechts de zachte lijntekening van een warm dampende theekop en ambachtelijke taartpunt.
+          </p>
+          <div style="background:var(--cream); border:1px solid var(--border-sand); border-radius:10px; padding:14px 18px; margin-bottom:20px; font-size:12.5px; line-height:1.65;">
+            <strong>Formaat:</strong> 85 × 55 mm (Europees standaard visitekaartje)<br>
+            <strong>Aanbevolen papiersoort:</strong> 350g/m² Biotop Naturel (ongebleekt crèmewit) of 350g Tintoretto Gesso (viltmarkering / katoenstructuur)<br>
+            <strong>Afwerking:</strong> Mat ongestreken of Soft-Touch mat laminaat<br>
+            <strong>Kleurtonen:</strong> Canvas Crème (#F9F6F0), Woudgroen (#2D3823), Terracotta (#B35E44)
+          </div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="assets/garden_by_jess_bedrijfskaartje.jpg" download="Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart_300DPI.jpg" class="btn-action" style="text-decoration:none;">
+              ⬇️ Download 300 DPI Bedrijfskaartje (JPG)
+            </a>
+            <a href="stickers_print_package/business_cards/Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart.jpg" download="Garden_by_Jess_Bedrijfskaartje_Drukbestand.jpg" class="btn-action" style="background:var(--deep-forest); text-decoration:none;">
+              📦 Drukwerkbestand (Pakket)
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -558,12 +670,20 @@
             <p>HEX: #8B7AA8<br>CMYK: 40 / 45 / 15 / 0<br>PMS: 5285 C</p>
           </div>
         </div>
+
+        <div class="swatch-card">
+          <div class="swatch-color" style="background: #B35E44;"></div>
+          <div class="swatch-info">
+            <h5>Terracotta Aarde</h5>
+            <p>HEX: #B35E44<br>CMYK: 15 / 65 / 75 / 10<br>Tekst 'thee & taart' & hartje</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- How to Order Guide -->
     <div class="details-card">
-      <h2>Bestelinstructies voor Stickerleveranciers</h2>
+      <h2>Bestelinstructies voor Drukkerijen & Kaartjesleveranciers</h2>
       <div class="guide-grid">
         
         <div class="guide-step">
@@ -578,7 +698,7 @@
 
         <div class="guide-step">
           <div class="guide-step-number">2</div>
-          <h4>Drukwerkdeal.nl</h4>
+          <h4>Drukwerkdeal.nl (Stickers)</h4>
           <p>
             Kies <strong>Stickers op rol</strong> voor snelle handmatige verwerking.<br>
             Vorm: <strong>Rond ø 50 mm</strong>.<br>
@@ -593,6 +713,16 @@
             Kies <strong>Circle Stickers</strong> • Formaat: <strong>51 mm (2 inch)</strong>.<br>
             Upload de 300 DPI PNG.<br>
             Ontvang binnen 4 uur een gratis digitale drukproef (proof).
+          </p>
+        </div>
+
+        <div class="guide-step" id="bestel-instructies">
+          <div class="guide-step-number">4</div>
+          <h4>Bedrijfskaartjes (Drukwerkdeal / Helloprint / Vistaprint)</h4>
+          <p>
+            Kies <strong>Visitekaartjes</strong> • Formaat: <strong>85 × 55 mm</strong>.<br>
+            Papiersoort: <strong>350g Biotop Naturel</strong> (ongebleekt) of <strong>350g Tintoretto Gesso</strong>.<br>
+            Afwerking: Ongestreken natuurlijk mat of Soft-Touch mat laminaat. Upload het 300 DPI bestand.
           </p>
         </div>
 

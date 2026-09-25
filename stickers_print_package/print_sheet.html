@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Garden by Jess — Sticker & Label Drukwerkspecificaties (Print Sheet)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Password Gate (Code: 1974) -->
+  <link rel="stylesheet" href="../assets/password-gate.css">
+  <script src="../assets/print-gate.js" defer></script>
   <style>
     :root {
       --cream: #F9F6F0;
@@ -202,22 +205,48 @@
         <h1>Garden by Jess — Drukwerk & Sticker Sheet</h1>
         <p style="font-size: 13px; color: #666;">Compleet overzicht van alle 7 ronde stickers (300 DPI, 3mm afloop / cutline)</p>
       </div>
-      <button class="btn-print" onclick="window.print()">
-        🖨️ Drukwerk Sheet Printen / Opslaan als PDF
-      </button>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <button class="btn-print" onclick="window.print()">
+          🖨️ Drukwerk Sheet Printen / Opslaan als PDF
+        </button>
+        <button class="btn-print" onclick="lockPrintSheet()" style="background: transparent; color: var(--deep-forest); border: 1px solid var(--sand);" title="Vergrendel de drukwerkpagina opnieuw">
+          🔒 Vergrendelen
+        </button>
+      </div>
     </div>
 
     <div class="print-sheet">
       <div class="sheet-header">
         <div>
           <div class="brand-title">GARDEN by JESS</div>
-          <div style="font-size: 14px; color: #555;">Officiële Ronde Sticker Collectie • 50g Aromazakjes & Theeblikken</div>
+          <div style="font-size: 14px; color: #555;">Officiële Drukwerk Collectie • Bedrijfskaartjes & 50g Aromazakjes / Theeblikken</div>
         </div>
         <div class="sheet-meta">
-          <strong>Formaat:</strong> Rond ø 50mm / ø 60mm<br>
-          <strong>Resolutie:</strong> 300 DPI (High-Res)<br>
+          <strong>Kaartjesformaat:</strong> 85 × 55 mm<br>
+          <strong>Stickerformaat:</strong> Rond ø 50mm / ø 60mm<br>
+          <strong>Resolutie:</strong> 300 DPI (High-Res Print)<br>
           <strong>Kleurprofiel:</strong> CMYK / Fogra39<br>
-          <strong>Afloop (Bleed):</strong> 3.0 mm
+          <strong>Afloop (Bleed):</strong> 2.0 – 3.0 mm
+        </div>
+      </div>
+
+      <!-- Bedrijfskaartje Showcase -->
+      <div style="background:var(--cream); border:1px solid var(--sand); border-radius:12px; padding:24px; margin-bottom:28px; display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:center;">
+        <div style="position:relative; border-radius:8px; overflow:hidden; border:1px solid var(--sand); box-shadow:0 6px 18px rgba(45,56,35,0.08);">
+          <img src="business_cards/Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart.jpg" alt="Garden by Jess Bedrijfskaartje (85x55mm)" style="width:100%; display:block;">
+          <div style="position:absolute; top:6px; left:6px; right:6px; bottom:6px; border:1.5px dashed var(--cutline); border-radius:4px; pointer-events:none;"></div>
+        </div>
+        <div>
+          <span style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--sage); display:inline-block; margin-bottom:6px;">✨ Officieel Drukwerkitem • Visitekaartje</span>
+          <h2 style="font-family:'Cormorant Garamond', serif; font-size:24px; color:var(--deep-forest); margin-bottom:8px;">Bedrijfskaartje "Garden by Jess — thee & taart"</h2>
+          <p style="font-size:13px; color:#555; line-height:1.5; margin-bottom:12px;">Het officiële visitekaartje voor bijsluiting in theepakketten, taartdozen, verzenddozen en proefpakketten.</p>
+          <div style="font-size:12px; color:#444; background:white; padding:10px 14px; border-radius:6px; border:1px solid var(--sand); margin-bottom:14px; line-height:1.5;">
+            <strong>Formaat:</strong> 85 × 55 mm • <strong>Papiersoort:</strong> 350g Biotop Naturel of Tintoretto Gesso<br>
+            <strong>Bestand:</strong> <code>business_cards/Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart.jpg</code>
+          </div>
+          <a href="business_cards/Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart.jpg" download="Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart.jpg" class="btn-print" style="padding:8px 16px; font-size:12.5px; text-decoration:none; display:inline-flex;">
+            ⬇️ Download 300 DPI Bedrijfskaartje
+          </a>
         </div>
       </div>
 
@@ -315,6 +344,11 @@
           </thead>
           <tbody>
             <tr>
+              <td><strong>Bedrijfskaartje Formaat</strong></td>
+              <td>85 × 55 mm (Rechthoek)</td>
+              <td>Standaard Europees visitekaartje (inclusief 2mm bleed). Geschikt voor 350g Biotop of Tintoretto Gesso papier.</td>
+            </tr>
+            <tr>
               <td><strong>Sticker Vorm</strong></td>
               <td>Rond (Die-Cut / Kiss-Cut)</td>
               <td>Cirkelvormige stanslijn langs de buitenring met 3mm marge</td>
@@ -327,12 +361,12 @@
             <tr>
               <td><strong>Materiaal & Afwerking</strong></td>
               <td>Mat Papier / Kraft of Mat Vinyl (Soft-Touch)</td>
-              <td>Geeft de authentieke, ambachtelijke ambachtelijke natuurlijke uitstraling zonder glans</td>
+              <td>Geeft de authentieke, ambachtelijke natuurlijke uitstraling zonder glans</td>
             </tr>
             <tr>
               <td><strong>Resolutie & Kleur</strong></td>
               <td>300 DPI • CMYK Fogra39</td>
-              <td>Alle bronbestanden in de map <code>circular_stickers/</code> zijn op 300 DPI geëxporteerd</td>
+              <td>Alle bronbestanden in de mappen <code>business_cards/</code> en <code>circular_stickers/</code> zijn op 300 DPI geëxporteerd</td>
             </tr>
             <tr>
               <td><strong>Kleurenpalet</strong></td>
@@ -340,7 +374,8 @@
                 <span class="color-swatch" style="background: #F9F6F0;"></span> <strong>Canvas Crème:</strong> #F9F6F0 (C:2 M:2 Y:5 K:0)<br>
                 <span class="color-swatch" style="background: #6B7A55;"></span> <strong>Saliegroen:</strong> #6B7A55 (C:50 M:30 Y:70 K:15)<br>
                 <span class="color-swatch" style="background: #2D3823;"></span> <strong>Diep Woudgroen:</strong> #2D3823 (C:70 M:50 Y:80 K:60)<br>
-                <span class="color-swatch" style="background: #8B7AA8;"></span> <strong>Lavendelpaars:</strong> #8B7AA8 (C:40 M:45 Y:15 K:0)
+                <span class="color-swatch" style="background: #8B7AA8;"></span> <strong>Lavendelpaars:</strong> #8B7AA8 (C:40 M:45 Y:15 K:0)<br>
+                <span class="color-swatch" style="background: #B35E44;"></span> <strong>Terracotta:</strong> #B35E44 (C:15 M:65 Y:75 K:10)
               </td>
             </tr>
           </tbody>

@@ -1,7 +1,7 @@
-# 🏷️ GARDEN BY JESS — COMPLETE STICKER & PRINT SPECIFICATIES
-**Documentversie:** 1.0 (Definitief Productiepakket)  
+# 🏷️ GARDEN BY JESS — COMPLETE DRUKWERK-, KAARTJES- & STICKERSPECIFICATIES
+**Documentversie:** 1.1 (Definitief Productiepakket inclusief Bedrijfskaartjes)  
 **Datum:** September 2026  
-**Doel:** Direct verzendklaar naar elke sticker- en labeldrukker (o.a. StickerApp.nl, Drukwerkdeal.nl, Sticker Mule, Helloprint, Avery WePrint)
+**Doel:** Direct verzendklaar naar elke drukker (o.a. Drukwerkdeal.nl, StickerApp.nl, Helloprint, Sticker Mule, Vistaprint)
 
 ---
 
@@ -12,6 +12,8 @@ In de map [`stickers_print_package/`](file:///c:/Users/Luuk%20van%20den%20Hout/D
 ```text
 stickers_print_package/
 ├── print_sheet.html                  <-- Interactieve drukwerk-preview & 1:1 PDF-printsheet
+├── business_cards/                   <-- 300 DPI Bedrijfskaartjes (85 x 55 mm)
+│   └── Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart.jpg (Officiële voorzijde - Thee & Taart)
 ├── circular_stickers/                <-- 300 DPI Ronde Stickers (PNG & JPG)
 │   ├── 01_Main_Brand_Logo_Sticker.png (Hoofdmerk - Lavendel & Rozemarijn)
 │   ├── 02_Morning_Rise_Sticker.png    (Morning Rise - Munt & Lavendel)
@@ -36,11 +38,12 @@ stickers_print_package/
 
 | Toepassing | Aanbevolen Afmeting | Vorm / Stanslijn | Opmerking |
 | :--- | :--- | :--- | :--- |
+| **Bedrijfskaartje / Visitekaartje** | **85 × 55 mm** (of 90 × 60 mm) | Rechthoek (2 mm bleed: 89 × 59 mm) | Officiële 'thee & taart' inlegkaart voor in theedozen, verzendpakketten en taartdozen. |
 | **50g Stazakjes (Aromazakjes)** | **ø 50 mm** (5.0 cm) | Rond (Kiss-Cut / Die-Cut) | Perfect formaat voor de voorzijde van de 50g stazakjes. |
 | **Theeblikken (Deksels of Voorzijde)** | **ø 60 mm** (6.0 cm) | Rond | Vult de deksel of het bliklichaam perfect en symmetrisch. |
 | **Sluitzegels / Verzenddozen** | **ø 40 mm** of **ø 50 mm** | Rond | Voor het verzegelen van vloeipapier en kraft verzenddozen. |
 
-*Alle bestanden in `circular_stickers/` zijn aangeleverd in een vierkant canvas met voldoende afloop (bleed), geschikt voor zowel 40mm, 50mm, 60mm als 70mm stansvormen.*
+*Alle bestanden in `circular_stickers/` en `business_cards/` zijn op 300 DPI aangeleverd met voldoende afloop.*
 
 ---
 
@@ -48,31 +51,43 @@ stickers_print_package/
 
 | Kleurnaam | Hex Code | CMYK Waarde (Fogra39) | Pantone Equivalent | Rol in Huisstijl |
 | :--- | :--- | :--- | :--- | :--- |
-| **Canvas Crème** | `#F9F6F0` | **C: 2% M: 2% Y: 5% K: 0%** | Pantone Warm Gray 1 C | Achtergrond van alle stickers |
-| **Diep Woudgroen** | `#2D3823` | **C: 70% M: 50% Y: 80% K: 60%** | Pantone 5605 C | Typografie ("GARDEN by Jess") |
+| **Canvas Crème** | `#F9F6F0` | **C: 2% M: 2% Y: 5% K: 0%** | Pantone Warm Gray 1 C | Achtergrond van alle stickers & kaartjes |
+| **Diep Woudgroen** | `#2D3823` | **C: 70% M: 50% Y: 80% K: 60%** | Pantone 5605 C | Typografie ("Garden by Jess") |
 | **Saliegroen** | `#6B7A55` | **C: 50% M: 30% Y: 70% K: 15%** | Pantone 5763 C | Botanische bladeren & accenten |
 | **Lavendelpaars** | `#8B7AA8` | **C: 40% M: 45% Y: 15% K: 0%** | Pantone 5285 C | Lavendelknoppen & bloesems |
+| **Terracotta Aarde** | `#B35E44` | **C: 15% M: 65% Y: 75% K: 10%** | Pantone 7592 C | Tekst 'thee & taart' & hartaccent |
 
 ---
 
 ## 🌿 4. Materiaal & Afwerking (Aanbeveling)
 
-Voor een ambachtelijk en ambachtelijk theemerk raden we de volgende materialen aan:
+Voor een ambachtelijk theemerk en taartenatelier raden we de volgende materialen aan:
 
-1. **Optie A (Beste Uitstraling): Mat Onbewerkt Papier / Kraftpapier (FSC)**
-   - *Waarom:* Heeft een natuurlijke, warme en niet-reflecterende textuur. Sluit naadloos aan bij het ambachtelijke karakter van Garden by Jess.
-   - *Geschikt voor:* 50g kraft stazakjes en theeblikken voor droge opslag.
-2. **Optie B (Meest Duurzaam): Mat Wit Vinyl met Soft-Touch Laminaat**
-   - *Waarom:* Volledig vocht- en waterbestendig (handig als er thee wordt gemorst of in vochtige keukens), met een fluweelzachte, matte afwerking zónder glans.
-   - *Geschikt voor:* Zowel theeblikken als aromazakjes.
-3. **Optie C: Tintoretto Gesso / Wijnlabel-papier (Katoenstructuur)**
-   - *Waarom:* Voelbare fijne viltstructuur, gebruikt bij high-end natuurwijnen en luxe theemerken.
+1. **Visitekaartjes / Inlegkaarten (Bedrijfskaartjes):**
+   - **Optie A (Beste Uitstraling):** **350g/m² Biotop Naturel (FSC)** — natuurlijk ongebleekt crèmewit papier, voelt warm, zacht en luxueus.
+   - **Optie B (Luxe Textuur):** **350g/m² Tintoretto Gesso** — luxe viltgemarkeerde katoenstructuur voor een authentieke atelier-look.
+   - **Afwerking:** Mat ongestreken of Soft-Touch mat laminaat (fluweelzacht gevoel).
+
+2. **Ronde Stickers (Zakjes & Blikken):**
+   - **Optie A (Beste Uitstraling):** **Mat Onbewerkt Papier / Kraftpapier (FSC)**
+     - *Waarom:* Natuurlijke, warme en niet-reflecterende textuur. Sluit naadloos aan bij kraft stazakjes en theeblikken.
+   - **Optie B (Meest Duurzaam):** **Mat Wit Vinyl met Soft-Touch Laminaat**
+     - *Waarom:* Volledig vocht- en waterbestendig zónder glans. Geschikt voor vochtige omgevingen en theeblikken.
+   - **Optie C:** **Tintoretto Gesso / Wijnlabel-papier (Katoenstructuur)**
+     - *Waarom:* Voelbare fijne viltstructuur, gebruikt bij high-end natuurwijnen en ambachtelijke merken.
 
 ---
 
 ## 🚀 5. Stappenplan voor Bestellen bij Drukkerijen
 
-### A. Bestellen bij [StickerApp.nl](https://stickerapp.nl) (Zeer eenvoudig voor ronde stickers):
+### A. Visitekaartjes / Bedrijfskaartjes bestellen bij [Drukwerkdeal.nl](https://drukwerkdeal.nl) of [Helloprint.nl](https://helloprint.nl):
+1. Kies **Visitekaartjes** ➔ Standaard formaat: **85 mm x 55 mm**.
+2. Selecteer papiersoort: **350g Biotop Naturel** of **350g Tintoretto Gesso**.
+3. Kies afwerking: **Mat ongestreken** of **Mat soft-touch**.
+4. Upload het bestand uit: `stickers_print_package/business_cards/Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart.jpg`.
+5. Controleer de snijmarge (bleed van 2 mm) en bevestig.
+
+### B. Bestellen bij [StickerApp.nl](https://stickerapp.nl) (Voor ronde stickers):
 1. Ga naar **StickerApp.nl** ➔ Kies **Ronde Stickers**.
 2. Kies het formaat (bijv. **50 mm x 50 mm**).
 3. Selecteer het materiaal: **Matte Stickers** of **Kraftpapier**.
@@ -81,13 +96,13 @@ Voor een ambachtelijk en ambachtelijk theemerk raden we de volgende materialen a
    - `02_Morning_Rise_Sticker.png` t/m `07_Breath_Free_Sticker.png` voor de smaak-specifieke stickers.
 5. De preview toont automatisch de ronde stanslijn. Plaats de bestelling.
 
-### B. Bestellen bij [Drukwerkdeal.nl](https://drukwerkdeal.nl) (Voor stickers op rol):
+### C. Bestellen bij [Drukwerkdeal.nl](https://drukwerkdeal.nl) (Voor stickers op rol):
 1. Ga naar **Drukwerkdeal.nl** ➔ **Stickers op rol**.
 2. Kies vorm: **Rond** ➔ Diameter: **50 mm**.
 3. Kies materiaal: **Mat papier** of **Polypropyleen mat** met permanente belijming.
 4. Upload de PDF via de export van `print_sheet.html` of de afzonderlijke 300 DPI PNG's.
 
-### C. Bestellen bij [Sticker Mule](https://stickermule.com/nl):
+### D. Bestellen bij [Sticker Mule](https://stickermule.com/nl):
 1. Kies **Ronde Stickers (Circle Stickers)**.
 2. Formaat: **51 mm** (2 inch).
 3. Upload de PNG's. Sticker Mule stuurt binnen 4 uur een gratis online drukproef (proof).
@@ -96,6 +111,7 @@ Voor een ambachtelijk en ambachtelijk theemerk raden we de volgende materialen a
 
 ## 🖨️ 6. De Interactieve Print Sheet Gebruiken
 
-Open [`stickers_print_package/print_sheet.html`](file:///c:/Users/Luuk%20van%20den%20Hout/Desktop/garden%20of%20jess/stickers_print_package/print_sheet.html) in Chrome, Edge of Safari:
-* Toont alle 7 stickers gerangschikt met interactieve stanslijnen.
+Open [`stickers_print_package/print_sheet.html`](file:///c:/Users/Luuk%20van%20den%20Hout/Desktop/garden%20of%20jess/stickers_print_package/print_sheet.html) of de hoofdsheet [`print-sheet.html`](file:///c:/Users/Luuk%20van%20den%20Hout/Desktop/garden%20of%20jess/print-sheet.html) in Chrome, Edge of Safari:
+* Toont het officiële bedrijfskaartje (85 × 55 mm) en alle 7 stickers gerangschikt met interactieve stanslijnen.
 * Klik rechtsboven op **"🖨️ Drukwerk Sheet Printen / Opslaan als PDF"** om direct een kant-en-klaar A4 PDF-document te genereren om per e-mail naar uw lokale drukker te sturen.
+

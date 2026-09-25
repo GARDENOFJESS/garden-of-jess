@@ -1243,6 +1243,151 @@
       }
     }
 
+    /* 7b. BEDRIJFSKAARTJE FEATURE SECTION */
+    .business-card-feature-section {
+      padding: 80px 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--border-sand);
+      position: relative;
+    }
+    .business-card-feature-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-sand);
+      border-radius: 24px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 52px;
+      align-items: center;
+      box-shadow: 0 16px 40px rgba(45, 56, 35, 0.05);
+    }
+    .business-card-feature-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .business-card-frame {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 48px rgba(45, 56, 35, 0.14), 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid var(--border-sand);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+      background: #F9F6F0;
+      max-width: 520px;
+      width: 100%;
+    }
+    .business-card-frame:hover {
+      transform: translateY(-6px) scale(1.015);
+      box-shadow: 0 30px 60px rgba(45, 56, 35, 0.22);
+    }
+    .business-card-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .card-tactile-caption {
+      font-size: 12.5px;
+      color: var(--muted-earth);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .business-card-feature-copy .badge-atelier {
+      display: inline-block;
+      background: var(--sage-light);
+      color: var(--sage-dark);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .business-card-feature-copy h2 {
+      font-size: 38px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--deep-forest);
+    }
+    .business-card-feature-copy h2 em {
+      color: #A35C45;
+      font-style: italic;
+    }
+    .business-card-feature-copy p.lead {
+      font-size: 16px;
+      color: #3B4730;
+      line-height: 1.65;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+    .business-card-feature-copy p {
+      font-size: 14.5px;
+      color: #55624A;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+    .card-feature-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+      background: var(--cream-soft);
+      border: 1px solid var(--border-sand);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .card-feature-meta .meta-item strong {
+      display: block;
+      font-size: 13px;
+      color: var(--deep-forest);
+      margin-bottom: 2px;
+    }
+    .card-feature-meta .meta-item span {
+      font-size: 11px;
+      color: #7A856D;
+    }
+    .card-feature-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-secondary-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border-sand);
+      background: #FFFFFF;
+      color: var(--deep-forest);
+      padding: 12px 22px;
+      border-radius: 30px;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .btn-secondary-outline:hover {
+      border-color: var(--sage);
+      background: var(--sage-light);
+      color: var(--sage-dark);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 900px) {
+      .business-card-feature-card {
+        grid-template-columns: 1fr;
+        padding: 28px 20px;
+        gap: 32px;
+      }
+      .card-feature-meta {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .business-card-feature-copy h2 { font-size: 30px; }
+    }
+
     /* 14. MONOGRAAF MODAL */
     .modal-backdrop {
       position: fixed;
@@ -1547,6 +1692,7 @@
         <a href="pages/kruiden-abc.html" class="nav-link">Kruiden ABC</a>
         <a href="pages/our-garden-journal.html" class="nav-link">Onze Tuinkroniek</a>
         <a href="#over-jess" class="nav-link">Over Jess</a>
+        <a href="#bedrijfskaartje" class="nav-link">Bedrijfskaartje</a>
         <a href="#proeflokaal" class="nav-link">Afhalen & Bezorging</a>
       </nav>
 
@@ -1579,6 +1725,7 @@
     <div class="mobile-nav-links">
       <a href="/homemade/">♡ Homemade by Jess — Chocoladetaarten</a>
       <a href="#signature-six" onclick="toggleMobileMenu()">🌿 De 6 Smaken (€7,95)</a>
+      <a href="#bedrijfskaartje" onclick="toggleMobileMenu()">🏷️ Bedrijfskaartje (Thee & Taart)</a>
       <a href="pages/kruiden-abc.html" onclick="toggleMobileMenu()">📚 Kruiden ABC (27 Planten & Werking)</a>
       <a href="pages/our-garden-journal.html" onclick="toggleMobileMenu()">📖 Onze Tuinkroniek (Artikelen)</a>
       <a href="#over-jess" onclick="toggleMobileMenu()">👩‍🌾 Over Jess & Atelier</a>
@@ -1975,6 +2122,55 @@
       </div>
     </div>
   </section>
+
+  <!-- 7c. HET OFFICIELE BEDRIJFSKAARTJE (THEE & TAART) -->
+  <section class="business-card-feature-section" id="bedrijfskaartje">
+    <div class="container">
+      <div class="business-card-feature-card">
+        <div class="business-card-feature-visual">
+          <div class="business-card-frame" onclick="window.open('print-sheet.html#bedrijfskaartje', '_blank')" title="Klik om het bedrijfskaartje in printkwaliteit te bekijken">
+            <img src="assets/garden_by_jess_bedrijfskaartje.jpg" alt="Officieel Bedrijfskaartje Garden by Jess — thee & taart" width="1024" height="682" loading="lazy" decoding="async">
+          </div>
+          <div class="card-tactile-caption">
+            <span>✦ Formaat 85 × 55 mm</span> • <span>350g Biotop Naturel</span> • <span>Soft-Touch Afwerking</span>
+          </div>
+        </div>
+        <div class="business-card-feature-copy">
+          <span class="badge-atelier">OFFICIEEL ATELIER VISITEKAARTJE</span>
+          <h2>Garden by Jess — <em>thee & taart</em></h2>
+          <p class="lead">
+            Het tastbare visitekaartje van Jessica's atelier. Dit officiële kaartje vindt u als kwaliteitszegel bijgesloten in elk theepakket, in onze verzenddozen en bij de ambachtelijke chocoladetaarten.
+          </p>
+          <p>
+            Een harmonieus ontwerp waarin beide werelden samenkomen: links de gedetailleerde botanische kruiden van de theetuin (kamille en geurige kruiden), in het midden 'Garden by Jess — thee & taart', en rechts de warme uitnodiging van een dampend theekopje en een heerlijke taartpunt.
+          </p>
+          <div class="card-feature-meta">
+            <div class="meta-item">
+              <strong>Voorkamp 14, Beets</strong>
+              <span>Thuisatelier & Bereiding</span>
+            </div>
+            <div class="meta-item">
+              <strong>06 4161 5544</strong>
+              <span>Direct via WhatsApp</span>
+            </div>
+            <div class="meta-item">
+              <strong>300 DPI Print-Ready</strong>
+              <span>Drukwerkspecificaties</span>
+            </div>
+          </div>
+          <div class="card-feature-actions">
+            <a href="print-sheet.html#bedrijfskaartje" class="btn-primary" target="_blank">
+              Bekijk Drukwerkspecificaties & Print Sheet →
+            </a>
+            <a href="assets/garden_by_jess_bedrijfskaartje.jpg" download="Garden_by_Jess_Bedrijfskaartje_Thee_en_Taart.jpg" class="btn-secondary-outline">
+              ⬇️ Download Kaartje (300 DPI)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="reviews-section">
     <div class="container">
       <div class="section-header">
@@ -2214,7 +2410,8 @@
           <li><a href="#over-jess">Over Jess & Het Atelier</a></li>
           <li><a href="/homemade/">Homemade by Jess — Chocoladetaarten</a></li>
           <li><a href="pages/contact.html">Proeflokaal & Contact</a></li>
-          <li><a href="print-sheet.html" target="_blank" style="color:#D2DEC8; font-weight:600;">🏷️ Drukwerk & Stickers (Print Sheet)</a></li>
+          <li><a href="#bedrijfskaartje">🏷️ Ons Bedrijfskaartje (Thee & Taart)</a></li>
+          <li><a href="print-sheet.html" target="_blank" style="color:#D2DEC8; font-weight:600;">🖨️ Drukwerk, Kaartjes & Stickers (Print Sheet)</a></li>
           <li><a href="#faq">Veelgestelde Vragen</a></li>
           <li><a href="pages/privacy-policy.html">Privacybeleid (AVG)</a></li>
           <li><a href="404.html">Vriendelijke 404 Pagina</a></li>
@@ -2234,7 +2431,7 @@
       <div>© 2026 Garden by Jess. Ambachtelijk bereid aan Voorkamp 14, Beets. Afhalen bij het atelier of Bio Rosa, Padjedijk 30, Purmerend.</div>
       <div style="display:flex; gap:18px;">
         <a href="pages/privacy-policy.html">Privacybeleid</a>
-        <a href="print-sheet.html" target="_blank">Drukwerkspecificaties</a>
+        <a href="print-sheet.html#bedrijfskaartje" target="_blank">Bedrijfskaartje & Drukwerk</a>
         <a href="pages/contact.html">Algemene Voorwaarden</a>
         <a href="pages/thank-you.html">Bestelbevestiging Voorbeeld</a>
       </div>
