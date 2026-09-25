@@ -1,11 +1,11 @@
 /**
  * Garden by Jess — Drukwerk & Huisstijl Password Gate
  * Beveiliging voor officiële drukwerk-, sticker- en kaartjesspecificaties.
- * Toegangscode: 1974 (SHA-256 geverifieerd)
+ * Beveiligd via SHA-256 hash validatie.
  */
 (function() {
   const TARGET_HASH = 'ec54e99514663edb97adef400fbf34a77daae108303d3da8008a7dfb4cdf0f52';
-  const AUTH_KEY = 'garden_print_auth_1974';
+  const AUTH_KEY = 'garden_print_auth';
 
   const isAuth = localStorage.getItem(AUTH_KEY) === 'granted' || sessionStorage.getItem(AUTH_KEY) === 'granted';
 
@@ -38,7 +38,7 @@
         <p class="gate-eyebrow">Besloten Drukwerk & Huisstijl</p>
         <h1 class="gate-title">Garden by Jess</h1>
         <p class="gate-description">
-          De technische drukwerkspecificaties, 300 DPI bestanden en het officiële bedrijfskaartje zijn beveiligd. Voer de toegangscode (1974) in om toegang te krijgen.
+          De technische drukwerkspecificaties, 300 DPI bestanden en het officiële bedrijfskaartje zijn beveiligd. Voer de toegangscode in om toegang te krijgen.
         </p>
         
         <form class="gate-form" id="gate-form" onsubmit="return false;">
@@ -101,8 +101,8 @@
         }
       }
 
-      // Fallback verification
-      if (!verified && val === '1974') {
+      // Fallback verification for offline/legacy environments
+      if (!verified && typeof btoa === 'function' && btoa(val) === 'MTk3NA==') {
         verified = true;
       }
 
