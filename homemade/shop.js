@@ -63,7 +63,7 @@
   $('#prepare').addEventListener('click', () => {
     const wish = $('#wish').value.trim();
     const selection = Object.entries(catalog).filter(([id]) => cart[id] > 0).map(([id, product]) => `${cart[id]} × ${product.name}`).join('\n');
-    const message = `Hoi Jessica! Ik heb interesse in de volgende taarten van Homemade by Jess:\n\n${selection}\n\n${wish ? `Mijn wens: ${wish}\n\n` : ''}Kun je me de prijs, beschikbaarheid en mogelijkheden voor afhalen laten weten?\n\nDank je wel!`;
+    const message = `Hoi Jessica! Ik heb interesse in de volgende taarten van Homemade by Jess:\n\n${selection}\n\n${wish ? `Mijn wens of gewenste datum: ${wish}\n\n` : ''}Graag verneem ik de beschikbaarheid en afspraak (bezorgen regio Beets/Hoorn/Purmerend ~20 km, of afhalen in Beets / Bio Rosa Purmerend).\n\nDank je wel!`;
     $('#request-text').value = message;
     $('#request').hidden = false;
     $('#send-whatsapp').href = 'https://wa.me/31641615544?text=' + encodeURIComponent(message);
