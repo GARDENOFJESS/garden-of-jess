@@ -66,7 +66,7 @@
         </div>
 
         <div class="gate-footer">
-          © 2026 Garden by Jess • Voorkamp 14, Beets
+          © 2026 Garden by Jess • Beets
         </div>
       </div>
     `;
